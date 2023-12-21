@@ -10,34 +10,20 @@ import net.minecraft.util.ResourceLocation;
 import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class SpectacledBearRenderer extends ZawaMobRenderer<SpectacledBearEntity, SpectacledBearModel> {
-    private final SpectacledBearModel adultModel;
-    private final SpectacledBearModel babyModel;
+    public SpectacledBearRenderer(EntityRendererManager manager) {
+        super(manager, new SpectacledBearModel.Adult(), new SpectacledBearModel.Child(), 0.35F);
 
-    public SpectacledBearRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new SpectacledBearModel.Adult(), 1.0F);
-        adultModel = model;
-        babyModel = new SpectacledBearModel.Child();
     }
 
     @Override
-    public void render(SpectacledBearEntity entity, float entityYaw, float partialTicks, MatrixStack matrixStack, IRenderTypeBuffer buffer, int packedLight) {
-        model = entity.isBaby() ? babyModel : adultModel;
-        super.render(entity, entityYaw, partialTicks, matrixStack, buffer, packedLight);
+    protected void scale(SpectacledBearEntity entity, MatrixStack matrixStack, float partialTickTime) {
+        float scale = entity.isBaby() ? 0.9F : 1.1F;
+        matrixStack.scale(scale, scale, scale);
+        super.scale(entity, matrixStack, partialTickTime);
     }
 
     @Override
-    public void setupAdultTextures(SpectacledBearEntity entity) {
-        int variantCount = entity.getTotalVariants();
-        adultTextures = new ResourceLocation[variantCount];
-        for (int i = 0; i < variantCount; i++)
-            adultTextures[i] = new ResourceLocation(EcoRegions.MOD_ID, "textures/entity/spectacled_bear/spectacled_bear_" + (i + 1) + ".png");
-    }
-
-    @Override
-    public void setupBabyTextures(SpectacledBearEntity entity) {
-        int variantCount = entity.getTotalVariants();
-        babyTextures = new ResourceLocation[variantCount];
-        for (int i = 0; i < variantCount; i++)
-            babyTextures[i] = new ResourceLocation(EcoRegions.MOD_ID, "textures/entity/spectacled_bear/spectacled_bear_baby_" + (i + 1) + ".png");
+    protected boolean hasBabyVariants(SpectacledBearEntity entity) {
+        return false;
     }
 }

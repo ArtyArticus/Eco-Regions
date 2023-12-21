@@ -42,8 +42,6 @@ minecraft {
         client {
             workingDirectory project.file('run')
             property 'forge.logging.console.level', 'debug'
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             mods {
                 ecoregions {
@@ -89,9 +87,6 @@ repositories {
             includeGroup "curse.maven"
         }
     }
-    flatDir {
-        dirs 'lib'
-    }
 }
 
 dependencies {
@@ -99,8 +94,7 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft "net.minecraftforge:forge:${modMinecraftVersion}-${modForgeVersion}"
-//    implementation fg.deobf("curse.maven:zawa-evolved-581942:${project.modZawaFile}")
-    implementation fg.deobf("zawa:zawa:1.16.5-1.0.2-addon-testing-only")
+    implementation fg.deobf("curse.maven:zawa-evolved-581942:${project.modZawaFile}")
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
@@ -151,3 +145,4 @@ publishing {
         }
     }
 }
+

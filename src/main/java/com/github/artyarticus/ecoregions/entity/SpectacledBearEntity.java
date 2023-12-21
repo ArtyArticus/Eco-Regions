@@ -12,7 +12,7 @@ import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 import javax.annotation.Nullable;
 
 public class SpectacledBearEntity extends ZawaLandEntity {
-    public SpectacledBearEntity(EntityType<? extends ZawaBaseEntity> type, World world) {
+    public SpectacledBearEntity(EntityType<? extends ZawaLandEntity> type, World world) {
         super(type, world);
     }
 
@@ -25,4 +25,16 @@ public class SpectacledBearEntity extends ZawaLandEntity {
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return EcoEntities.SPECTACLED_BEAR.get().create(world);
     }
-}
+
+    @Override
+    protected void registerGoals() {
+        //super.registerGoals();
+        //this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 2.0D, 2.5D, true));
+        //this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+        //this.targetSelector.addGoal(3, new NonTamedTargetGoal<>(this, PlayerEntity.class, true, (entity) -> this.distanceToSqr(entity) <= 10.0D));
+    }
+    @Override
+    public float getMaleRatio() {
+        return 0.33F;
+    }
+    }
