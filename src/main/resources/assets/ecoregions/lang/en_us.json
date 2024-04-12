@@ -1,22 +1,21 @@
 {
   "__comment": "Entity Names",
-  "entity.ecoregions.spectacled_bear": "Spectacled Bear",
+  "entity.ecoregions.bush_dog": "Bush Dog",
 
   "__comment": "Items",
-  "item.ecoregions.spectacled_bear_spawn_egg": "Spectacled Bear Spawn Egg",
+  "item.ecoregions.bush_dog_spawn_egg": "Bush Dog Spawn Egg",
 
 
   "__comment": "Entity Variant and Scientific Names, and Informational Blurbs",
-  "scientific.ecoregions.spectacled_bear": "",
-  "variant.ecoregions.spectacled_bear_0": "",
-  "variant.ecoregions.spectacled_bear_1": "",
-  "variant.ecoregions.spectacled_bear_2": "",
-  "variant.ecoregions.spectacled_bear_3": "",
-  "variant.ecoregions.spectacled_bear_4": "",
-  "taxonomic_class.ecoregions.spectacled_bear": "",
-  "range.ecoregions.spectacled_bear": "",
-  "conservation_status.ecoregions.spectacled_bear": "",
-  "informational_blurb.ecoregions.spectacled_bear": "",
+  "scientific.ecoregions.bush_dog": "Spethos venaticus",
+  "variant.ecoregions.bush_dog_0": "Hedge",
+  "variant.ecoregions.bush_dog_1": "Shrub",
+  "variant.ecoregions.bush_dog_2": "Thorns",
+  "variant.ecoregions.bush_dog_3": "Weed",
+  "taxonomic_class.ecoregions.bush_dog": "Mammal",
+  "range.ecoregions.bush_dog": "Central & South America",
+  "conservation_status.ecoregions.bush_dog": "Near Threatened",
+  "informational_blurb.ecoregions.bush_dog": "The Bush Dog is a highly social and cooperative species, living in packs that can include up to 12 individuals. They communicate through various vocalizations, helping them coordinate hunts and maintain strong social bonds.",
   
   "__comment": "Ambient Entity Variant Names"
 }

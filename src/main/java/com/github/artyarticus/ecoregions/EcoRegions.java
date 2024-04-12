@@ -1,7 +1,7 @@
 package com.github.artyarticus.ecoregions;
 
-import com.github.artyarticus.ecoregions.entity.EcoEntities;
-import com.github.artyarticus.ecoregions.item.EcoItems;
+import com.github.artyarticus.ecoregions.entity.EcoRegionsEntities;
+import com.github.artyarticus.ecoregions.item.EcoRegionsItems;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -15,13 +15,13 @@ public class EcoRegions {
     public EcoRegions() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        EcoEntities.REGISTRAR.register(bus);
-        EcoItems.REGISTRAR.register(bus);
+        EcoRegionsEntities.REGISTRAR.register(bus);
+        EcoRegionsItems.REGISTRAR.register(bus);
 
         bus.addListener(this::setup);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        EcoEntities.registerSpawnPlacements();
+        EcoRegionsEntities.registerSpawnPlacements();
     }
 }
