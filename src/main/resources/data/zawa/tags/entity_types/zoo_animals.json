@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
-    "ecoregions:bush_dog"
+    "ecoregions:bush_dog",
+    "ecoregions:blackbuck",
+    "ecoregions:giant_otter",
+    "ecoregions:porcupine",
+    "ecoregions:red_river_hog",
+    "ecoregions:rhea",
+    "ecoregions:spectacled_bear"
   ]
 }

@@ -1,0 +1,23 @@
+{
+  "temperament": "defensive",
+  "kibble": "zawa:herbivore_kibble",
+  "size": "small",
+  "fertility": "medium",
+  "breeding_item": "minecraft:pumpkin",
+  "litter_size": {
+    "min": 1,
+    "max": 2
+  },
+  "diet": "zawa:herbivore",
+  "speed": "medium",
+  "enrichment": {
+    "zawa:blocks": [
+      "zawa:hanging_browse",
+      "zawa:sprinkler"
+    ],
+    "zawa:entities": [
+      "zawa:boomer_ball"
+    ]
+  },
+  "variant_count": 3
+}

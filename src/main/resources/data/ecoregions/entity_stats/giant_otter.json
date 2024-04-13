@@ -1,0 +1,20 @@
+{
+  "temperament": "defensive",
+  "kibble": "zawa:piscivore_kibble",
+  "size": "medium",
+  "fertility": "medium",
+  "breeding_item": "minecraft:cod",
+  "litter_size": {
+    "min": 1,
+    "max": 6
+  },
+  "diet": "zawa:piscivore",
+  "speed": "fast",
+  "enrichment": {
+    "zawa:blocks": [
+      "zawa:puzzle_feeder",
+      "zawa:tire_swing"
+    ]
+  },
+  "variant_count": 3
+}

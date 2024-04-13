@@ -1,0 +1,492 @@
+package com.github.artyarticus.ecoregions.client.model;
+
+import com.github.artyarticus.ecoregions.entity.BlackbuckEntity;
+import com.google.common.collect.ImmutableList;
+import mcp.MethodsReturnNonnullByDefault;
+import net.minecraft.client.renderer.model.ModelRenderer;
+import net.minecraft.entity.Entity;
+import org.zawamod.zawa.client.model.ZawaBaseModel;
+
+public abstract class BlackbuckModel extends ZawaBaseModel<BlackbuckEntity> {
+    public ModelRenderer Chest;
+    protected Iterable<ModelRenderer> parts;
+
+    @Override
+    @MethodsReturnNonnullByDefault
+    public Iterable<ModelRenderer> parts() {
+        if (this.parts == null) {
+            this.parts = ImmutableList.of(Chest);
+        }
+
+        return this.parts;
+    }
+
+    public static class Adult extends BlackbuckModel {
+
+        public ModelRenderer Body;
+        public ModelRenderer ArmBaseLeft;
+        public ModelRenderer ArmBaseRight;
+        public ModelRenderer Neck;
+        public ModelRenderer Hips;
+        public ModelRenderer Tail;
+        public ModelRenderer ThighLeft;
+        public ModelRenderer ThighRight;
+        public ModelRenderer UpperLegLeft;
+        public ModelRenderer LowerLegLeft;
+        public ModelRenderer FootLeft;
+        public ModelRenderer UpperLegLeft_1;
+        public ModelRenderer LowerLegLeft_1;
+        public ModelRenderer FootRight;
+        public ModelRenderer UpperArmLeft;
+        public ModelRenderer ArmLeft;
+        public ModelRenderer HandLeft;
+        public ModelRenderer UpperArmRight;
+        public ModelRenderer ArmRight;
+        public ModelRenderer HandRight;
+        public ModelRenderer Neck_1;
+        public ModelRenderer Head;
+        public ModelRenderer EarLeft;
+        public ModelRenderer Snout;
+        public ModelRenderer EarLeft_1;
+        public ModelRenderer HornLeft1;
+        public ModelRenderer HornRight1;
+        public ModelRenderer TopSnout;
+        public ModelRenderer Mouth;
+        public ModelRenderer HornLeft2;
+        public ModelRenderer HornLeft3;
+        public ModelRenderer HornLeft4;
+        public ModelRenderer HornLeft5;
+        public ModelRenderer HornLeft6;
+        public ModelRenderer HornRight2;
+        public ModelRenderer HornRight3;
+        public ModelRenderer HornRight4;
+        public ModelRenderer HornRight5;
+        public ModelRenderer HornRight6;
+
+        public Adult() {
+            this.texWidth = 64;
+            this.texHeight = 64;
+            this.UpperLegLeft_1 = new ModelRenderer(this, 19, 54);
+            this.UpperLegLeft_1.setPos(0.0F, 6.3F, -1.5F);
+            this.UpperLegLeft_1.addBox(-1.0F, -0.2F, -0.3F, 2.0F, 5.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(UpperLegLeft_1, 0.7330382858376184F, 0.0F, 0.0F);
+            this.EarLeft_1 = new ModelRenderer(this, 44, 1);
+            this.EarLeft_1.setPos(-1.8F, -0.8F, 0.6F);
+            this.EarLeft_1.addBox(-0.5F, -3.0F, 0.0F, 1.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(EarLeft_1, -0.7285004590772052F, 0.3186971254089062F, -0.7285004590772052F);
+            this.Mouth = new ModelRenderer(this, 52, 25);
+            this.Mouth.setPos(0.0F, 1.9F, -0.5F);
+            this.Mouth.addBox(-1.0F, 0.0F, -2.9F, 2.0F, 1.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Mouth, -0.13665927909957545F, 0.0F, 0.0F);
+            this.HornLeft5 = new ModelRenderer(this, 10, 30);
+            this.HornLeft5.mirror = true;
+            this.HornLeft5.setPos(-0.1F, -2.7F, -0.1F);
+            this.HornLeft5.addBox(-0.5F, -2.0F, 0.0F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(HornLeft5, 0.0F, 0.0F, 0.5462880425584197F);
+            this.Head = new ModelRenderer(this, 47, 2);
+            this.Head.setPos(0.0F, 1.5F, -4.5F);
+            this.Head.addBox(-2.0F, -2.0F, -2.0F, 4.0F, 4.0F, 4.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Head, 1.0471975511965976F, 0.0F, 0.0F);
+            this.HornRight4 = new ModelRenderer(this, 15, 31);
+            this.HornRight4.setPos(-0.7F, -1.9F, 0.1F);
+            this.HornRight4.addBox(-0.5F, -3.0F, 0.0F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(HornRight4, 0.0F, 0.0F, 0.6373942508178124F);
+            this.ArmBaseLeft = new ModelRenderer(this, 22, 34);
+            this.ArmBaseLeft.mirror = true;
+            this.ArmBaseLeft.setPos(1.9F, -1.5F, -0.6F);
+            this.ArmBaseLeft.addBox(-1.5F, 0.0F, -2.0F, 3.0F, 6.0F, 4.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(ArmBaseLeft, 0.5462880425584197F, 0.0F, 0.0F);
+            this.HornRight5 = new ModelRenderer(this, 10, 30);
+            this.HornRight5.setPos(0.1F, -2.7F, -0.1F);
+            this.HornRight5.addBox(-0.5F, -2.0F, 0.0F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(HornRight5, 0.0F, 0.0F, -0.5462880425584197F);
+            this.FootRight = new ModelRenderer(this, 41, 58);
+            this.FootRight.setPos(0.0F, 4.5F, -1.0F);
+            this.FootRight.addBox(-0.9F, -0.5F, -1.6F, 2.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(FootRight, 0.13962634015954636F, 0.0F, 0.0F);
+            this.Tail = new ModelRenderer(this, 22, 46);
+            this.Tail.setPos(0.0F, 0.0F, 5.0F);
+            this.Tail.addBox(-1.0F, 0.0F, -1.0F, 2.0F, 4.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Tail, 0.3186971254089062F, 0.0F, 0.0F);
+            this.ThighLeft = new ModelRenderer(this, 0, 49);
+            this.ThighLeft.mirror = true;
+            this.ThighLeft.setPos(2.0F, 1.0F, 2.0F);
+            this.ThighLeft.addBox(-1.5F, 0.0F, -2.0F, 3.0F, 7.0F, 4.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(ThighLeft, 0.2275909337942703F, 0.0F, 0.0F);
+            this.ArmLeft = new ModelRenderer(this, 46, 35);
+            this.ArmLeft.mirror = true;
+            this.ArmLeft.setPos(-0.05F, 3.8F, -2.0F);
+            this.ArmLeft.addBox(-1.0F, 0.0F, 0.0F, 2.0F, 4.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.HornLeft3 = new ModelRenderer(this, 10, 30);
+            this.HornLeft3.mirror = true;
+            this.HornLeft3.setPos(-0.1F, -2.68F, -0.1F);
+            this.HornLeft3.addBox(-0.5F, -3.0F, 0.0F, 1.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(HornLeft3, 0.0F, 0.0F, 0.5462880425584197F);
+            this.Body = new ModelRenderer(this, 0, 13);
+            this.Body.setPos(0.0F, 3.0F, 2.5F);
+            this.Body.addBox(-3.0F, -7.0F, 0.0F, 6.0F, 7.0F, 8.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Body, 0.47123889803846897F, 0.0F, 0.0F);
+            this.HornLeft6 = new ModelRenderer(this, 15, 31);
+            this.HornLeft6.mirror = true;
+            this.HornLeft6.setPos(0.6F, -0.9F, 0.1F);
+            this.HornLeft6.addBox(-0.5F, -2.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(HornLeft6, 0.0F, 0.0F, -0.6373942508178124F);
+            this.TopSnout = new ModelRenderer(this, 52, 12);
+            this.TopSnout.setPos(0.0F, 0.0F, 0.0F);
+            this.TopSnout.addBox(-1.0F, -0.6F, -3.0F, 2.0F, 1.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(TopSnout, 0.2275909337942703F, 0.0F, 0.0F);
+            this.ArmBaseRight = new ModelRenderer(this, 22, 34);
+            this.ArmBaseRight.setPos(-1.9F, -1.5F, -0.6F);
+            this.ArmBaseRight.addBox(-1.5F, 0.0F, -2.0F, 3.0F, 6.0F, 4.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(ArmBaseRight, 0.5462880425584197F, 0.0F, 0.0F);
+            this.Snout = new ModelRenderer(this, 50, 18);
+            this.Snout.setPos(0.0F, -1.0F, -1.0F);
+            this.Snout.addBox(-1.5F, 0.0F, -3.5F, 3.0F, 2.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Snout, 0.0911061832922575F, 0.0F, 0.0F);
+            this.HandLeft = new ModelRenderer(this, 55, 37);
+            this.HandLeft.mirror = true;
+            this.HandLeft.setPos(0.0F, 3.5F, 1.0F);
+            this.HandLeft.addBox(-1.1F, -0.5F, -1.5F, 2.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.HornRight1 = new ModelRenderer(this, 0, 30);
+            this.HornRight1.setPos(-0.9F, -1.5F, -0.5F);
+            this.HornRight1.addBox(-0.5F, -3.0F, 0.0F, 1.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(HornRight1, -0.8196066007575706F, 0.0F, -0.500909508638178F);
+            this.Chest = new ModelRenderer(this, 0, 0);
+            this.Chest.setPos(0.0F, 11.4F, -6.0F);
+            this.Chest.addBox(-2.5F, -3.0F, -2.5F, 5.0F, 6.0F, 5.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Chest, -0.45378560551852565F, 0.0F, 0.0F);
+            this.LowerLegLeft_1 = new ModelRenderer(this, 32, 53);
+            this.LowerLegLeft_1.setPos(0.05F, 4.8F, 1.7F);
+            this.LowerLegLeft_1.addBox(-1.0F, 0.0F, -2.0F, 2.0F, 5.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(LowerLegLeft_1, -0.8203047484373349F, 0.0F, 0.0F);
+            this.Hips = new ModelRenderer(this, 0, 37);
+            this.Hips.setPos(0.0F, -7.0F, 8.0F);
+            this.Hips.addBox(-2.5F, 0.0F, 0.0F, 5.0F, 6.0F, 5.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Hips, -0.2617993877991494F, 0.0F, 0.0F);
+            this.LowerLegLeft = new ModelRenderer(this, 32, 53);
+            this.LowerLegLeft.mirror = true;
+            this.LowerLegLeft.setPos(-0.05F, 4.8F, 1.7F);
+            this.LowerLegLeft.addBox(-1.0F, 0.0F, -2.0F, 2.0F, 5.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(LowerLegLeft, -0.8203047484373349F, 0.0F, 0.0F);
+            this.EarLeft = new ModelRenderer(this, 44, 1);
+            this.EarLeft.mirror = true;
+            this.EarLeft.setPos(1.8F, -0.8F, 0.6F);
+            this.EarLeft.addBox(-0.5F, -3.0F, 0.0F, 1.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(EarLeft, -0.7285004590772052F, -0.3186971254089062F, 0.7285004590772052F);
+            this.HornRight2 = new ModelRenderer(this, 5, 31);
+            this.HornRight2.setPos(-0.6F, -1.8F, 0.1F);
+            this.HornRight2.addBox(-0.5F, -3.0F, 0.0F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(HornRight2, 0.0F, 0.0F, 0.5462880425584197F);
+            this.FootLeft = new ModelRenderer(this, 41, 58);
+            this.FootLeft.mirror = true;
+            this.FootLeft.setPos(0.0F, 4.5F, -1.0F);
+            this.FootLeft.addBox(-1.1F, -0.5F, -1.6F, 2.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(FootLeft, 0.13962634015954636F, 0.0F, 0.0F);
+            this.UpperArmRight = new ModelRenderer(this, 37, 35);
+            this.UpperArmRight.setPos(0.0F, 5.8F, 1.0F);
+            this.UpperArmRight.addBox(-1.0F, 0.0F, -2.0F, 2.0F, 4.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(UpperArmRight, -0.08726646259971647F, 0.0F, 0.0F);
+            this.UpperLegLeft = new ModelRenderer(this, 19, 54);
+            this.UpperLegLeft.mirror = true;
+            this.UpperLegLeft.setPos(0.0F, 6.3F, -1.3F);
+            this.UpperLegLeft.addBox(-1.0F, -0.2F, -0.3F, 2.0F, 5.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(UpperLegLeft, 0.7330382858376184F, 0.0F, 0.0F);
+            this.Neck = new ModelRenderer(this, 21, 1);
+            this.Neck.setPos(0.0F, -2.5F, -2.0F);
+            this.Neck.addBox(-1.5F, -0.5F, -5.4F, 3.0F, 3.0F, 7.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Neck, -0.4098033003787853F, 0.0F, 0.0F);
+            this.ThighRight = new ModelRenderer(this, 0, 49);
+            this.ThighRight.setPos(-2.0F, 1.0F, 2.0F);
+            this.ThighRight.addBox(-1.5F, 0.0F, -2.0F, 3.0F, 7.0F, 4.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(ThighRight, 0.2275909337942703F, 0.0F, 0.0F);
+            this.ArmRight = new ModelRenderer(this, 46, 35);
+            this.ArmRight.setPos(0.05F, 3.8F, -2.0F);
+            this.ArmRight.addBox(-1.0F, 0.0F, 0.0F, 2.0F, 4.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.HornLeft1 = new ModelRenderer(this, 0, 30);
+            this.HornLeft1.mirror = true;
+            this.HornLeft1.setPos(0.9F, -1.5F, -0.5F);
+            this.HornLeft1.addBox(-0.5F, -3.0F, 0.0F, 1.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(HornLeft1, -0.8196066007575706F, 0.0F, 0.500909508638178F);
+            this.HandRight = new ModelRenderer(this, 55, 37);
+            this.HandRight.setPos(0.0F, 3.5F, 1.0F);
+            this.HandRight.addBox(-0.9F, -0.5F, -1.5F, 2.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.HornLeft2 = new ModelRenderer(this, 5, 31);
+            this.HornLeft2.mirror = true;
+            this.HornLeft2.setPos(0.6F, -1.8F, 0.1F);
+            this.HornLeft2.addBox(-0.5F, -3.0F, 0.0F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(HornLeft2, 0.0F, 0.0F, -0.5462880425584197F);
+            this.HornLeft4 = new ModelRenderer(this, 15, 31);
+            this.HornLeft4.mirror = true;
+            this.HornLeft4.setPos(0.7F, -1.9F, 0.1F);
+            this.HornLeft4.addBox(-0.5F, -3.0F, 0.0F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(HornLeft4, 0.0F, 0.0F, -0.6373942508178124F);
+            this.Neck_1 = new ModelRenderer(this, 36, 8);
+            this.Neck_1.setPos(0.0F, 2.2F, 1.5F);
+            this.Neck_1.addBox(-1.0F, 0.0F, -5.5F, 2.0F, 2.0F, 6.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Neck_1, -0.18203784630933073F, 0.0F, 0.0F);
+            this.HornRight3 = new ModelRenderer(this, 10, 30);
+            this.HornRight3.setPos(0.1F, -2.69F, -0.1F);
+            this.HornRight3.addBox(-0.5F, -3.0F, 0.0F, 1.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(HornRight3, 0.0F, 0.0F, -0.5462880425584197F);
+            this.HornRight6 = new ModelRenderer(this, 15, 31);
+            this.HornRight6.setPos(-0.6F, -0.9F, 0.1F);
+            this.HornRight6.addBox(-0.5F, -2.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(HornRight6, 0.0F, 0.0F, 0.6373942508178124F);
+            this.UpperArmLeft = new ModelRenderer(this, 37, 35);
+            this.UpperArmLeft.mirror = true;
+            this.UpperArmLeft.setPos(0.0F, 5.8F, 1.0F);
+            this.UpperArmLeft.addBox(-1.0F, 0.0F, -2.0F, 2.0F, 4.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(UpperArmLeft, -0.08726646259971647F, 0.0F, 0.0F);
+            this.ThighRight.addChild(this.UpperLegLeft_1);
+            this.Head.addChild(this.EarLeft_1);
+            this.Snout.addChild(this.Mouth);
+            this.HornLeft4.addChild(this.HornLeft5);
+            this.Neck.addChild(this.Head);
+            this.HornRight3.addChild(this.HornRight4);
+            this.Chest.addChild(this.ArmBaseLeft);
+            this.HornRight4.addChild(this.HornRight5);
+            this.LowerLegLeft_1.addChild(this.FootRight);
+            this.Hips.addChild(this.Tail);
+            this.Hips.addChild(this.ThighLeft);
+            this.UpperArmLeft.addChild(this.ArmLeft);
+            this.HornLeft2.addChild(this.HornLeft3);
+            this.Chest.addChild(this.Body);
+            this.HornLeft5.addChild(this.HornLeft6);
+            this.Snout.addChild(this.TopSnout);
+            this.Chest.addChild(this.ArmBaseRight);
+            this.Head.addChild(this.Snout);
+            this.ArmLeft.addChild(this.HandLeft);
+            this.Head.addChild(this.HornRight1);
+            this.UpperLegLeft_1.addChild(this.LowerLegLeft_1);
+            this.Body.addChild(this.Hips);
+            this.UpperLegLeft.addChild(this.LowerLegLeft);
+            this.Head.addChild(this.EarLeft);
+            this.HornRight1.addChild(this.HornRight2);
+            this.LowerLegLeft.addChild(this.FootLeft);
+            this.ArmBaseRight.addChild(this.UpperArmRight);
+            this.ThighLeft.addChild(this.UpperLegLeft);
+            this.Chest.addChild(this.Neck);
+            this.Hips.addChild(this.ThighRight);
+            this.UpperArmRight.addChild(this.ArmRight);
+            this.Head.addChild(this.HornLeft1);
+            this.ArmRight.addChild(this.HandRight);
+            this.HornLeft1.addChild(this.HornLeft2);
+            this.HornLeft3.addChild(this.HornLeft4);
+            this.Neck.addChild(this.Neck_1);
+            this.HornRight2.addChild(this.HornRight3);
+            this.HornRight5.addChild(this.HornRight6);
+            this.ArmBaseLeft.addChild(this.UpperArmLeft);
+            this.saveBase();
+        }
+
+        @Override
+        public void setupAnim(BlackbuckEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+            super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+
+        }
+
+        @Override
+        public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        }
+
+        @Override
+        public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+            if (isSwimming) {
+                limbSwing = (float) entity.tickCount;
+                limbSwingAmount = 0.3F;
+            }
+
+        }
+    }
+
+
+    public static class Child extends BlackbuckModel {
+
+        public ModelRenderer Body;
+        public ModelRenderer Neck;
+        public ModelRenderer ArmBaseLeft;
+        public ModelRenderer ArmBaseRight;
+        public ModelRenderer ThighLeft;
+        public ModelRenderer ThighRight;
+        public ModelRenderer Tail;
+        public ModelRenderer UpperLegLeft;
+        public ModelRenderer LowerLegLeft;
+        public ModelRenderer FootLeft;
+        public ModelRenderer UpperLegRight;
+        public ModelRenderer LowerLegRight;
+        public ModelRenderer FootRight;
+        public ModelRenderer BottomNeck;
+        public ModelRenderer NeckBottom;
+        public ModelRenderer EarLeft;
+        public ModelRenderer EarRight;
+        public ModelRenderer Snout;
+        public ModelRenderer TopSnout;
+        public ModelRenderer Mouth;
+        public ModelRenderer UpperArmLeft;
+        public ModelRenderer ArmLeft;
+        public ModelRenderer HandLeft;
+        public ModelRenderer UpperArmRight;
+        public ModelRenderer ArmRight;
+        public ModelRenderer HandRight;
+
+        public Child() {
+            this.texWidth = 32;
+            this.texHeight = 32;
+            this.TopSnout = new ModelRenderer(this, 24, 1);
+            this.TopSnout.setPos(0.0F, -0.7F, -0.1F);
+            this.TopSnout.addBox(-0.5F, 0.0F, -2.0F, 1.0F, 1.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(TopSnout, 0.4098033003787853F, 0.0F, 0.0F);
+            this.LowerLegRight = new ModelRenderer(this, 10, 21);
+            this.LowerLegRight.setPos(0.05F, 3.0F, 1.7F);
+            this.LowerLegRight.addBox(-0.5F, 0.0F, -1.0F, 1.0F, 4.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(LowerLegRight, -0.767944870877505F, 0.0F, 0.0F);
+            this.FootLeft = new ModelRenderer(this, 6, 30);
+            this.FootLeft.mirror = true;
+            this.FootLeft.setPos(-0.1F, 3.7F, -0.7F);
+            this.FootLeft.addBox(-0.5F, 0.0F, -0.7F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(FootLeft, 0.13962634015954636F, 0.0F, 0.0F);
+            this.ArmBaseLeft = new ModelRenderer(this, 15, 22);
+            this.ArmBaseLeft.mirror = true;
+            this.ArmBaseLeft.setPos(1.1F, 0.2F, -1.0F);
+            this.ArmBaseLeft.addBox(-1.0F, 0.0F, -1.0F, 2.0F, 3.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(ArmBaseLeft, 0.3490658503988659F, 0.0F, 0.0F);
+            this.NeckBottom = new ModelRenderer(this, 0, 8);
+            this.NeckBottom.setPos(0.0F, 0.0F, -0.5F);
+            this.NeckBottom.addBox(-0.5F, -2.0F, -1.3F, 1.0F, 4.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(NeckBottom, -0.0911061832922575F, 0.0F, 0.0F);
+            this.Mouth = new ModelRenderer(this, 0, 13);
+            this.Mouth.setPos(0.0F, 0.4F, 0.1F);
+            this.Mouth.addBox(-0.5F, 0.0F, -2.0F, 1.0F, 1.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Mouth, -0.04555309164612875F, 0.0F, 0.0F);
+            this.UpperLegLeft = new ModelRenderer(this, 0, 27);
+            this.UpperLegLeft.mirror = true;
+            this.UpperLegLeft.setPos(0.0F, 2.5F, -1.2F);
+            this.UpperLegLeft.addBox(-0.5F, 0.0F, 0.0F, 1.0F, 3.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(UpperLegLeft, 0.6632251157578453F, 0.0F, 0.0F);
+            this.EarLeft = new ModelRenderer(this, 26, 28);
+            this.EarLeft.setPos(1.0F, -0.5F, 0.6F);
+            this.EarLeft.addBox(-0.5F, -2.0F, 0.0F, 1.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(EarLeft, 0.0F, -0.4098033003787853F, 0.7740534966278743F);
+            this.ArmLeft = new ModelRenderer(this, 16, 27);
+            this.ArmLeft.mirror = true;
+            this.ArmLeft.setPos(-0.05F, 2.0F, -1.0F);
+            this.ArmLeft.addBox(-0.5F, 0.0F, 0.0F, 1.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.UpperLegRight = new ModelRenderer(this, 0, 27);
+            this.UpperLegRight.setPos(0.0F, 2.5F, -1.2F);
+            this.UpperLegRight.addBox(-0.5F, 0.0F, 0.0F, 1.0F, 3.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(UpperLegRight, 0.6632251157578453F, 0.0F, 0.0F);
+            this.HandLeft = new ModelRenderer(this, 21, 29);
+            this.HandLeft.mirror = true;
+            this.HandLeft.setPos(-0.1F, 2.5F, 0.3F);
+            this.HandLeft.addBox(-0.5F, 0.0F, -0.7F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.LowerLegLeft = new ModelRenderer(this, 10, 21);
+            this.LowerLegLeft.mirror = true;
+            this.LowerLegLeft.setPos(-0.05F, 3.0F, 1.7F);
+            this.LowerLegLeft.addBox(-0.5F, 0.0F, -1.0F, 1.0F, 4.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(LowerLegLeft, -0.767944870877505F, 0.0F, 0.0F);
+            this.Neck = new ModelRenderer(this, 0, 0);
+            this.Neck.setPos(0.0F, -1.0F, -2.0F);
+            this.Neck.addBox(-1.0F, -3.0F, -1.0F, 2.0F, 5.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Neck, 0.9105382388075086F, 0.0F, 0.0F);
+            this.ArmBaseRight = new ModelRenderer(this, 15, 22);
+            this.ArmBaseRight.setPos(-1.1F, 0.2F, -1.0F);
+            this.ArmBaseRight.addBox(-1.0F, 0.0F, -1.0F, 2.0F, 3.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(ArmBaseRight, 0.3490658503988659F, 0.0F, 0.0F);
+            this.FootRight = new ModelRenderer(this, 6, 30);
+            this.FootRight.setPos(0.1F, 3.7F, -0.7F);
+            this.FootRight.addBox(-0.5F, 0.0F, -0.7F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(FootRight, 0.13962634015954636F, 0.0F, 0.0F);
+            this.UpperArmRight = new ModelRenderer(this, 24, 23);
+            this.UpperArmRight.setPos(0.0F, 2.8F, 0.5F);
+            this.UpperArmRight.addBox(-0.5F, 0.0F, -1.0F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(UpperArmRight, -0.08726646259971647F, 0.0F, 0.0F);
+            this.Chest = new ModelRenderer(this, 13, 0);
+            this.Chest.setPos(0.0F, 15.9F, -2.5F);
+            this.Chest.addBox(-1.5F, -2.0F, -2.0F, 3.0F, 4.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Chest, -0.2275909337942703F, 0.0F, 0.0F);
+            this.Tail = new ModelRenderer(this, 9, 0);
+            this.Tail.setPos(0.0F, 0.0F, 5.5F);
+            this.Tail.addBox(-0.5F, 0.0F, -0.5F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Tail, 0.45535640450848164F, 0.0F, 0.0F);
+            this.Snout = new ModelRenderer(this, 24, 5);
+            this.Snout.setPos(0.0F, 0.0F, -1.0F);
+            this.Snout.addBox(-1.0F, 0.0F, -2.0F, 2.0F, 1.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Snout, 0.13962634015954636F, 0.0F, 0.0F);
+            this.ThighRight = new ModelRenderer(this, 0, 21);
+            this.ThighRight.setPos(-1.4F, 1.3F, 4.5F);
+            this.ThighRight.addBox(-1.0F, 0.0F, -1.5F, 2.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(ThighRight, -0.05235987755982988F, 0.0F, 0.0F);
+            this.Body = new ModelRenderer(this, 0, 9);
+            this.Body.setPos(0.0F, -1.5F, 0.0F);
+            this.Body.addBox(-2.0F, -0.5F, -1.0F, 4.0F, 4.0F, 7.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Body, 0.2275909337942703F, 0.0F, 0.0F);
+            this.UpperArmLeft = new ModelRenderer(this, 24, 23);
+            this.UpperArmLeft.mirror = true;
+            this.UpperArmLeft.setPos(0.0F, 2.8F, 0.5F);
+            this.UpperArmLeft.addBox(-0.5F, 0.0F, -1.0F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(UpperArmLeft, -0.08726646259971647F, 0.0F, 0.0F);
+            this.EarRight = new ModelRenderer(this, 26, 28);
+            this.EarRight.setPos(-1.0F, -0.5F, 0.6F);
+            this.EarRight.addBox(-0.5F, -2.0F, 0.0F, 1.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(EarRight, 0.0F, 0.4098033003787853F, -0.7740534966278743F);
+            this.HandRight = new ModelRenderer(this, 21, 29);
+            this.HandRight.setPos(0.1F, 2.5F, 0.3F);
+            this.HandRight.addBox(-0.5F, 0.0F, -0.7F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.ThighLeft = new ModelRenderer(this, 0, 21);
+            this.ThighLeft.mirror = true;
+            this.ThighLeft.setPos(1.4F, 1.3F, 4.5F);
+            this.ThighLeft.addBox(-1.0F, 0.0F, -1.5F, 2.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(ThighLeft, -0.05235987755982988F, 0.0F, 0.0F);
+            this.BottomNeck = new ModelRenderer(this, 19, 9);
+            this.BottomNeck.setPos(0.0F, -2.6F, -1.0F);
+            this.BottomNeck.addBox(-1.5F, -1.5F, -1.5F, 3.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(BottomNeck, -0.591841146688116F, 0.0F, 0.0F);
+            this.ArmRight = new ModelRenderer(this, 16, 27);
+            this.ArmRight.setPos(0.05F, 2.0F, -1.0F);
+            this.ArmRight.addBox(-0.5F, 0.0F, 0.0F, 1.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.Snout.addChild(this.TopSnout);
+            this.UpperLegRight.addChild(this.LowerLegRight);
+            this.LowerLegLeft.addChild(this.FootLeft);
+            this.Chest.addChild(this.ArmBaseLeft);
+            this.Neck.addChild(this.NeckBottom);
+            this.Snout.addChild(this.Mouth);
+            this.ThighLeft.addChild(this.UpperLegLeft);
+            this.BottomNeck.addChild(this.EarLeft);
+            this.UpperArmLeft.addChild(this.ArmLeft);
+            this.ThighRight.addChild(this.UpperLegRight);
+            this.ArmLeft.addChild(this.HandLeft);
+            this.UpperLegLeft.addChild(this.LowerLegLeft);
+            this.Chest.addChild(this.Neck);
+            this.Chest.addChild(this.ArmBaseRight);
+            this.LowerLegRight.addChild(this.FootRight);
+            this.ArmBaseRight.addChild(this.UpperArmRight);
+            this.Body.addChild(this.Tail);
+            this.BottomNeck.addChild(this.Snout);
+            this.Body.addChild(this.ThighRight);
+            this.Chest.addChild(this.Body);
+            this.ArmBaseLeft.addChild(this.UpperArmLeft);
+            this.BottomNeck.addChild(this.EarRight);
+            this.ArmRight.addChild(this.HandRight);
+            this.Body.addChild(this.ThighLeft);
+            this.Neck.addChild(this.BottomNeck);
+            this.UpperArmRight.addChild(this.ArmRight);
+            this.saveBase();
+
+        }
+
+        @Override
+        public void setupAnim(BlackbuckEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+            super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+
+        }
+
+        @Override
+        public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        }
+
+        @Override
+        public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+
+        }
+    }
+}
