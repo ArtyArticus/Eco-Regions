@@ -3,12 +3,12 @@
 "kibble": "zawa:carnivore_kibble",
 "size": "small",
 "fertility": "low",
-"breeding_item": "minecraft:mutton",
+"breeding_item": "minecraft:raw_mutton",
 "litter_size": {
 "min": 1,
 "max": 3
 },
-"diet": "zawa:carnivore",
+"diet": "zawa:small_carnivore",
 "speed": "fast",
 "enrichment": {
 "zawa:blocks": [

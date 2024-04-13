@@ -22,10 +22,6 @@ public class EcoRegionsEntities {
                     .spawns(2, 2, 3, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.DRY_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("bush_dog");
-<<<<<<< Updated upstream
-
-=======
-<<<<<<< HEAD
 
     public static final RegistryObject<EntityType<SpectacledBearEntity>> SPECTACLED_BEAR =
             REGISTRY.builder (SpectacledBearEntity::new, EntityClassification.CREATURE)
@@ -74,11 +70,6 @@ public class EcoRegionsEntities {
                     .spawns(2, 2, 3, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.DRY_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(0.0F, 0.0F).clientTrackingRange(10))
                     .build("red_river_hog");
-    public static void registerSpawnPlacements() {
-=======
->>>>>>> e72678ad9e555d469b3f26c4fc0e51a934badef5
-
->>>>>>> Stashed changes
     public static void registerSpawnPlacements() {
         EntitySpawnPlacementRegistry.register(BUSH_DOG.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(SPECTACLED_BEAR.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
