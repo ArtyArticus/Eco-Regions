@@ -17,4 +17,8 @@ public class RedRiverHogRenderer extends ZawaMobRenderer<RedRiverHogEntity, RedR
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }
+    @Override
+    protected boolean isSexuallyDimorphic() {
+        return true;
+    }
 }

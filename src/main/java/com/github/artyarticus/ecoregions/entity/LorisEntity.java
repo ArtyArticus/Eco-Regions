@@ -15,30 +15,42 @@ import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
 import javax.annotation.Nullable;
 
-public class BlackbuckEntity extends ZawaLandEntity {
-    public BlackbuckEntity(EntityType<? extends ZawaLandEntity> type, World world) {
+public class LorisEntity extends ZawaLandEntity implements SpeciesVariantsEntity {
+    public LorisEntity(EntityType<? extends ZawaLandEntity> type, World world) {
         super(type, world);
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 14.0).add(Attributes.ATTACK_DAMAGE, 2);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 21.0).add(Attributes.ATTACK_DAMAGE, 3.0);
     }
 
     @Nullable
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
-        return EcoRegionsEntities.BLACKBUCK.get().create(world);
+        return EcoRegionsEntities.LORIS.get().create(world);
+    }
+
+    @Override
+    public int getVariantByBiome(IWorld iWorld) {
+        return random.nextInt(getWildVariants());
     }
 
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 2.0D, 2.5D, true));
-        this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-
+        this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
     }
     @Override
     public float getMaleRatio() {
-        return 0.25F;
+        return 0.14F;
+    }
+
+    @Override
+    public float getScale() {
+        if (isBaby()) return 0.6F;
+        int variant = getVariant();
+        if (variant == 1) return 1.15F;
+        if (variant == 2) return 0.95F;
+        return 1.0F;
     }
 }

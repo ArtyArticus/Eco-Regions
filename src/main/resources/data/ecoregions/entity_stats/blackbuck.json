@@ -12,7 +12,8 @@
   "speed": "fast",
   "enrichment": {
     "zawa:blocks": [
-      "zawa:hanging_browse",
+      "zawa:hay_browse",
+      "zawa:leaf_browse",
       "zawa:sprinkler"
     ]
   },

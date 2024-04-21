@@ -20,5 +20,8 @@
       "zawa:boomer_ball"
     ]
   },
-  "variant_count": 4
+  "variant_count": 4,
+  "captive_variants": [
+    "citrus"
+  ]
 }

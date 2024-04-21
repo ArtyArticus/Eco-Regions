@@ -243,8 +243,8 @@ public abstract class SpectacledBearModel extends ZawaBaseModel<SpectacledBearEn
         public ModelRenderer FootLeft;
 
         public Child() {
-            this.texWidth = 32;
-            this.texHeight = 16;
+            this.texWidth = 48;
+            this.texHeight = 32;
             this.Snout = new ModelRenderer(this, 20, 3);
             this.Snout.setPos(0.0F, 0.2F, -1.2F);
             this.Snout.addBox(-1.5F, -1.0F, -2.0F, 3.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);

@@ -17,4 +17,9 @@ public class SpectacledBearRenderer extends ZawaMobRenderer<SpectacledBearEntity
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }
+    @Override
+    protected boolean hasBabyVariants(SpectacledBearEntity entity) {
+        return false;
+    }
 }
+

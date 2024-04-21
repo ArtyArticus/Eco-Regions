@@ -1,0 +1,20 @@
+{
+  "temperament": "defensive",
+  "kibble": "zawa:carnivore_kibble",
+  "size": "small",
+  "fertility": "low",
+  "breeding_item": "minecraft:mutton",
+  "litter_size": {
+    "min": 1,
+    "max": 3
+  },
+  "diet": "zawa:small_carnivore",
+  "speed": "fast",
+  "enrichment": {
+    "zawa:blocks": [
+      "zawa:scratching_post",
+      "zawa:sprinkler"
+    ]
+  },
+  "variant_count": 2
+}
