@@ -30,9 +30,9 @@ public class PorcupineEntity extends ZawaLandEntity {
 
     @Override
     protected void registerGoals() {
-        super.registerGoals();
-        this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 2.0D, 2.5D, true));
-        this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+        //super.registerGoals();
+        //this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 2.0D, 2.5D, true));
+        //this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
 
     }
 }

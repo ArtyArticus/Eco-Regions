@@ -5,6 +5,7 @@ import com.google.common.collect.ImmutableList;
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.math.MathHelper;
 import org.zawamod.zawa.client.model.ZawaBaseModel;
 
 public abstract class GiantOtterModel extends ZawaBaseModel<GiantOtterEntity> {
@@ -199,12 +200,17 @@ public abstract class GiantOtterModel extends ZawaBaseModel<GiantOtterEntity> {
         @Override
         public void setupAnim(GiantOtterEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-
         }
 
         @Override
         public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        }
+            float speed = 1.0f;
+            float degree = 1.0f;
+
+            this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.2F) * 0.2F - 0.227F;
+            this.Head.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.2F) * 0.2F + 0.592F;
+            this.Tail1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.2F) * 0.2F - 0.162F;
+            this.Tail2.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.2F) * 0.2F + 0.364F;        }
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -367,12 +373,21 @@ public abstract class GiantOtterModel extends ZawaBaseModel<GiantOtterEntity> {
         @Override
         public void setupAnim(GiantOtterEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-
+            this.Neck.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
+            this.Head.yRot = netHeadYaw / (180F / (float) Math.PI);
+            this.Head.xRot = (headPitch / (180F / (float) Math.PI)) + 0.592F;
+            this.Head.zRot = headPitch / (180F / (float) Math.PI);
         }
 
         @Override
         public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        }
+            float speed = 1.0f;
+            float degree = 1.0f;
+            this.Neck.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.740F;
+            this.Head.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.2F) * 0.5F + 0.592F;
+            this.Tail1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.34F) * 0.5F + 0.462F;
+            this.Tail1.zRot = MathHelper.cos(3.0F + limbSwing * speed * 0.05F) * limbSwingAmount * (degree * 0.6F) * 0.5F;
+            this.Tail2.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.5F) * 0.5F + 0.392F;        }
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
