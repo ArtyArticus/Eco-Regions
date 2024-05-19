@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "zawa:termite",
+          "name": "zawa:termites",
           "functions": [
             {
               "function": "minecraft:set_count",
