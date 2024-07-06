@@ -32,9 +32,9 @@ public class SpectacledBearEntity extends ZawaLandEntity {
 
     @Override
     protected void registerGoals() {
-        //super.registerGoals();
-        //this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 2.0D, 2.5D, true));
-        //this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-        //this.targetSelector.addGoal(3, new NonTamedTargetGoal<>(this, PlayerEntity.class, true, (entity) -> this.distanceToSqr(entity) <= 10.0D));
+        super.registerGoals();
+        this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 2.0D, 2.5D, true));
+        this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+        this.targetSelector.addGoal(3, new NonTamedTargetGoal<>(this, PlayerEntity.class, true, (entity) -> this.distanceToSqr(entity) <= 10.0D));
     }
 }

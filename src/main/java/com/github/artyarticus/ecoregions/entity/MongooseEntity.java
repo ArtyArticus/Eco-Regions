@@ -35,8 +35,8 @@ public class MongooseEntity extends ZawaLandEntity implements SpeciesVariantsEnt
 
     @Override
     protected void registerGoals() {
-        //super.registerGoals();
-        //this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
+        super.registerGoals();
+        this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
     }
     @Override
     public float getMaleRatio() {

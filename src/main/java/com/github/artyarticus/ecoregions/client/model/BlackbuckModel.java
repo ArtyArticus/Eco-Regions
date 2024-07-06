@@ -35,8 +35,8 @@ public abstract class BlackbuckModel extends ZawaBaseModel<BlackbuckEntity> {
         public ModelRenderer UpperLegLeft;
         public ModelRenderer LowerLegLeft;
         public ModelRenderer FootLeft;
-        public ModelRenderer UpperLegLeft_1;
-        public ModelRenderer LowerLegLeft_1;
+        public ModelRenderer UpperLegRight;
+        public ModelRenderer LowerLegRight;
         public ModelRenderer FootRight;
         public ModelRenderer UpperArmLeft;
         public ModelRenderer ArmLeft;
@@ -76,10 +76,10 @@ public abstract class BlackbuckModel extends ZawaBaseModel<BlackbuckEntity> {
             this.Snout.setPos(0.0F, -1.0F, -1.4F);
             this.Snout.addBox(-1.5F, 0.0F, -3.5F, 3.0F, 2.0F, 3.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(Snout, 0.0911061832922575F, 0.0F, 0.0F);
-            this.LowerLegLeft_1 = new ModelRenderer(this, 32, 53);
-            this.LowerLegLeft_1.setPos(0.05F, 4.8F, 1.7F);
-            this.LowerLegLeft_1.addBox(-1.0F, 0.0F, -2.0F, 2.0F, 5.0F, 2.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(LowerLegLeft_1, -0.8203047484373349F, 0.0F, 0.0F);
+            this.LowerLegRight = new ModelRenderer(this, 32, 53);
+            this.LowerLegRight.setPos(0.05F, 4.8F, 1.7F);
+            this.LowerLegRight.addBox(-1.0F, 0.0F, -2.0F, 2.0F, 5.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(LowerLegRight, -0.8203047484373349F, 0.0F, 0.0F);
             this.Horn5Left = new ModelRenderer(this, 10, 30);
             this.Horn5Left.mirror = true;
             this.Horn5Left.setPos(-0.1F, -2.7F, -0.1F);
@@ -122,10 +122,10 @@ public abstract class BlackbuckModel extends ZawaBaseModel<BlackbuckEntity> {
             this.Horn5Right.setPos(0.1F, -2.7F, -0.1F);
             this.Horn5Right.addBox(-0.5F, -2.0F, 0.0F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(Horn5Right, 0.0F, 0.0F, -0.5462880425584197F);
-            this.UpperLegLeft_1 = new ModelRenderer(this, 19, 54);
-            this.UpperLegLeft_1.setPos(0.0F, 6.3F, -1.5F);
-            this.UpperLegLeft_1.addBox(-1.0F, -0.2F, -0.3F, 2.0F, 5.0F, 2.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(UpperLegLeft_1, 0.7330382858376184F, 0.0F, 0.0F);
+            this.UpperLegRight = new ModelRenderer(this, 19, 54);
+            this.UpperLegRight.setPos(0.0F, 6.3F, -1.5F);
+            this.UpperLegRight.addBox(-1.0F, -0.2F, -0.3F, 2.0F, 5.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(UpperLegRight, 0.7330382858376184F, 0.0F, 0.0F);
             this.Horn3Left = new ModelRenderer(this, 10, 30);
             this.Horn3Left.mirror = true;
             this.Horn3Left.setPos(-0.1F, -2.68F, -0.1F);
@@ -240,18 +240,18 @@ public abstract class BlackbuckModel extends ZawaBaseModel<BlackbuckEntity> {
             this.setRotateAngle(Horn2Left, 0.0F, 0.0F, -0.5462880425584197F);
             this.ThighLeft.addChild(this.UpperLegLeft);
             this.Head.addChild(this.Snout);
-            this.UpperLegLeft_1.addChild(this.LowerLegLeft_1);
+            this.UpperLegRight.addChild(this.LowerLegRight);
             this.Horn4Left.addChild(this.Horn5Left);
             this.Chest.addChild(this.Body);
             this.Horn3Left.addChild(this.Horn4Left);
-            this.LowerLegLeft_1.addChild(this.FootRight);
+            this.LowerLegRight.addChild(this.FootRight);
             this.ArmLeft.addChild(this.HandLeft);
             this.Hips.addChild(this.Tail);
             this.Neck.addChild(this.Head);
             this.ArmBaseRight.addChild(this.UpperArmRight);
             this.Head.addChild(this.EarRight);
             this.Horn4Right.addChild(this.Horn5Right);
-            this.ThighRight.addChild(this.UpperLegLeft_1);
+            this.ThighRight.addChild(this.UpperLegRight);
             this.Horn2Left.addChild(this.Horn3Left);
             this.Neck.addChild(this.NeckBase);
             this.Hips.addChild(this.ThighLeft);
@@ -283,17 +283,19 @@ public abstract class BlackbuckModel extends ZawaBaseModel<BlackbuckEntity> {
         @Override
         public void setupAnim(BlackbuckEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-
+            this.Neck.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
+            this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
+            this.Head.xRot = (headPitch / (180F / (float) Math.PI)) + 1.047F;
+            this.Head.zRot = headPitch / (180F / (float) Math.PI) * 0.05F;
         }
 
         @Override
         public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             float speed = 1.0f;
             float degree = 1.0f;
-
-            this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.2F) * 0.2F - 0.182F;
-            this.Head.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.2F) * 0.2F + 1.047F;
-            this.Tail.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.2F) * 0.2F - 0.319F;}
+            this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.07F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.409F;
+            this.Head.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.07F) * limbSwingAmount * (degree * -0.15F) * 0.5F + 1.047F;
+        }
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -302,6 +304,40 @@ public abstract class BlackbuckModel extends ZawaBaseModel<BlackbuckEntity> {
                 limbSwingAmount = 0.3F;
             }
 
+            if (entity.isSprinting()) {
+                float speed = 1.0f;
+                float degree = 0.5f;
+
+
+            } else {
+                float speed = 1.65f;
+                float degree = 1.0f;
+                this.Neck.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.409F;
+                this.Head.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.2F) * 0.5F + 1.047F;
+
+                this.Chest.y = MathHelper.cos(3.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -1F) * 0.5F + 11.4F;
+                this.Chest.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.1F) * 0.5F - 0.453F;
+                this.Body.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.1F) * 0.5F + 0.471F;
+                this.Hips.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.261F;
+
+                this.ArmBaseLeft.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.6F) * 0.5F + 0.546F;
+                this.UpperArmLeft.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.3F) * 0.5F - 0.087F;
+                this.ArmLeft.xRot = MathHelper.cos(6.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1F) * 0.5F;
+                this.HandLeft.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.8F) * 0.5F;
+                this.ArmBaseRight.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.6F) * 0.5F + 0.546F;
+                this.UpperArmRight.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.3F) * 0.5F - 0.087F;
+                this.ArmRight.xRot = MathHelper.cos(6.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1F) * 0.5F;
+                this.HandRight.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.8F) * 0.5F;
+
+                this.ThighLeft.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 2.3F) * 0.5F + 0.227F;
+                this.UpperLegLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.5F) * 0.5F + 0.733F;
+                this.LowerLegLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.5F) * 0.5F - 0.820F;
+                this.FootLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.5F) * 0.5F + 0.139F;
+                this.ThighRight.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -2.3F) * 0.5F + 0.227F;
+                this.UpperLegRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.5F) * 0.5F + 0.733F;
+                this.LowerLegRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.5F) * 0.5F - 0.820F;
+                this.FootRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.5F) * 0.5F + 0.139F;
+            }
         }
     }
 
