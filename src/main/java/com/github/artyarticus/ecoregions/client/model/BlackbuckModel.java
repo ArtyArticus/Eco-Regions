@@ -299,11 +299,6 @@ public abstract class BlackbuckModel extends ZawaBaseModel<BlackbuckEntity> {
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            if (isSwimming) {
-                limbSwing = (float) entity.tickCount;
-                limbSwingAmount = 0.3F;
-            }
-
             if (entity.isSprinting()) {
                 float speed = 1.0f;
                 float degree = 0.5f;
@@ -357,7 +352,7 @@ public abstract class BlackbuckModel extends ZawaBaseModel<BlackbuckEntity> {
         public ModelRenderer UpperLegRight;
         public ModelRenderer LowerLegRight;
         public ModelRenderer FootRight;
-        public ModelRenderer BottomNeck;
+        public ModelRenderer Head;
         public ModelRenderer NeckBottom;
         public ModelRenderer EarLeft;
         public ModelRenderer EarRight;
@@ -479,10 +474,10 @@ public abstract class BlackbuckModel extends ZawaBaseModel<BlackbuckEntity> {
             this.ThighLeft.setPos(1.4F, 1.3F, 4.5F);
             this.ThighLeft.addBox(-1.0F, 0.0F, -1.5F, 2.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(ThighLeft, -0.05235987755982988F, 0.0F, 0.0F);
-            this.BottomNeck = new ModelRenderer(this, 19, 9);
-            this.BottomNeck.setPos(0.0F, -2.6F, -1.0F);
-            this.BottomNeck.addBox(-1.5F, -1.5F, -1.5F, 3.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(BottomNeck, -0.591841146688116F, 0.0F, 0.0F);
+            this.Head = new ModelRenderer(this, 19, 9);
+            this.Head.setPos(0.0F, -2.6F, -1.0F);
+            this.Head.addBox(-1.5F, -1.5F, -1.5F, 3.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Head, -0.591841146688116F, 0.0F, 0.0F);
             this.ArmRight = new ModelRenderer(this, 16, 27);
             this.ArmRight.setPos(0.05F, 2.0F, -1.0F);
             this.ArmRight.addBox(-0.5F, 0.0F, 0.0F, 1.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
@@ -493,7 +488,7 @@ public abstract class BlackbuckModel extends ZawaBaseModel<BlackbuckEntity> {
             this.Neck.addChild(this.NeckBottom);
             this.Snout.addChild(this.Mouth);
             this.ThighLeft.addChild(this.UpperLegLeft);
-            this.BottomNeck.addChild(this.EarLeft);
+            this.Head.addChild(this.EarLeft);
             this.UpperArmLeft.addChild(this.ArmLeft);
             this.ThighRight.addChild(this.UpperLegRight);
             this.ArmLeft.addChild(this.HandLeft);
@@ -503,14 +498,14 @@ public abstract class BlackbuckModel extends ZawaBaseModel<BlackbuckEntity> {
             this.LowerLegRight.addChild(this.FootRight);
             this.ArmBaseRight.addChild(this.UpperArmRight);
             this.Body.addChild(this.Tail);
-            this.BottomNeck.addChild(this.Snout);
+            this.Head.addChild(this.Snout);
             this.Body.addChild(this.ThighRight);
             this.Chest.addChild(this.Body);
             this.ArmBaseLeft.addChild(this.UpperArmLeft);
-            this.BottomNeck.addChild(this.EarRight);
+            this.Head.addChild(this.EarRight);
             this.ArmRight.addChild(this.HandRight);
             this.Body.addChild(this.ThighLeft);
-            this.Neck.addChild(this.BottomNeck);
+            this.Neck.addChild(this.Head);
             this.UpperArmRight.addChild(this.ArmRight);
             this.saveBase();
 
@@ -519,16 +514,50 @@ public abstract class BlackbuckModel extends ZawaBaseModel<BlackbuckEntity> {
         @Override
         public void setupAnim(BlackbuckEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-
+            this.Neck.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
+            this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
+            this.Head.xRot = (headPitch / (180F / (float) Math.PI)) - 0.59F;
+            this.Head.zRot = headPitch / (180F / (float) Math.PI) * 0.05F;
         }
 
         @Override
         public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+            float speed = 1.0f;
+            float degree = 1.0f;
+            this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.07F) * limbSwingAmount * (degree * 0.2F) * 0.5F + 0.91F;
+            this.Head.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.07F) * limbSwingAmount * (degree * -0.15F) * 0.5F - 0.59F;
+
+            this.Tail.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.07F) * limbSwingAmount * (degree * -0.2F) * 0.5F + 0.46F;
+            this.Tail.zRot = MathHelper.cos(1.0F + limbSwing * speed * 0.07F) * limbSwingAmount * (degree * 0.3F) * 0.5F;
         }
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+                float speed = 1.2f;
+                float degree = 0.8f;
+                this.Neck.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.15F) * 0.5F + 0.91F;
+                this.Head.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.1F) * 0.5F - 0.59F;
+                this.Chest.y = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.7F) * 0.5F + 15.9F;
+                this.Chest.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.02F) * 0.5F - 0.23F;
+                this.Body.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.1F) * 0.5F + 0.23F;
+                this.ArmBaseLeft.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -0.9F) * 0.5F + 0.35F;
+                this.ArmLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.3F) * 0.5F + 0.0F;
+                this.UpperArmLeft.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.3F) * 0.5F - 0.09F;
+                this.HandLeft.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.8F) * 0.5F + 0.0F;
+                this.ArmBaseRight.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 0.9F) * 0.5F + 0.35F;
+                this.ArmRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.3F) * 0.5F + 0.0F;
+                this.UpperArmRight.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.3F) * 0.5F - 0.09F;
+                this.HandRight.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.8F) * 0.5F + 0.0F;
+                this.ThighLeft.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 2.3F) * 0.5F - 0.05F;
+                this.UpperLegLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.5F) * 0.5F + 0.66F;
+                this.LowerLegLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.5F) * 0.5F - 0.77F;
+                this.FootLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.5F) * 0.5F;
+                this.ThighRight.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -2.3F) * 0.5F - 0.05F;
+                this.UpperLegRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.5F) * 0.5F + 0.66F;
+                this.LowerLegRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.5F) * 0.5F - 0.77F;
+                this.FootRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.5F) * 0.5F;
 
+            }
         }
     }
-}
+

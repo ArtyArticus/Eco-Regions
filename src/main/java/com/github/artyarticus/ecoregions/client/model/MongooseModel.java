@@ -229,13 +229,7 @@ public abstract class MongooseModel extends ZawaBaseModel<MongooseEntity> {
             this.loadBase();
             float speed = 1.5F;
             float degree = 0.5F;
-            if (this.isSwimming) {
-                limbSwing = (float)entity.tickCount;
-                limbSwingAmount = 0.3F;
-                speed = 2.0F;
-            }
-
-            if (entity.isSprinting() && !this.isSwimming) {
+            if (entity.isSprinting()) {
                 this.UpperArmRight.xRot = MathHelper.cos(limbSwing * speed * 0.3F + 3.1415927F) * degree * 5.0F * limbSwingAmount * 0.5F;
                 this.LowerArmRight.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * -3.0F * limbSwingAmount * 0.5F -0.234F;
                 this.HandRight.xRot = MathHelper.cos(limbSwing * speed * 0.3F + 3.1415927F) * degree * -3.0F * limbSwingAmount * 0.5F + 0.195F;
@@ -256,6 +250,7 @@ public abstract class MongooseModel extends ZawaBaseModel<MongooseEntity> {
                 this.Tail2.xRot = MathHelper.cos(6.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * 3.0F * limbSwingAmount * 0.5F;
 
                 this.Body.y = MathHelper.cos(2.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * 0.5F * limbSwingAmount * 0.5F + -0.02F + 18.2F;
+
             } else {
                 this.UpperArmLeft.xRot = MathHelper.cos(1.5F + limbSwing * speed * 0.2F) * degree * 1.5F * limbSwingAmount + 0.0F;
                 this.LowerArmLeft.xRot = MathHelper.cos(5.5F + limbSwing * speed * 0.2F) * degree * -1.0F * limbSwingAmount -0.234F;
@@ -474,7 +469,7 @@ public abstract class MongooseModel extends ZawaBaseModel<MongooseEntity> {
 
         @Override
         public void setupAnim(MongooseEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+            super.setupAnim(entity, entity.tickCount, 0.3F, ageInTicks, netHeadYaw, headPitch);
 
         }
 

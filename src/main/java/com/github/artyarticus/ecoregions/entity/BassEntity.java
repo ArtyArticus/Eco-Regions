@@ -2,7 +2,9 @@ package com.github.artyarticus.ecoregions.entity;
 
 import com.github.artyarticus.ecoregions.item.EcoRegionsItems;
 import net.minecraft.entity.AgeableEntity;
+import net.minecraft.entity.EntitySize;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.Pose;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.PanicGoal;
@@ -33,7 +35,9 @@ public class BassEntity extends ZawaAmbientFishEntity {
         return SoundEvents.COD_FLOP;
     }
 
-
+    protected float getStandingEyeHeight(Pose pose, EntitySize size) {
+        return size.height * 0.85F;
+    }
     @Nullable
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {

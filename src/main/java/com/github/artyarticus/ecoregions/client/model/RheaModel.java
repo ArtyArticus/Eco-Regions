@@ -31,8 +31,8 @@ public abstract class RheaModel extends ZawaBaseModel<RheaEntity> {
         public ModelRenderer Chest;
         public ModelRenderer WingRight;
         public ModelRenderer WingLeft;
-        public ModelRenderer Neck1;
-        public ModelRenderer Neck2;
+        public ModelRenderer NeckBase;
+        public ModelRenderer Neck;
         public ModelRenderer Neck3;
         public ModelRenderer Neck4;
         public ModelRenderer Head;
@@ -100,10 +100,10 @@ public abstract class RheaModel extends ZawaBaseModel<RheaEntity> {
             this.Tail2.setPos(0.0F, 0.5F, 4.5F);
             this.Tail2.addBox(-3.5F, -0.5F, 0.0F, 7.0F, 6.0F, 3.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(Tail2, -0.45535640450848164F, 0.0F, 0.0F);
-            this.Neck1 = new ModelRenderer(this, 42, 0);
-            this.Neck1.setPos(0.0F, 2.5F, -0.4F);
-            this.Neck1.addBox(-2.5F, -2.0F, -3.0F, 5.0F, 6.0F, 5.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(Neck1, 0.8651597048872669F, 0.0F, 0.0F);
+            this.NeckBase = new ModelRenderer(this, 42, 0);
+            this.NeckBase.setPos(0.0F, 2.5F, -0.4F);
+            this.NeckBase.addBox(-2.5F, -2.0F, -3.0F, 5.0F, 6.0F, 5.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(NeckBase, 0.8651597048872669F, 0.0F, 0.0F);
             this.jawUpper1 = new ModelRenderer(this, 79, 5);
             this.jawUpper1.setPos(0.0F, 0.0F, -2.0F);
             this.jawUpper1.addBox(-1.0F, 0.0F, -1.5F, 2.0F, 1.0F, 2.0F, 0.0F, 0.0F, 0.0F);
@@ -134,10 +134,10 @@ public abstract class RheaModel extends ZawaBaseModel<RheaEntity> {
             this.ThighRight.setPos(-2.2F, 0.1F, 0.5F);
             this.ThighRight.addBox(-1.5F, -1.0F, -4.0F, 3.0F, 7.0F, 4.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(ThighRight, 0.3642502295386026F, -0.017453292519943295F, -0.017453292519943295F);
-            this.Neck2 = new ModelRenderer(this, 61, 19);
-            this.Neck2.setPos(0.0F, 1.0F, -3.0F);
-            this.Neck2.addBox(-2.0F, -3.0F, -4.0F, 4.0F, 4.0F, 7.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(Neck2, -1.1838568635856868F, 0.0F, 0.0F);
+            this.Neck = new ModelRenderer(this, 61, 19);
+            this.Neck.setPos(0.0F, 1.0F, -3.0F);
+            this.Neck.addBox(-2.0F, -3.0F, -4.0F, 4.0F, 4.0F, 7.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Neck, -1.1838568635856868F, 0.0F, 0.0F);
             this.toeLeftLeft_1 = new ModelRenderer(this, 108, 56);
             this.toeLeftLeft_1.setPos(0.5F, 0.1F, -0.5F);
             this.toeLeftLeft_1.addBox(-0.5F, 0.0F, -2.4F, 1.0F, 1.0F, 3.0F, 0.0F, 0.0F, 0.0F);
@@ -174,14 +174,14 @@ public abstract class RheaModel extends ZawaBaseModel<RheaEntity> {
             this.ThighLeft.addChild(this.legLowerLeft);
             this.Neck3.addChild(this.Neck4);
             this.Tail1.addChild(this.Tail2);
-            this.Chest.addChild(this.Neck1);
+            this.Chest.addChild(this.NeckBase);
             this.Head.addChild(this.jawUpper1);
-            this.Neck2.addChild(this.Neck3);
+            this.Neck.addChild(this.Neck3);
             this.toeFrontLeft.addChild(this.toeLeftLeft);
             this.Shoulder.addChild(this.WingLeft);
             this.ThighRight.addChild(this.legLowerRight);
             this.Body.addChild(this.ThighRight);
-            this.Neck1.addChild(this.Neck2);
+            this.NeckBase.addChild(this.Neck);
             this.toeFrontLeft_1.addChild(this.toeLeftLeft_1);
             this.toeFrontLeft_1.addChild(this.toeRightLeft_1);
             this.Shoulder.addChild(this.Chest);
@@ -192,11 +192,20 @@ public abstract class RheaModel extends ZawaBaseModel<RheaEntity> {
         }
 
         @Override
+        public void setupAnim(RheaEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+            super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+            this.Neck.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
+            this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
+            this.Head.xRot = (headPitch / (180F / (float) Math.PI)) + 1.4F;
+            this.Head.zRot = headPitch / (180F / (float) Math.PI) * 0.05F;
+        }
+
+        @Override
         public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             float speed = 1.0f;
             float degree = 1.0f;
-
-            this.Head.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * -0.3F) * 0.5F + 0.117F;
+            this.NeckBase.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.1F) * 0.5F + 0.87F;
+            this.Head.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * -0.3F) * 0.5F + 1.4F;
         }
 
         @Override
@@ -207,39 +216,49 @@ public abstract class RheaModel extends ZawaBaseModel<RheaEntity> {
             }
 
             if (entity.isSprinting()) {
-                float speed = 2.0f;
-                float degree = 1.0f;
-
-                this.Head.xRot = MathHelper.cos(5F + limbSwing * speed * 0.7F) * limbSwingAmount * (degree * -0.9F) * 0.5F + 0.117F;
-                this.Chest.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.7F) * limbSwingAmount * (degree * 0.6F) * 0.5F + 0.312F;
-
-                this.Body.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.7F) * limbSwingAmount * (degree * -0.5F) * 0.5F + 0.117F;
-                this.Body.y = MathHelper.cos(2F + limbSwing * speed * 0.7F) * limbSwingAmount * (degree * -8F) * 0.5F + 7.2F;
+                float speed = 1.0f;
+                float degree = 0.5f;
+                this.NeckBase.xRot = MathHelper.cos(6.0F + limbSwing * speed * 0.7F) * limbSwingAmount * (degree * 0.7F) * 0.5F + 0.87F;
+                this.Head.xRot = MathHelper.cos(5F + limbSwing * speed * 0.7F) * limbSwingAmount * (degree * -0.9F) * 0.5F + 1.4F;
+                this.Chest.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.7F) * limbSwingAmount * (degree * 0.6F) * 0.5F - 0.41F;
+                this.Tail1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.7F) * limbSwingAmount * (degree * -0.5F) * 0.5F - 0.5F;
+                this.Body.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.7F) * limbSwingAmount * (degree * -0.5F) * 0.5F - 0.04F;
+                this.Body.y = MathHelper.cos(2F + limbSwing * speed * 0.7F) * limbSwingAmount * (degree * -8F) * 0.5F + 8.6F;
                 this.Body.zRot = MathHelper.cos(2F + limbSwing * speed * 0.35F) * limbSwingAmount * (degree * -0.3F) * 0.5F;
                 this.Body.yRot = MathHelper.cos(2F + limbSwing * speed * 0.35F) * limbSwingAmount * (degree * -0.3F) * 0.5F;
 
-                this.ThighLeft.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.35F) * limbSwingAmount * (degree * -4F) * 0.5F + 0.156F;
-                this.ThighLeft.y = MathHelper.cos(7.0F + limbSwing * speed * 0.35F) * limbSwingAmount * (degree * 7F) * 0.5F + 4.0F;
-                this.ThighLeft.z = MathHelper.cos(3.0F + limbSwing * speed * 0.35F) * limbSwingAmount * (degree * -8F) * 0.5F + 1.0F;
+                this.ThighLeft.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.35F) * limbSwingAmount * (degree * -4F) * 0.5F + 0.36F;
+                this.ThighLeft.y = MathHelper.cos(7.0F + limbSwing * speed * 0.35F) * limbSwingAmount * (degree * 7F) * 0.5F + 0.1F;
+                this.ThighLeft.z = MathHelper.cos(3.0F + limbSwing * speed * 0.35F) * limbSwingAmount * (degree * -8F) * 0.5F + 0.5F;
+                this.legLowerLeft.xRot = MathHelper.cos(0.5F + limbSwing * speed * 0.35F) * limbSwingAmount * (degree * 4F) * 0.5F - 0.39F;
+                this.toeFrontLeft.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.35F) * limbSwingAmount * (degree * 3F) * 0.5F + 0.1F;
 
-                this.ThighRight.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.35F) * limbSwingAmount * (degree * 4F) * 0.5F + 0.156F;
-                this.ThighRight.y = MathHelper.cos(7.0F + limbSwing * speed * 0.35F) * limbSwingAmount * (degree * -7F) * 0.5F + 4.0F;
-                this.ThighRight.z = MathHelper.cos(3.0F + limbSwing * speed * 0.35F) * limbSwingAmount * (degree * 8F) * 0.5F + 1.0F;
+                this.ThighRight.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.35F) * limbSwingAmount * (degree * 4F) * 0.5F + 0.36F;
+                this.ThighRight.y = MathHelper.cos(7.0F + limbSwing * speed * 0.35F) * limbSwingAmount * (degree * -7F) * 0.5F + 0.1F;
+                this.ThighRight.z = MathHelper.cos(3.0F + limbSwing * speed * 0.35F) * limbSwingAmount * (degree * 8F) * 0.5F + 0.5F;
+                this.legLowerRight.xRot = MathHelper.cos(0.5F + limbSwing * speed * 0.35F) * limbSwingAmount * (degree * -4F) * 0.5F - 0.39F;
+                this.toeFrontLeft_1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.35F) * limbSwingAmount * (degree * -3F) * 0.5F + 0.1F;
 
 
             } else {
-                float speed = 2.75f;
+                float speed = 1.5f;
                 float degree = 1.0f;
-                this.Head.xRot = MathHelper.cos(2.2F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.5F) * 0.5F + 0.117F;
-                this.Chest.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.1F) * 0.5F + 0.312F;
-                this.Body.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.05F) * 0.5F + 0.117F;
-                this.Body.y = MathHelper.cos(4.5F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 1F) * 0.5F + 7.2F;
+                this.NeckBase.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F + 0.87F;
+                this.Head.xRot = MathHelper.cos(2.2F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.5F) * 0.5F + 1.4F;
+                this.Chest.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.1F) * 0.5F - 0.41F;
+                this.Tail1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.05F) * 0.5F - 0.5F;
+                this.Body.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.05F) * 0.5F - 0.04F;
+                this.Body.y = MathHelper.cos(4.5F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 1F) * 0.5F + 8.6F;
 
-                this.ThighLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -2F) * 0.5F + 0.156F;
-                this.ThighLeft.y = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 2F) * 0.5F + 4.0F;
-                this.ThighRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.156F;
-                this.ThighRight.y = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -2F) * 0.5F + 4.0F;
+                this.ThighLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -2F) * 0.5F + 0.36F;
+                this.ThighLeft.y = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.1F;
+                this.legLowerLeft.xRot = MathHelper.cos(0.5F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 3F) * 0.5F - 0.39F;
+                this.toeFrontLeft.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.1F;
 
+                this.ThighRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.36F;
+                this.ThighRight.y = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -2F) * 0.5F + 0.1F;
+                this.legLowerRight.xRot = MathHelper.cos(0.5F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -3F) * 0.5F - 0.39F;
+                this.toeFrontLeft_1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -2F) * 0.5F + 0.1F;
             }
         }
     }
@@ -248,13 +267,13 @@ public abstract class RheaModel extends ZawaBaseModel<RheaEntity> {
     public static class Child extends RheaModel {
 
         public ModelRenderer Tail;
-        public ModelRenderer Neck1;
+        public ModelRenderer NeckBase;
         public ModelRenderer WingLeft;
         public ModelRenderer Back1;
         public ModelRenderer ThighLeft;
         public ModelRenderer ThighRight;
         public ModelRenderer WingRight;
-        public ModelRenderer Neck2;
+        public ModelRenderer Neck;
         public ModelRenderer Head;
         public ModelRenderer Jaw;
         public ModelRenderer BottomJaw;
@@ -296,10 +315,10 @@ public abstract class RheaModel extends ZawaBaseModel<RheaEntity> {
             this.ThighLeft.setPos(1.6F, 1.3F, 0.5F);
             this.ThighLeft.addBox(-1.5F, -0.5F, -0.5F, 2.0F, 3.0F, 2.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(ThighLeft, 0.27314402127920984F, 0.0F, 0.0F);
-            this.Neck2 = new ModelRenderer(this, 20, 11);
-            this.Neck2.setPos(0.0F, 0.0F, -1.0F);
-            this.Neck2.addBox(-1.0F, -4.0F, -1.5F, 2.0F, 6.0F, 2.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(Neck2, 0.8651597048872669F, 0.0F, 0.0F);
+            this.Neck = new ModelRenderer(this, 20, 11);
+            this.Neck.setPos(0.0F, 0.0F, -1.0F);
+            this.Neck.addBox(-1.0F, -4.0F, -1.5F, 2.0F, 6.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Neck, 0.8651597048872669F, 0.0F, 0.0F);
             this.LegBottomLeft = new ModelRenderer(this, 13, 14);
             this.LegBottomLeft.mirror = true;
             this.LegBottomLeft.setPos(0.01F, 2.0F, 0.0F);
@@ -365,10 +384,10 @@ public abstract class RheaModel extends ZawaBaseModel<RheaEntity> {
             this.Body.setPos(0.0F, 16.3F, 0.0F);
             this.Body.addBox(-2.0F, -2.5F, -2.5F, 4.0F, 5.0F, 6.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(Body, -0.13665927909957545F, 0.0F, 0.0F);
-            this.Neck1 = new ModelRenderer(this, 15, 20);
-            this.Neck1.setPos(0.0F, -2.0F, -2.0F);
-            this.Neck1.addBox(-1.5F, -0.4F, -1.0F, 3.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(Neck1, -0.7285004590772052F, 0.0F, 0.0F);
+            this.NeckBase = new ModelRenderer(this, 15, 20);
+            this.NeckBase.setPos(0.0F, -2.0F, -2.0F);
+            this.NeckBase.addBox(-1.5F, -0.4F, -1.0F, 3.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(NeckBase, -0.7285004590772052F, 0.0F, 0.0F);
             this.Jaw = new ModelRenderer(this, 33, 6);
             this.Jaw.setPos(0.0F, 0.5F, -1.0F);
             this.Jaw.addBox(-1.0F, -0.5F, -2.2F, 2.0F, 1.0F, 2.0F, 0.0F, 0.0F, 0.0F);
@@ -378,9 +397,9 @@ public abstract class RheaModel extends ZawaBaseModel<RheaEntity> {
             this.Jaw.addChild(this.Nose);
             this.LegUpperRight.addChild(this.LegBottomRight);
             this.Body.addChild(this.ThighLeft);
-            this.Neck1.addChild(this.Neck2);
+            this.NeckBase.addChild(this.Neck);
             this.LegUpperLeft.addChild(this.LegBottomLeft);
-            this.Neck2.addChild(this.Head);
+            this.Neck.addChild(this.Head);
             this.ThighRight.addChild(this.LegUpperRight);
             this.Back1.addChild(this.Back2);
             this.Head.addChild(this.BottomJaw);
@@ -394,7 +413,7 @@ public abstract class RheaModel extends ZawaBaseModel<RheaEntity> {
             this.MiddleToeRight.addChild(this.LeftToeRight);
             this.Body.addChild(this.WingLeft);
             this.Body.addChild(this.Back1);
-            this.Body.addChild(this.Neck1);
+            this.Body.addChild(this.NeckBase);
             this.Head.addChild(this.Jaw);
             this.saveBase();
 
@@ -403,18 +422,40 @@ public abstract class RheaModel extends ZawaBaseModel<RheaEntity> {
         @Override
         public void setupAnim(RheaEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-
+            this.Neck.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
+            this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
+            this.Head.xRot = (headPitch / (180F / (float) Math.PI)) + 0.05F;
+            this.Head.zRot = headPitch / (180F / (float) Math.PI) * 0.05F;
         }
 
         @Override
         public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+            float speed = 1.0f;
+            float degree = 1.0f;
+            this.NeckBase.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.73F;
+            this.Head.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * -0.3F) * 0.5F + 0.05F;
         }
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+                float speed = 1.2f;
+                float degree = 1.0f;
+                this.NeckBase.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.4F) * 0.5F - 0.73F;
+                this.Head.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.3F) * 0.5F + 0.05F;
+                this.Body.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.14F;
+                this.Body.y = MathHelper.cos(4.5F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 1F) * 0.5F + 16.3F;
 
+                this.ThighLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * -2F) * 0.5F + 0.27F;
+                this.ThighLeft.y = MathHelper.cos(2.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * 2F) * 0.5F + 1.3F;
+                this.LegUpperLeft.xRot = MathHelper.cos(0.5F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * 3F) * 0.5F;
+                this.MiddleToeLeft.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * -2F) * 0.5F + 0.05F;
+                this.ThighRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.27F;
+                this.ThighRight.y = MathHelper.cos(2.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * -2F) * 0.5F + 1.3F;
+                this.LegUpperRight.xRot = MathHelper.cos(0.5F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * -3F) * 0.5F;
+                this.MiddleToeRight.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.05F;
+            }
         }
     }
-}
+
 
 

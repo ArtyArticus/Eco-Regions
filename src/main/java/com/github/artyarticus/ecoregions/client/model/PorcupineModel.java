@@ -7,6 +7,7 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 import org.zawamod.zawa.client.model.ZawaBaseModel;
+import org.zawamod.zawa.client.model.ZawaModelRenderer;
 
 public abstract class PorcupineModel extends ZawaBaseModel<PorcupineEntity> {
     public ModelRenderer Chest;
@@ -334,17 +335,17 @@ public abstract class PorcupineModel extends ZawaBaseModel<PorcupineEntity> {
         @Override
         public void setupAnim(PorcupineEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-
+            this.Neck.yRot = (float)Math.toRadians((double)netHeadYaw) * 0.5F;
+            this.Head.yRot = (float)Math.toRadians((double)netHeadYaw) * 0.5F;
         }
 
-        @Override
         public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            float speed = 1.0f;
-            float degree = 1.0f;
-
-            this.Tail.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.2F) * 0.2F - 0.391F;
-            this.QuillHipConnector.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.2F) * 0.2F + 0.195F;        }
-
+            this.loadBase();
+            float speed = 0.8F;
+            float degree = 1.0F;
+            this.Head.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.05F + 3.1415927F) * degree * 0.3F * limbSwingAmount * 0.5F;
+            this.QuillHipConnector.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.05F + 3.1415927F) * degree * 0.3F * limbSwingAmount * 0.5F + 0.23F;
+        }
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             if (isSwimming) {
@@ -574,7 +575,7 @@ public abstract class PorcupineModel extends ZawaBaseModel<PorcupineEntity> {
 
         @Override
         public void setupAnim(PorcupineEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+            super.setupAnim(entity, entity.tickCount, 0.3F, ageInTicks, netHeadYaw, headPitch);
 
         }
 

@@ -195,7 +195,7 @@ public abstract class BushDogModel extends ZawaBaseModel<BushDogEntity> {
 
         @Override
         public void setupAnim(BushDogEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            super.setupAnim(entity, entity.tickCount, 0.3F, ageInTicks, netHeadYaw, headPitch);
+            super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Neck.yRot = (float)Math.toRadians((double)netHeadYaw) * 0.5F;
             this.Head.yRot = (float)Math.toRadians((double)netHeadYaw) * 0.5F;
         }
@@ -216,13 +216,8 @@ public abstract class BushDogModel extends ZawaBaseModel<BushDogEntity> {
             this.loadBase();
             float speed = 1.0F;
             float degree = 1.0F;
-            if (this.isSwimming) {
-                limbSwing = (float)entity.tickCount;
-                limbSwingAmount = 0.3F;
-                speed = 2.0F;
-            }
 
-            if (entity.isSprinting() && !this.isSwimming) {
+            if (entity.isSprinting()) {
                 speed = 1.9F;
                 degree = 0.3F;
                 this.ArmBaseLeft.xRot = MathHelper.cos(limbSwing * speed * 0.3F + 3.1415927F) * degree * 5.5F * limbSwingAmount * 0.5F + 0.227F;
@@ -252,6 +247,7 @@ public abstract class BushDogModel extends ZawaBaseModel<BushDogEntity> {
                 this.Tail1.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * -3.0F * limbSwingAmount * 0.5F -1.138F;
                 this.Tail2.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * 2.0F * limbSwingAmount * 0.5F + 0.273F;
                 this.Mouth.xRot = MathHelper.cos(limbSwing * speed * 0.3F + 3.1415927F) * degree * 0.5F * limbSwingAmount * 0.5F -0.091F;
+
             } else {
                 this.ArmBaseLeft.xRot = MathHelper.cos(limbSwing * speed * 0.2F + 3.1415927F) * degree * 1.5F * limbSwingAmount * 0.5F + 0.227F;
                 this.ArmLeft.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.2F + 3.1415927F) * degree * -1.5F * limbSwingAmount * 0.5F - 0.182F;
