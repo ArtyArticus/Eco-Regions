@@ -8,12 +8,12 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class BushDogRenderer extends ZawaMobRenderer<BushDogEntity, BushDogModel> {
     public BushDogRenderer(EntityRendererManager manager) {
-        super(manager, new BushDogModel.Adult(), new BushDogModel.Child(), 0.65F);
+        super(manager, new BushDogModel.Adult(), new BushDogModel.Child(), 0.4F);
     }
 
     @Override
     protected void scale(BushDogEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.8F : 1.0F;
+        float scale = entity.isBaby() ? 0.5F : 1.0F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

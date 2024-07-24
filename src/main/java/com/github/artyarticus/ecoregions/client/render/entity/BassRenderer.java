@@ -19,6 +19,7 @@ public class BassRenderer extends ZawaMobRenderer<BassEntity, BassModel> {
         matrixStack.scale(0.5F, 0.5F, 0.5F);
         super.scale(entity, matrixStack, partialTickTime);
     }
+
     @Override
     public ResourceLocation getBabyTexture(BassEntity entity, int variant) {
         if (variant >= entity.getWildVariants()) {

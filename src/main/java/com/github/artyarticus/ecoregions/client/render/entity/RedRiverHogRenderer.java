@@ -8,7 +8,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class RedRiverHogRenderer extends ZawaMobRenderer<RedRiverHogEntity, RedRiverHogModel> {
     public RedRiverHogRenderer(EntityRendererManager manager) {
-        super(manager, new RedRiverHogModel.Adult(), new RedRiverHogModel.Child(), 0.65F);
+        super(manager, new RedRiverHogModel.Adult(), new RedRiverHogModel.Child(), 0.60F);
     }
 
     @Override
@@ -17,6 +17,7 @@ public class RedRiverHogRenderer extends ZawaMobRenderer<RedRiverHogEntity, RedR
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }
+
     @Override
     protected boolean isSexuallyDimorphic() {
         return true;

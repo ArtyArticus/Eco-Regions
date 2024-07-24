@@ -8,7 +8,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class RheaRenderer extends ZawaMobRenderer<RheaEntity, RheaModel> {
     public RheaRenderer(EntityRendererManager manager) {
-        super(manager, new RheaModel.Adult(), new RheaModel.Child(), 0.65F);
+        super(manager, new RheaModel.Adult(), new RheaModel.Child(), 0.25F);
     }
 
     @Override

@@ -28,6 +28,7 @@ public class BassModel extends SegmentedModel<BassEntity> {
 
         return this.parts;
     }
+
     public BassModel() {
         this.texWidth = 64;
         this.texHeight = 64;
@@ -91,6 +92,7 @@ public class BassModel extends SegmentedModel<BassEntity> {
         this.Tail2.addChild(this.TailFin);
         this.Body.addChild(this.PectoralFinLeft);
     }
+
     @Override
     public void setupAnim(BassEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
     }

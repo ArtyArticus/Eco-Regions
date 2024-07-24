@@ -7,7 +7,6 @@ import net.minecraft.entity.Pose;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
-import net.minecraft.entity.ai.goal.PanicGoal;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
@@ -32,6 +31,7 @@ public class MongooseEntity extends ZawaLandEntity implements SpeciesVariantsEnt
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return EcoRegionsEntities.MONGOOSE.get().create(world);
     }
+
     @Override
     protected void customServerAiStep() {
         if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
@@ -42,16 +42,19 @@ public class MongooseEntity extends ZawaLandEntity implements SpeciesVariantsEnt
     public int getVariantByBiome(IWorld iWorld) {
         return random.nextInt(getWildVariants());
     }
+
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
         return size.height * 0.85F;
     }
+
     @Override
     protected void registerGoals() {
-       // super.registerGoals();
+        super.registerGoals();
         this.goalSelector.addGoal(4, new BreachGoal(this, 5));
         this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 4.0, 1.33, true));
-        this.targetSelector.addGoal(3, new HurtByTargetGoal(this, new Class[0]));
+        this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
     }
+
     @Override
     public float getMaleRatio() {
         return 0.14F;

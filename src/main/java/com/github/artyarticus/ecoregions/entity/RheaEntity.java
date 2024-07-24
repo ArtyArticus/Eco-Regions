@@ -9,7 +9,6 @@ import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
 import net.minecraft.entity.ai.goal.NonTamedTargetGoal;
-import net.minecraft.entity.ai.goal.PanicGoal;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -34,6 +33,7 @@ public class RheaEntity extends ZawaLandEntity implements OviparousEntity {
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return EcoRegionsEntities.RHEA.get().create(world);
     }
+
     @Override
     protected void customServerAiStep() {
         if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
@@ -44,17 +44,19 @@ public class RheaEntity extends ZawaLandEntity implements OviparousEntity {
     public ItemStack getBreedEggItem() {
         return EcoRegionsItems.RHEA_EGG.get().getDefaultInstance();
     }
+
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
         return size.height * 0.85F;
     }
+
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        super.registerGoals();
         this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 2.0, 1.33, true));
-        this.targetSelector.addGoal(2, new HurtByTargetGoal(this, new Class[0]));
+        this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
         this.targetSelector.addGoal(3, new NonTamedTargetGoal<>(this, PlayerEntity.class, true, (entity) -> this.distanceToSqr(entity) <= 10.0));
     }
+
     @Override
     public float getMaleRatio() {
         return 0.25F;

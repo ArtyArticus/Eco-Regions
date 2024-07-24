@@ -25,6 +25,7 @@ public class BassEntity extends ZawaAmbientFishEntity {
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
         return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 3.0);
     }
+
     @Override
     protected ItemStack getBucketItemStack() {
         return new ItemStack(EcoRegionsItems.BASS_BUCKET.get());
@@ -38,13 +39,15 @@ public class BassEntity extends ZawaAmbientFishEntity {
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
         return size.height * 0.85F;
     }
+
     @Nullable
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return EcoRegionsEntities.BASS.get().create(world);
     }
+
     @Override
-    protected void registerGoals () {
+    protected void registerGoals() {
         super.registerGoals();
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
     }

@@ -17,6 +17,6 @@ public class EcoRegionsItems {
     public static final RegistryObject<Item>
             BASS = REGISTRAR.register("bass", () -> new Item(new Item.Properties().tab(Zawa.ITEMS_GROUP)));
     public static final RegistryObject<Item>
-           BASS_BUCKET = REGISTRAR.register("bucket_of_bass", () -> new ZawaFishBucketItem(EcoRegionsEntities.BASS, () -> Fluids.WATER,
+            BASS_BUCKET = REGISTRAR.register("bucket_of_bass", () -> new ZawaFishBucketItem(EcoRegionsEntities.BASS, () -> Fluids.WATER,
             new Item.Properties().stacksTo(1).tab(Zawa.ITEMS_GROUP)));
 }

@@ -198,8 +198,8 @@ public abstract class SpectacledBearModel extends ZawaBaseModel<SpectacledBearEn
         @Override
         public void setupAnim(SpectacledBearEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-            this.Neck.yRot = (float) Math.toRadians((double) netHeadYaw) * 0.5F;
-            this.Head.yRot = (float) Math.toRadians((double) netHeadYaw) * 0.5F;
+            this.Neck.yRot = (float) Math.toRadians(netHeadYaw) * 0.5F;
+            this.Head.yRot = (float) Math.toRadians(netHeadYaw) * 0.5F;
         }
 
         @Override
@@ -216,7 +216,7 @@ public abstract class SpectacledBearModel extends ZawaBaseModel<SpectacledBearEn
                 limbSwingAmount = 0.3F;
 
             } else {
-                float speed = 0.8f;
+                float speed = 1.1f;
                 float degree = 0.7f;
 
                 this.Body.xRot = MathHelper.cos(limbSwing * speed * 0.4F) * degree * -0.05F * limbSwingAmount - 0.034F;
@@ -404,8 +404,8 @@ public abstract class SpectacledBearModel extends ZawaBaseModel<SpectacledBearEn
         @Override
         public void setupAnim(SpectacledBearEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-            this.Neck.yRot = (float) Math.toRadians((double) netHeadYaw) * 0.5F;
-            this.head.yRot = (float) Math.toRadians((double) netHeadYaw) * 0.5F;
+            this.Neck.yRot = (float) Math.toRadians(netHeadYaw) * 0.5F;
+            this.head.yRot = (float) Math.toRadians(netHeadYaw) * 0.5F;
         }
 
         public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -430,12 +430,12 @@ public abstract class SpectacledBearModel extends ZawaBaseModel<SpectacledBearEn
             this.ThighRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * degree * 1.5F * limbSwingAmount - 0.07F;
             this.UpperLegRight.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.2F) * degree * 0.5F * limbSwingAmount + 0.49F;
             this.FootRight.xRot = MathHelper.cos(-4.0F + limbSwing * speed * 0.2F) * degree * 1.0F * limbSwingAmount - 0.21F;
-            this.Body.xRot = MathHelper.cos(limbSwing * speed * 0.4F) * degree * -0.05F * limbSwingAmount -0.03F;
+            this.Body.xRot = MathHelper.cos(limbSwing * speed * 0.4F) * degree * -0.05F * limbSwingAmount - 0.03F;
             this.Chest.xRot = MathHelper.cos(6.0F + limbSwing * speed * 0.4F) * degree * 0.1F * limbSwingAmount - 0.14F;
             this.Hips.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.4F) * degree * 0.1F * limbSwingAmount - 0.17F;
             this.Body.y = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * degree * 0.05F * limbSwingAmount + 17.5F;
             this.head.zRot = MathHelper.cos(3.0F + limbSwing * speed * 0.2F) * degree * -0.2F * limbSwingAmount;
-            this.head.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * degree * 0.2F * limbSwingAmount + (this.isSwimming ? -0.4F : + 0.22F);
+            this.head.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * degree * 0.2F * limbSwingAmount + 0.23F;
             this.Neck.xRot = this.isSwimming ? -0.2F : 0.2443461F;
         }
     }
