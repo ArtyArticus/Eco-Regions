@@ -23,7 +23,7 @@ public class LorisEntity extends ZawaLandEntity implements SpeciesVariantsEntity
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 21.0).add(Attributes.ATTACK_DAMAGE, 3.0);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.15F).add(Attributes.MAX_HEALTH, 4.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Nullable
@@ -50,15 +50,15 @@ public class LorisEntity extends ZawaLandEntity implements SpeciesVariantsEntity
 
     @Override
     public float getMaleRatio() {
-        return 0.14F;
+        return 0.33F;
     }
 
     @Override
     public float getScale() {
-        if (isBaby()) return 0.6F;
+        if (isBaby()) return 0.3F;
         int variant = getVariant();
-        if (variant == 1) return 1.15F;
-        if (variant == 2) return 0.95F;
-        return 1.0F;
+        if (variant == 1) return 0.85F;
+        if (variant == 2) return 0.35F;
+        return 0.65F;
     }
 }

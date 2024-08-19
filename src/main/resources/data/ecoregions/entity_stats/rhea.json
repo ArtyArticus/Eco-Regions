@@ -1,20 +1,22 @@
 {
   "temperament": "territorial",
-  "kibble": "zawa:herbivore_kibble",
+  "kibble": "zawa:omnivore_kibble",
   "size": "large",
-  "fertility": "medium",
-  "breeding_item": "minecraft:grass",
+  "fertility": "high",
+  "breeding_item": "zawa:brown_rat",
   "litter_size": {
     "min": 1,
     "max": 5
   },
-  "diet": "zawa:herbivore",
-  "speed": "medium",
+  "diet": "zawa:omnivore",
+  "speed": "fast",
   "enrichment": {
     "zawa:blocks": [
-      "zawa:hay_browse",
-      "zawa:leaf_browse",
       "zawa:sprinkler"
+    ],
+    "zawa:entities": [
+      "zawa:boomer_ball",
+      "zawa:apple_ice_treat"
     ]
   },
   "variant_count": 3

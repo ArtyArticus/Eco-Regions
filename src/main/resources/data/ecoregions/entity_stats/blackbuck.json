@@ -1,9 +1,9 @@
 {
-  "temperament": "defensive",
+  "temperament": "neutral",
   "kibble": "zawa:herbivore_kibble",
   "size": "medium",
   "fertility": "high",
-  "breeding_item": "minecraft:grass",
+  "breeding_item": "minecraft:hay_block",
   "litter_size": {
     "min": 1,
     "max": 1
@@ -12,10 +12,13 @@
   "speed": "fast",
   "enrichment": {
     "zawa:blocks": [
-      "zawa:hay_browse",
-      "zawa:leaf_browse",
-      "zawa:sprinkler"
-    ]
+        "zawa:scratching_post",
+        "zawa:salt_lick",
+      "zawa:apple_ice_treat"
+      ],
+      "zawa:entities": [
+        "zawa:apple_ice_treat"
+      ]
   },
   "variant_count": 3
 }

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "ecoregions:rhea_egg
+    "ecoregions:rhea_egg",
+    "ecoregions:seriema_egg"
   ]
 }

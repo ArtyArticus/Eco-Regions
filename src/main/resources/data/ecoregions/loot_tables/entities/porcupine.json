@@ -6,26 +6,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:pumpkin",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 3
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
           "name": "zawa:small_meat",
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": 1
+              "count": 2
             },
             {
               "function": "minecraft:furnace_smelt",

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ecoregions:block/giant_otter_plush"
+    },
+    "facing=east": {
+      "model": "ecoregions:block/giant_otter_plush",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ecoregions:block/giant_otter_plush",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ecoregions:block/giant_otter_plush",
+      "y": 270
+    }
+  }
+}

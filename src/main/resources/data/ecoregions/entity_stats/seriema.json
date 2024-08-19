@@ -1,0 +1,23 @@
+{
+  "temperament": "defensive",
+  "kibble": "zawa:omnivore_kibble",
+  "size": "small",
+  "fertility": "medium",
+  "breeding_item": "minecraft:egg",
+  "litter_size": {
+    "min": 2,
+    "max": 3
+  },
+  "diet": "zawa:omnivore",
+  "speed": "medium",
+  "enrichment": {
+    "zawa:blocks": [
+      "zawa:sprinkler"
+    ],
+    "zawa:entities": [
+      "zawa:boomer_ball",
+      "zawa:apple_ice_treat"
+    ]
+  },
+  "variant_count": 3
+}

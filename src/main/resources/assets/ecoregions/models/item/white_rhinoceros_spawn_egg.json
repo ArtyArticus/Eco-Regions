@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ecoregions:item/white_rhinoceros_spawn_egg"
+  }
+}

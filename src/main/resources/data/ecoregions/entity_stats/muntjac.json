@@ -1,0 +1,23 @@
+{
+  "temperament": "timid",
+  "kibble": "zawa:omnivore_kibble",
+  "size": "medium",
+  "fertility": "low",
+  "breeding_item": "minecraft:oak_leaves",
+  "litter_size": {
+    "min": 1,
+    "max": 2
+  },
+  "diet": "zawa:omnivore",
+  "speed": "medium",
+  "enrichment": {
+    "zawa:blocks": [
+      "zawa:scratching_post",
+      "zawa:salt_lick"
+    ],
+    "zawa:entities": [
+      "zawa:apple_ice_treat"
+    ]
+  },
+  "variant_count": 3
+}

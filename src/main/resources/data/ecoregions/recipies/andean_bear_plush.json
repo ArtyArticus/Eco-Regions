@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "ecoregionsgroup",
+  "pattern": [
+    "PDD",
+    "DSD",
+    "HHH"
+  ],
+  "key": {
+    "P": [
+      {
+        "item": "minecraft:yellow_wool"
+      }
+    ],
+    "S": [
+      {
+        "item": "minecraft:bamboo"
+      }
+    ],
+    "H": [
+      {
+        "item": "minecraft:black_wool"
+      }
+    ],
+    "D": [
+      {
+        "item": "minecraft:brown_wool"
+      }
+    ]
+  },
+  "result": {
+    "item": "ecoregions:andean_bear_plush",
+    "count": 1
+  }
+}

@@ -1,20 +1,22 @@
 {
-  "temperament": "defensive",
-  "kibble": "zawa:omnivore_kibble",
+  "temperament": "neutral",
+  "kibble": "zawa:carnivore_kibble",
   "size": "tiny",
-  "fertility": "medium",
-  "breeding_item": "minecraft:egg",
+  "fertility": "high",
+  "breeding_item": "zawa:small_meat",
   "litter_size": {
     "min": 1,
-    "max": 6
+    "max": 5
   },
-  "diet": "zawa:omnivore",
+  "diet": "zawa:small_carnivore",
   "speed": "fast",
   "enrichment": {
     "zawa:blocks": [
-      "zawa:puzzle_feeder",
       "zawa:sprinkler",
-      "zawa:scratching_post"
+      "zawa:puzzle_feeder"
+    ],
+    "zawa:entities": [
+      "zawa:scented_ball"
     ]
   },
   "variant_count": 4

@@ -213,8 +213,8 @@ public abstract class GiantOtterModel extends ZawaBaseModel<GiantOtterEntity> {
             this.Neck.xRot = MathHelper.cos((limbSwing * speed * 0.05F) + (float) Math.PI) * (degree * 0.1F) * limbSwingAmount * 0.5F - 0.23F;
             this.EarLeft.zRot = MathHelper.cos((limbSwing * speed * 0.1F) + (float) Math.PI) * (degree * 0.4F) * limbSwingAmount * 0.5F;
             this.EarRight.zRot = MathHelper.cos((limbSwing * speed * 0.1F) + (float) Math.PI) * (degree * -0.4F) * limbSwingAmount * 0.5F;
-            this.Tail1.xRot = MathHelper.cos((limbSwing * speed * 0.05F) + (float) Math.PI) * (degree * 0.2F) * limbSwingAmount * 0.5F - 0.14F;
-            this.Tail2.xRot = MathHelper.cos((limbSwing * speed * 0.05F) + (float) Math.PI) * (degree * 0.2F) * limbSwingAmount * 0.5F + 0.36F;
+            this.Tail1.xRot = MathHelper.cos((limbSwing * speed * 0.05F) + (float) Math.PI) * (degree * 0.05F) * limbSwingAmount * 0.5F - 0.14F;
+            this.Tail2.xRot = MathHelper.cos((limbSwing * speed * 0.05F) + (float) Math.PI) * (degree * 0.05F) * limbSwingAmount * 0.5F + 0.36F;
         }
 
         @Override
@@ -489,9 +489,9 @@ public abstract class GiantOtterModel extends ZawaBaseModel<GiantOtterEntity> {
                 this.Back.xRot = MathHelper.cos((limbSwing * speed * 0.2F) + (float) Math.PI) * (degree * 0.8F) * limbSwingAmount * 0.5F - 0.46F;
                 this.Neck.xRot = MathHelper.cos(1.0F + (limbSwing * speed * 0.2F) + (float) Math.PI) * (degree * 2.0F) * limbSwingAmount * 0.5F - 0.23F;
                 this.Head.xRot = MathHelper.cos(2.5F + (limbSwing * speed * 0.2F) + (float) Math.PI) * (degree * 2.0F) * limbSwingAmount * 0.5F + 0.59F;
-                this.Tail1.xRot = MathHelper.cos(-1.0F + (limbSwing * speed * 0.2F) + (float) Math.PI) * (degree * 2.0F) * limbSwingAmount * 0.5F;
-                this.Tail2.xRot = MathHelper.cos(-2.0F + (limbSwing * speed * 0.2F) + (float) Math.PI) * (degree * 2.0F) * limbSwingAmount * 0.5F;
-                this.Tail3.xRot = MathHelper.cos(-3.0F + (limbSwing * speed * 0.2F) + (float) Math.PI) * (degree * 2.0F) * limbSwingAmount * 0.5F;
+                this.Tail1.yRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * degree * -1.9F * limbSwingAmount;
+                this.Tail2.yRot = MathHelper.cos(0.0F + limbSwing * speed * 0.1F) * degree * -2.1F * limbSwingAmount;
+                this.Tail3.yRot = MathHelper.cos(3.0F + limbSwing * speed * 0.1F) * degree * 1.9F * limbSwingAmount;
                 this.Body.y = MathHelper.cos((limbSwing * speed * 0.2F) + (float) Math.PI) * (degree * 1.4F) * limbSwingAmount * 0.5F + 17.0F;
                 this.ThighLeft.xRot = MathHelper.cos((limbSwing * speed * 0.0F) + (float) Math.PI) * (degree * 0.0F) * limbSwingAmount * 0.5F + 0.18F;
                 this.ArmLeft.xRot = MathHelper.cos((limbSwing * speed * 0.0F) + (float) Math.PI) * (degree * 0.0F) * limbSwingAmount * 0.5F - 0.47F;

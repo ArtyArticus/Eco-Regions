@@ -2,7 +2,7 @@
   "temperament": "defensive",
   "kibble": "zawa:herbivore_kibble",
   "size": "small",
-  "fertility": "medium",
+  "fertility": "high",
   "breeding_item": "minecraft:pumpkin",
   "litter_size": {
     "min": 1,
@@ -17,7 +17,8 @@
       "zawa:sprinkler"
     ],
     "zawa:entities": [
-      "zawa:boomer_ball"
+      "zawa:boomer_ball",
+      "zawa:apple_ice_treat"
     ]
   },
   "variant_count": 3

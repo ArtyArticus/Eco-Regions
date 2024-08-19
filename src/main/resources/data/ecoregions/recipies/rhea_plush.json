@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "ecoregionsgroup",
+  "pattern": [
+    "PDD",
+    "PSD",
+    "PDP"
+  ],
+  "key": {
+    "P": [
+      {
+        "item": "minecraft:light_gray_wool"
+      }
+    ],
+    "S": [
+      {
+        "item": "minecraft:bamboo"
+      }
+    ],
+    "D": [
+      {
+        "item": "minecraft:black_wool"
+      }
+    ]
+  },
+  "result": {
+    "item": "ecoregions:rhea_plush",
+    "count": 1
+  }
+}

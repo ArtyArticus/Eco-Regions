@@ -6,21 +6,6 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "zawa:termites",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
           "name": "zawa:small_meat",
           "functions": [
             {

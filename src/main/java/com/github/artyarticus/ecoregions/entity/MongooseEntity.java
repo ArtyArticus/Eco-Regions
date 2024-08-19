@@ -7,9 +7,11 @@ import net.minecraft.entity.Pose;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
+import net.minecraft.entity.ai.goal.PanicGoal;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+import org.zawamod.zawa.world.entity.SittingEntity;
 import org.zawamod.zawa.world.entity.SpeciesVariantsEntity;
 import org.zawamod.zawa.world.entity.ai.goal.BreachGoal;
 import org.zawamod.zawa.world.entity.ai.goal.ZawaMeleeAttackGoal;
@@ -23,7 +25,7 @@ public class MongooseEntity extends ZawaLandEntity implements SpeciesVariantsEnt
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 4.0).add(Attributes.ATTACK_DAMAGE, 1.0);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 4.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Nullable
@@ -50,9 +52,7 @@ public class MongooseEntity extends ZawaLandEntity implements SpeciesVariantsEnt
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal(4, new BreachGoal(this, 5));
-        this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 4.0, 1.33, true));
-        this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+        this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
     }
 
     @Override

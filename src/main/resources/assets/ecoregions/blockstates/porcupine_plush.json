@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ecoregions:block/porcupine_plush"
+    },
+    "facing=east": {
+      "model": "ecoregions:block/porcupine_plush",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ecoregions:block/porcupine_plush",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ecoregions:block/porcupine_plush",
+      "y": 270
+    }
+  }
+}

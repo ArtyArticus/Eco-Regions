@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "ecoregionsgroup",
+  "pattern": [
+    "PDD",
+    "DSD",
+    "DDD"
+  ],
+  "key": {
+    "P": [
+      {
+        "item": "minecraft:yellow_wool"
+      }
+    ],
+    "S": [
+      {
+        "item": "minecraft:bamboo"
+      }
+    ],
+    "D": [
+      {
+        "item": "minecraft:brown_wool"
+      }
+    ]
+  },
+  "result": {
+    "item": "ecoregions:giant_otter_plush",
+    "count": 1
+  }
+}
