@@ -1,7 +1,7 @@
 {
   "temperament": "defensive",
   "kibble": "zawa:herbivore_kibble",
-  "size": "small",
+  "size": "medium",
   "fertility": "high",
   "breeding_item": "minecraft:pumpkin",
   "litter_size": {

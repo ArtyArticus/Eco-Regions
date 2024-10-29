@@ -23,7 +23,7 @@ public abstract class SeriemaModel extends ZawaBaseModel<SeriemaEntity> {
     }
 
     public static class Adult extends SeriemaModel {
-        
+
         public ModelRenderer Neck1;
         public ModelRenderer TailBase;
         public ModelRenderer Wing1Right;

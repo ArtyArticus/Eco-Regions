@@ -57,8 +57,8 @@ public class LorisEntity extends ZawaLandEntity implements SpeciesVariantsEntity
     public float getScale() {
         if (isBaby()) return 0.3F;
         int variant = getVariant();
+        if (variant == 0) return 0.90F;
         if (variant == 1) return 0.85F;
-        if (variant == 2) return 0.35F;
         return 0.65F;
     }
 }

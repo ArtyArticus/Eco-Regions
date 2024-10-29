@@ -11,8 +11,6 @@ public class EcoRegionsSounds {
     public static final DeferredRegister<SoundEvent> REGISTRAR = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, EcoRegions.MOD_ID);
 
 
-
-
     private static RegistryObject<SoundEvent> registerSound(String name) {
         return REGISTRAR.register(name, () -> new SoundEvent(new ResourceLocation(EcoRegions.MOD_ID, name)));
     }

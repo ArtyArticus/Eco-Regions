@@ -13,7 +13,7 @@ public class WhiteRhinocerosRenderer extends ZawaMobRenderer<WhiteRhinocerosEnti
 
     @Override
     protected void scale(WhiteRhinocerosEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.5F : 1.25F;
+        float scale = entity.isBaby() ? 1.0F : 1.25F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

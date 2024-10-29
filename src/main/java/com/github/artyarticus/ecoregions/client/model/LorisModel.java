@@ -483,7 +483,7 @@ public abstract class LorisModel extends ZawaBaseModel<LorisEntity> {
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             if (entity.isSprinting()) {
                 float speed = 1.5f;
-                float degree = 0.4f;
+                float degree = 0.6f;
 
                 this.ThighLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * -4.5F * limbSwingAmount * 0.5F + 0.43F;
                 this.LegLeft.xRot = MathHelper.cos(6.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * -3.0F * limbSwingAmount * 0.5F + 0.43F;

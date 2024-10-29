@@ -2,7 +2,9 @@ package com.github.artyarticus.ecoregions.block;
 
 import com.github.artyarticus.ecoregions.EcoRegions;
 import com.github.artyarticus.ecoregions.item.EcoRegionsItems;
-import net.minecraft.block.*;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -16,9 +18,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.zawamod.zawa.Zawa;
 import org.zawamod.zawa.world.block.PlushBlock;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
+
 import static com.github.artyarticus.ecoregions.EcoRegions.PLUSHIES_LIST;
 
 public class EcoRegionsBlocks {

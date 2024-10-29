@@ -12,13 +12,13 @@
   "speed": "fast",
   "enrichment": {
     "zawa:blocks": [
-        "zawa:scratching_post",
-        "zawa:salt_lick",
+      "zawa:scratching_post",
+      "zawa:salt_lick",
       "zawa:apple_ice_treat"
-      ],
-      "zawa:entities": [
-        "zawa:apple_ice_treat"
-      ]
+    ],
+    "zawa:entities": [
+      "zawa:apple_ice_treat"
+    ]
   },
   "variant_count": 3
 }
