@@ -151,18 +151,14 @@
   "taxonomic_class.ecoregions.muntjac": "Mamífero",
   "range.ecoregions.muntjac": "Asia del Este",
   "conservation_status.ecoregions.muntjac": "Preocupación Menor",
-  "informational_blurb.ecoregions.muntjac": "El Muntjac de Reeves es un ciervo pequeño conocido por su vocalización distintiva y su tamaño compacto. Estos ciervos son solitarios y se alimentan de hojas y brotes en el suelo de los bosques."
+  "informational_blurb.ecoregions.muntjac": "El Muntjac de Reeves es un ciervo pequeño conocido por su vocalización distintiva y su tamaño compacto. Estos ciervos son solitarios y se alimentan de hojas y brotes en el suelo de los bosques.",
 
 
 
   "__comment": "Noms des Variantes d'Entités Écologiques",
-  "variant": {
-    "ecoregions": {
-      "bass": [
-        "Xingu",
-        "Bleu",
-        "Monoculus",
-        "Monoculus",
-        "Paca",
-        "Avec Cernes"
-}
+  "variant.ecoregions.bass_0": "Xingu",
+  "variant.ecoregions.bass_1": "Bleu",
+  "variant.ecoregions.bass_2": "Monoculus",
+  "variant.ecoregions.bass_3": "Monoculus",
+  "variant.ecoregions.bass_4": "Paca",
+  "variant.ecoregions.bass_5": "Avec Cernes",
