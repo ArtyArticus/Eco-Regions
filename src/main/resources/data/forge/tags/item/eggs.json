@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "ecoregions:rhea_egg",
-    "ecoregions:seriema_egg"
+    "ecoregions:seriema_egg",
+    "ecoregions:bee_eater_egg",
+    "ecoregions:skink_egg",
+    "ecoregions:tegu_egg"
   ]
 }

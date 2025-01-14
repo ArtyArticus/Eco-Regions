@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "zawa",
+  "pattern": [
+    "BBB",
+    "BSB",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:gray_wool"
+    },
+    "B": {
+      "item": "minecraft:black_wool"
+    },
+    "S": [
+      {
+        "item": "minecraft:bamboo"
+      },
+      {
+        "item": "zawa:black_bamboo"
+      },
+      {
+        "item": "zawa:yellow_bamboo"
+      }
+    ]
+  },
+  "result": {
+    "item": "ecoregions:gibbon_plush"
+  }
+}

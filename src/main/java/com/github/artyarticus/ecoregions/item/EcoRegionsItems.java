@@ -27,9 +27,19 @@ public class EcoRegionsItems {
     });
     public static final RegistryObject<Item> RHEA_EGG = REGISTRAR.register("rhea_egg", () -> new ZawaEggItem(EcoRegionsEntities.RHEA, new Item.Properties().stacksTo(16).tab(Zawa.ITEMS_GROUP)));
     public static final RegistryObject<Item> SERIEMA_EGG = REGISTRAR.register("seriema_egg", () -> new ZawaEggItem(EcoRegionsEntities.SERIEMA, new Item.Properties().stacksTo(16).tab(Zawa.ITEMS_GROUP)));
+    public static final RegistryObject<Item> BEE_EATER_EGG = REGISTRAR.register("bee_eater_egg", () -> new ZawaEggItem(EcoRegionsEntities.SERIEMA, new Item.Properties().stacksTo(16).tab(Zawa.ITEMS_GROUP)));
+    public static final RegistryObject<Item> SKINK_EGG = REGISTRAR.register("skink_egg", () -> new ZawaEggItem(EcoRegionsEntities.SERIEMA, new Item.Properties().stacksTo(16).tab(Zawa.ITEMS_GROUP)));
+    public static final RegistryObject<Item> TEGU_EGG = REGISTRAR.register("tegu_egg", () -> new ZawaEggItem(EcoRegionsEntities.SERIEMA, new Item.Properties().stacksTo(16).tab(Zawa.ITEMS_GROUP)));
     public static final RegistryObject<Item>
             BASS = REGISTRAR.register("bass", () -> new Item(new Item.Properties().tab(Zawa.ITEMS_GROUP)));
+
+    public static final RegistryObject<Item>
+            FOXFACE = REGISTRAR.register("foxface", () -> new Item(new Item.Properties().tab(Zawa.ITEMS_GROUP)));
     public static final RegistryObject<Item>
             BASS_BUCKET = REGISTRAR.register("bucket_of_bass", () -> new ZawaFishBucketItem(EcoRegionsEntities.BASS, () -> Fluids.WATER,
+            new Item.Properties().stacksTo(1).tab(Zawa.ITEMS_GROUP)));
+
+    public static final RegistryObject<Item>
+            FOXFACE_BUCKET = REGISTRAR.register("bucket_of_foxface", () -> new ZawaFishBucketItem(EcoRegionsEntities.FOXFACE, () -> Fluids.WATER,
             new Item.Properties().stacksTo(1).tab(Zawa.ITEMS_GROUP)));
 }

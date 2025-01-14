@@ -13,7 +13,7 @@ public class BushDogRenderer extends ZawaMobRenderer<BushDogEntity, BushDogModel
 
     @Override
     protected void scale(BushDogEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.5F : 1.0F;
+        float scale = entity.isBaby() ? 0.95F : 1.0F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

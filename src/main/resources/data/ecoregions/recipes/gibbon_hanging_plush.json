@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "zawa",
+  "pattern": [
+    "FRF",
+    " S "
+  ],
+  "key": {
+    "F": {
+      "item": "minecraft:black_wool"
+    },
+    "R": {
+      "item": "zawa:rope"
+    },
+    "S": {
+      "item": "ecoregions:gibbon_plush"
+    }
+  },
+  "result": {
+    "item": "ecoregions:gibbon_hanging_plush"
+  }
+}

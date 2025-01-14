@@ -1,0 +1,22 @@
+{
+  "temperament": "timid",
+  "kibble": "zawa:insectivore_kibble",
+  "size": "small",
+  "fertility": "low",
+  "breeding_item": "zawa:honey_bee",
+  "litter_size": {
+    "min": 3,
+    "max": 5
+  },
+  "diet": "zawa:insectivore",
+  "speed": "fast",
+  "enrichment": {
+    "zawa:blocks": [
+      "zawa:perching_stand",
+      "zawa:sprinkler",
+      "zawa:branch",
+      "zawa:pineapple_pinata"
+    ]
+  },
+  "variant_count": 4
+}

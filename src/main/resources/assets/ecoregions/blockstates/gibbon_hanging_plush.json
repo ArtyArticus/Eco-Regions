@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ecoregions:block/gibbon_hanging_plush"
+    },
+    "facing=east": {
+      "model": "ecoregions:block/gibbon_hanging_plush",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ecoregions:block/gibbon_hanging_plush",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ecoregions:block/gibbon_hanging_plush",
+      "y": 270
+    }
+  }
+}

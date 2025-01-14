@@ -13,7 +13,7 @@ public class SeriemaRenderer extends ZawaMobRenderer<SeriemaEntity, SeriemaModel
 
     @Override
     protected void scale(SeriemaEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.35F : 0.75F;
+        float scale = entity.isBaby() ? 0.7F : 0.75F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

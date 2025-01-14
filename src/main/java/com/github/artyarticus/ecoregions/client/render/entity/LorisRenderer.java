@@ -13,7 +13,7 @@ public class LorisRenderer extends ZawaMobRenderer<LorisEntity, LorisModel> {
 
     @Override
     protected void scale(LorisEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        if (entity.isBaby()) matrixStack.scale(0.35F, 0.35F, 0.35F);
+        if (entity.isBaby()) matrixStack.scale(0.65F, 0.65F, 0.65F);
         else {
             int variant = entity.getVariant();
             if (variant == 0) matrixStack.scale(0.7F, 0.7F, 0.7F);

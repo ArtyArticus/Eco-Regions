@@ -2,6 +2,10 @@
   "replace": false,
   "values": [
     "ecoregions:loris",
-    "ecoregions:mongoose"
+    "ecoregions:mongoose",
+    "ecoregions:bee_eater",
+    "ecoregions:gazelle",
+    "ecoregions:gibbon",
+    "ecoregions:tegu"
   ]
 }

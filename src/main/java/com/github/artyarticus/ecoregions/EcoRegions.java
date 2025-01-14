@@ -13,7 +13,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 @Mod(EcoRegions.MOD_ID)
 public class EcoRegions {
     public static final String MOD_ID = "ecoregions";
-    public static final String[] PLUSHIES_LIST = new String[]{"rhea", "andean_bear", "giant_otter", "porcupine"};
+    public static final String[] PLUSHIES_LIST = new String[]{"rhea", "andean_bear", "giant_otter", "porcupine", "white_rhino", "mongoose", "gibbon", "gibbon_hanging"};
 
     public EcoRegions() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();

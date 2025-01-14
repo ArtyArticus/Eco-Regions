@@ -14,13 +14,11 @@
   "entity.ecoregions.seriema": "Seriemas",
   "entity.ecoregions.muntjac": "Muntjac de Reeves",
   "entity.ecoregions.tree_kangaroo": "Canguro Arborícola",
-
   "__comment": "Bloques",
   "block.ecoregions.andean_bear_plush": "Peluches de Oso Andino",
   "block.ecoregions.rhea_plush": "Peluches de Rhea",
   "block.ecoregions.giant_otter_plush": "Peluches de Nutria Gigante",
   "block.ecoregions.porcupine_plush": "Peluches de Porcupín",
-
   "__comment": "Objetos",
   "item.ecoregions.bush_dog_spawn_egg": "Huevo de Invocación de Perro de Monte",
   "item.ecoregions.rhea_spawn_egg": "Huevo de Invocación de Rhea",
@@ -40,9 +38,7 @@
   "item.ecoregions.tree_kangaroo_spawn_egg": "Huevo de Invocación de Canguro Arborícola",
   "item.ecoregions.seriema_egg": "Huevo de Seriemas",
   "item.ecoregions.muntjac_spawn_egg": "Huevo de Invocación de Muntjac de Reeves",
-
   "__comment": "Variantes de Entidades, Nombres Científicos e Información",
-
   "scientific.ecoregions.bush_dog": "Speothos venaticus",
   "variant.ecoregions.bush_dog_0": "Canela",
   "variant.ecoregions.bush_dog_1": "Nuez Moscada",
@@ -52,7 +48,6 @@
   "range.ecoregions.bush_dog": "América Central y del Sur",
   "conservation_status.ecoregions.bush_dog": "Casi Amenazado",
   "informational_blurb.ecoregions.bush_dog": "El Perro de Monte es una especie altamente social y cooperativa, que vive en grupos de hasta 12 individuos. Se comunican mediante diversas vocalizaciones, lo que ayuda a coordinar las cacerías y a mantener vínculos sociales fuertes.",
-
   "scientific.ecoregions.spectacled_bear": "Tremarctos ornatus",
   "variant.ecoregions.spectacled_bear_0": "Uva",
   "variant.ecoregions.spectacled_bear_1": "Baya",
@@ -62,7 +57,6 @@
   "range.ecoregions.spectacled_bear": "Cordillera de los Andes",
   "conservation_status.ecoregions.spectacled_bear": "Vulnerable",
   "informational_blurb.ecoregions.spectacled_bear": "El Oso Andino es el último de los osos de cara corta, su pariente más cercano es el Panda Gigante de Asia. Estos osos son los mayores depredadores terrestres de América del Sur, los machos pesan hasta 154 kg y las hembras raramente superan los 81 kg. Estos animales pueden incluso construir nidos en los árboles para dormir por la noche.",
-
   "scientific.ecoregions.rhea": "Rhea americana",
   "variant.ecoregions.rhea_0": "Aspinall",
   "variant.ecoregions.rhea_1": "Drusillas",
@@ -71,7 +65,6 @@
   "range.ecoregions.rhea": "Sur de Brasil",
   "conservation_status.ecoregions.rhea": "Casi Amenazado",
   "informational_blurb.ecoregions.rhea": "Estas aves, aunque no pueden volar, tienen alas grandes para su clase que ayudan al equilibrio, actuando como el timón de un avión. Son aves territoriales y a menudo se utilizan en granjas por su carne, plumas y aceites, siendo otras partes utilizadas para diversas finalidades.",
-  
   "scientific.ecoregions.giant_otter": "Pteronura brasiliensis",
   "variant.ecoregions.giant_otter_0": "Juará",
   "variant.ecoregions.giant_otter_1": "Mamoré",
@@ -80,7 +73,6 @@
   "range.ecoregions.giant_otter": "Ríos de América del Sur",
   "conservation_status.ecoregions.giant_otter": "En Peligro",
   "informational_blurb.ecoregions.giant_otter": "La Nutria Gigante es la especie de nutria más grande del mundo, con algunos individuos alcanzando hasta 1,8 metros de longitud. Conocidas por su comportamiento juguetón y social, desempeñan un papel vital en sus ecosistemas acuáticos, y la protección de sus hábitats es esencial para su supervivencia.",
-  
   "scientific.ecoregions.porcupine": "Hystrix cristata",
   "variant.ecoregions.porcupine_0": "Dunphy",
   "variant.ecoregions.porcupine_1": "Pritchett",
@@ -89,7 +81,6 @@
   "range.ecoregions.porcupine": "África Subsahariana",
   "conservation_status.ecoregions.porcupine": "Preocupación Menor",
   "informational_blurb.ecoregions.porcupine": "El Porcupín Africano es una especie grande y emblemática, con crestas de espinas que se levantan cuando se siente amenazada. Este mamífero omnívoro se alimenta principalmente de raíces, tubérculos, cortezas y frutas.",
- 
   "scientific.ecoregions.blackbuck": "Antilope cervicapra",
   "variant.ecoregions.blackbuck_0": "Silenus",
   "variant.ecoregions.blackbuck_1": "Barolo",
@@ -98,7 +89,6 @@
   "range.ecoregions.blackbuck": "Subcontinente indio",
   "conservation_status.ecoregions.blackbuck": "Casi Amenazado",
   "informational_blurb.ecoregions.blackbuck": "El Antílope Negro es conocido por su pelaje negro brillante en los machos, mientras que las hembras son de un color marrón más pálido. Este antílope se encuentra principalmente en llanuras abiertas y sabanas y es conocido por su velocidad, pudiendo alcanzar velocidades de hasta 80 km/h.",
-  
   "scientific.ecoregions.loris": "Loris tardigradus",
   "variant.ecoregions.loris_0": "Syrian",
   "variant.ecoregions.loris_1": "Malabar",
@@ -107,7 +97,6 @@
   "range.ecoregions.loris": "Asia del Sur y del Este",
   "conservation_status.ecoregions.loris": "Casi Amenazado",
   "informational_blurb.ecoregions.loris": "El Loris Lento es un primate nocturno conocido por su movimiento lento y su dieta basada en frutas y hojas. Su piel secreta veneno que le sirve como defensa contra depredadores.",
-  
   "scientific.ecoregions.mongoose": "Herpestes javanicus",
   "variant.ecoregions.mongoose_0": "Mongolia",
   "variant.ecoregions.mongoose_1": "Surin",
@@ -116,7 +105,6 @@
   "range.ecoregions.mongoose": "Asia y África",
   "conservation_status.ecoregions.mongoose": "Preocupación Menor",
   "informational_blurb.ecoregions.mongoose": "Las Mangostas son pequeñas carnívoras conocidas por su agilidad y resistencia a los venenos. A menudo se encuentran en grupos familiares y son conocidas por su caza de serpientes.",
-  
   "scientific.ecoregions.red_river_hog": "Potamochoerus porcus",
   "variant.ecoregions.red_river_hog_0": "Bairnsfather",
   "variant.ecoregions.red_river_hog_1": "Marrón",
@@ -125,7 +113,6 @@
   "range.ecoregions.red_river_hog": "África Central y Occidental",
   "conservation_status.ecoregions.red_river_hog": "Preocupación Menor",
   "informational_blurb.ecoregions.red_river_hog": "El Jabalí del Río Rojo es un cerdo de tamaño mediano que se encuentra en los bosques y sabanas de África. Conocidos por su pelaje rojo y su comportamiento curioso, estos animales son más activos durante la noche.",
-  
   "scientific.ecoregions.white_rhinoceros": "Ceratotherium simum",
   "variant.ecoregions.white_rhinoceros_0": "Cazador",
   "variant.ecoregions.white_rhinoceros_1": "Guía",
@@ -134,7 +121,6 @@
   "range.ecoregions.white_rhinoceros": "África del Sur y del Este",
   "conservation_status.ecoregions.white_rhinoceros": "Casi Amenazado",
   "informational_blurb.ecoregions.white_rhinoceros": "El Rinoceronte Blanco es la especie de rinoceronte más grande, con un peso de hasta 2.300 kg. A pesar de su gran tamaño, son herbívoros pacíficos que juegan un papel vital en sus ecosistemas al ayudar a mantener la vegetación.",
-  
   "scientific.ecoregions.seriema": "Cariama cristata",
   "variant.ecoregions.seriema_0": "Simpático",
   "variant.ecoregions.seriema_1": "Alas de Mariposa",
@@ -143,7 +129,6 @@
   "range.ecoregions.seriema": "Sudamérica",
   "conservation_status.ecoregions.seriema": "Preocupación Menor",
   "informational_blurb.ecoregions.seriema": "La Seriemas son aves grandes conocidas por su canto melodioso y su comportamiento social. Estas aves son cazadoras activas, alimentándose principalmente de insectos y pequeños vertebrados.",
-  
   "scientific.ecoregions.muntjac": "Muntiacus reevesi",
   "variant.ecoregions.muntjac_0": "Cervatillo",
   "variant.ecoregions.muntjac_1": "Chino",
@@ -152,13 +137,11 @@
   "range.ecoregions.muntjac": "Asia del Este",
   "conservation_status.ecoregions.muntjac": "Preocupación Menor",
   "informational_blurb.ecoregions.muntjac": "El Muntjac de Reeves es un ciervo pequeño conocido por su vocalización distintiva y su tamaño compacto. Estos ciervos son solitarios y se alimentan de hojas y brotes en el suelo de los bosques.",
-
-
-
   "__comment": "Noms des Variantes d'Entités Écologiques",
   "variant.ecoregions.bass_0": "Xingu",
   "variant.ecoregions.bass_1": "Bleu",
   "variant.ecoregions.bass_2": "Monoculus",
-  "variant.ecoregions.bass_3": "Monoculus",
+  "variant.ecoregions.bass_3": "Butterfly",
   "variant.ecoregions.bass_4": "Paca",
-  "variant.ecoregions.bass_5": "Avec Cernes",
+  "variant.ecoregions.bass_5": "Avec Cernes"
+}

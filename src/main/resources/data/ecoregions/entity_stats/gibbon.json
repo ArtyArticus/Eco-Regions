@@ -1,0 +1,24 @@
+{
+  "temperament": "neutral",
+  "kibble": "zawa:herbivore_kibble",
+  "size": "medium",
+  "fertility": "low",
+  "breeding_item": "minecraft:melon_slice",
+  "litter_size": {
+    "min": 1,
+    "max": 1
+  },
+  "diet": "zawa:frugivore",
+  "speed": "medium",
+  "enrichment": {
+    "zawa:blocks": [
+      "zawa:puzzle_feeder",
+      "zawa:apple_ice_treat",
+      "zawa:branch",
+      "zawa:pineapple_pinata",
+      "zawa:rope",
+      "zawa:ball_pit"
+    ]
+  },
+  "variant_count": 6
+}
