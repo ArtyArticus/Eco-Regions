@@ -414,7 +414,7 @@ public abstract class BushDogModel extends ZawaBaseModel<BushDogEntity> {
                 this.Neck.xRot = MathHelper.cos(limbSwing * speed * 0.3F + 3.1415927F) * degree * 1.2F * limbSwingAmount * 0.5F - 0.351F;
                 this.Head.xRot = MathHelper.cos(6.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * -0.5F * limbSwingAmount * 0.5F + 0.586F;
                 this.Head.z = MathHelper.cos(limbSwing * speed * 0.3F + 3.1415927F) * degree * 4.0F * limbSwingAmount * 0.5F + 0.02F;
-                this.Chest.y = MathHelper.cos(6.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * -8.0F * limbSwingAmount * 0.5F;
+                this.Chest.y = MathHelper.cos(6.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * -8.0F * limbSwingAmount * 0.5F + 18.1F;
 
                 this.Tail1.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * -3.0F * limbSwingAmount * 0.5F - 0.942F;
                 this.Tail2.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * 2.0F * limbSwingAmount * 0.5F + 0.273F;
@@ -446,7 +446,7 @@ public abstract class BushDogModel extends ZawaBaseModel<BushDogEntity> {
                 this.Tail1.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.4F + 3.1415927F) * degree * 0.3F * limbSwingAmount * 0.5F - 0.942F;
                 this.Tail2.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.4F + 3.1415927F) * degree * 0.4F * limbSwingAmount * 0.5F + 0.273F;
 
-                this.Chest.y = MathHelper.cos(2.0F + limbSwing * speed * 0.4F + 3.1415927F) * degree * 1.0F * limbSwingAmount * 0.5F;
+                this.Chest.y = MathHelper.cos(2.0F + limbSwing * speed * 0.4F + 3.1415927F) * degree * 1.0F * limbSwingAmount * 0.5F + 18.1F;
                 this.ThighLeft.z = MathHelper.cos(limbSwing * speed * 0.2F + 3.1415927F) * degree * -1.0F * limbSwingAmount * 0.5F + 0.0155F + 1.1F;
                 this.ThighRight.z = MathHelper.cos(limbSwing * speed * 0.2F + 3.1415927F) * degree * 1.0F * limbSwingAmount * 0.5F + 0.0155F + 1.1F;
 
