@@ -13,8 +13,8 @@ import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
 import javax.annotation.Nullable;
 
-public class BlackbuckEntity extends ZawaLandEntity {
-    public BlackbuckEntity(EntityType<? extends ZawaLandEntity> type, World world) {
+public class MuntjacEntity extends ZawaLandEntity {
+    public MuntjacEntity(EntityType<? extends ZawaLandEntity> type, World world) {
         super(type, world);
     }
 
@@ -25,7 +25,7 @@ public class BlackbuckEntity extends ZawaLandEntity {
     @Nullable
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
-        return EcoRegionsEntities.BLACKBUCK.get().create(world);
+        return EcoRegionsEntities.MUNTJAC.get().create(world);
     }
 
     @Override
@@ -44,6 +44,7 @@ public class BlackbuckEntity extends ZawaLandEntity {
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
 
     }
+
     @Override
     public float getMaleRatio() {
         return 0.20F;

@@ -17,6 +17,10 @@
     "ecoregions:gazelle",
     "ecoregions:gibbon",
     "ecoregions:skink",
-    "ecoregions:tegu"
+    "ecoregions:tegu",
+    "ecoregions:muntjac",
+    "ecoregions:tree_kangaroo",
+    "ecoregions:screamer",
+    "ecoregions:kudu"
   ]
 }

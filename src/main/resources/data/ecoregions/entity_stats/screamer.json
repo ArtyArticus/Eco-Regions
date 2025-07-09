@@ -1,0 +1,23 @@
+{
+  "temperament": "timid",
+  "kibble": "zawa:omnivore_kibble",
+  "size": "small",
+  "fertility": "low",
+  "breeding_item": "zawa:termites",
+  "litter_size": {
+    "min": 1,
+    "max": 2
+  },
+  "diet": "zawa:omnivore",
+  "speed": "slow",
+  "enrichment": {
+    "zawa:blocks": [
+      "zawa:hay_browse",
+      "zawa:leaf_browse",
+      "zawa:rope",
+      "zawa:tire_swing",
+      "zawa:branch"
+    ]
+  },
+  "variant_count": 2
+}

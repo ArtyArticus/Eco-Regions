@@ -168,6 +168,38 @@ public class EcoRegionsEntities {
                     .data(entityBuilder -> entityBuilder.sized(0.55F, 0.55F).clientTrackingRange(10))
                     .build("bee_eater");
 
+    public static final RegistryObject<EntityType<ScreamerEntity>> SCREAMER =
+            REGISTRY.builder(ScreamerEntity::new, EntityClassification.CREATURE)
+                    .attributes(ScreamerEntity::registerAttributes)
+                    .renderer(() -> ScreamerRenderer::new)
+                    .spawns(8, 1, 2, ZawaSpawnCategory.DRY_FOREST)
+                    .data(entityBuilder -> entityBuilder.sized(0.7F, 0.7F).clientTrackingRange(10))
+                    .build("screamer");
+
+    public static final RegistryObject<EntityType<TreeKangarooEntity>> TREE_KANGAROO =
+            REGISTRY.builder(TreeKangarooEntity::new, EntityClassification.CREATURE)
+                    .attributes(TreeKangarooEntity::registerAttributes)
+                    .renderer(() -> TreeKangarooRenderer::new)
+                    .spawns(8, 1, 2, ZawaSpawnCategory.DRY_FOREST)
+                    .data(entityBuilder -> entityBuilder.sized(0.8F, 0.8F).clientTrackingRange(10))
+                    .build("tree_kangaroo");
+
+    public static final RegistryObject<EntityType<MuntjacEntity>> MUNTJAC =
+            REGISTRY.builder(MuntjacEntity::new, EntityClassification.CREATURE)
+                    .attributes(MuntjacEntity::registerAttributes)
+                    .renderer(() -> MuntjacRenderer::new)
+                    .spawns(8, 1, 2, ZawaSpawnCategory.DRY_FOREST)
+                    .data(entityBuilder -> entityBuilder.sized(0.95F, 0.95F).clientTrackingRange(10))
+                    .build("muntjac");
+
+    public static final RegistryObject<EntityType<KuduEntity>> KUDU =
+            REGISTRY.builder(KuduEntity::new, EntityClassification.CREATURE)
+                    .attributes(KuduEntity::registerAttributes)
+                    .renderer(() -> KuduRenderer::new)
+                    .spawns(8, 1, 2, ZawaSpawnCategory.DRY_FOREST)
+                    .data(entityBuilder -> entityBuilder.sized(1.5F, 1.5F).clientTrackingRange(10))
+                    .build("kudu");
+
     public static void registerSpawnPlacements() {
         EntitySpawnPlacementRegistry.register(BUSH_DOG.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(SPECTACLED_BEAR.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
@@ -188,6 +220,10 @@ public class EcoRegionsEntities {
         EntitySpawnPlacementRegistry.register(GIBBON.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(BABOON.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(BEE_EATER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkFlyingSpawnRules);
+        EntitySpawnPlacementRegistry.register(SCREAMER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(TREE_KANGAROO.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(MUNTJAC.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(KUDU.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
     }
 }
 
