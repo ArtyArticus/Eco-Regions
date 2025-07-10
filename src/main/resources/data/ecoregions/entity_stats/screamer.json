@@ -1,22 +1,19 @@
 {
-  "temperament": "timid",
-  "kibble": "zawa:omnivore_kibble",
+  "temperament": "neutral",
+  "kibble": "zawa:herbivore_kibble",
   "size": "small",
-  "fertility": "low",
-  "breeding_item": "zawa:termites",
+  "fertility": "medium",
+  "breeding_item": "zawa:duckweed",
   "litter_size": {
-    "min": 1,
-    "max": 2
+    "min": 2,
+    "max": 33
   },
-  "diet": "zawa:omnivore",
-  "speed": "slow",
+  "diet": "zawa:herbivore",
+  "speed": "medium",
   "enrichment": {
     "zawa:blocks": [
-      "zawa:hay_browse",
-      "zawa:leaf_browse",
-      "zawa:rope",
-      "zawa:tire_swing",
-      "zawa:branch"
+      "zawa:puzzle_feeder",
+      "zawa:sprinkler"
     ]
   },
   "variant_count": 2

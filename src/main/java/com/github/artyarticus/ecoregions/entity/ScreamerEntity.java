@@ -30,7 +30,7 @@ public class ScreamerEntity extends ZawaLandEntity implements SpeciesVariantsEnt
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 8.0).add(Attributes.ATTACK_DAMAGE, 0.5);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 8.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Override
@@ -57,5 +57,9 @@ public class ScreamerEntity extends ZawaLandEntity implements SpeciesVariantsEnt
     @Override
     public ItemStack getBreedEggItem() {
         return EcoRegionsItems.SCREAMER_EGG.get().getDefaultInstance();
+    }
+    @Override
+    public float getMaleRatio() {
+        return 0.25F;
     }
 }

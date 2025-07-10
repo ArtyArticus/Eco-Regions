@@ -30,7 +30,7 @@ public class TreeKangarooEntity extends ZawaLandEntity implements SpeciesVariant
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 14.0).add(Attributes.ATTACK_DAMAGE, 0.5);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 10.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Override
@@ -65,22 +65,15 @@ public class TreeKangarooEntity extends ZawaLandEntity implements SpeciesVariant
     public boolean onClimbable() {
         return this.isClimbing();
     }
-
     public boolean causeFallDamage(float distance, float damageMultiplier) {
         return false;
     }
-
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
         return size.height * 0.85F;
     }
-
     @Override
     public int getVariantByBiome(IWorld iWorld) {
         return random.nextInt(getWildVariants());
-    }
-    @Override
-    public float getMaleRatio() {
-        return 0.25F;
     }
     @Nullable
     @Override

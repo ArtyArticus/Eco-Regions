@@ -172,7 +172,7 @@ public class EcoRegionsEntities {
             REGISTRY.builder(ScreamerEntity::new, EntityClassification.CREATURE)
                     .attributes(ScreamerEntity::registerAttributes)
                     .renderer(() -> ScreamerRenderer::new)
-                    .spawns(8, 1, 2, ZawaSpawnCategory.DRY_FOREST)
+                    .spawns(15, 1, 3, ZawaSpawnCategory.WET_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(0.7F, 0.7F).clientTrackingRange(10))
                     .build("screamer");
 
@@ -180,7 +180,7 @@ public class EcoRegionsEntities {
             REGISTRY.builder(TreeKangarooEntity::new, EntityClassification.CREATURE)
                     .attributes(TreeKangarooEntity::registerAttributes)
                     .renderer(() -> TreeKangarooRenderer::new)
-                    .spawns(8, 1, 2, ZawaSpawnCategory.DRY_FOREST)
+                    .spawns(2, 1, 2, ZawaSpawnCategory.TEMPERATE_FOREST,ZawaSpawnCategory.DEEP_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(0.8F, 0.8F).clientTrackingRange(10))
                     .build("tree_kangaroo");
 
@@ -188,7 +188,7 @@ public class EcoRegionsEntities {
             REGISTRY.builder(MuntjacEntity::new, EntityClassification.CREATURE)
                     .attributes(MuntjacEntity::registerAttributes)
                     .renderer(() -> MuntjacRenderer::new)
-                    .spawns(8, 1, 2, ZawaSpawnCategory.DRY_FOREST)
+                    .spawns(10, 1, 3, ZawaSpawnCategory.COASTAL_TAIGA)
                     .data(entityBuilder -> entityBuilder.sized(0.95F, 0.95F).clientTrackingRange(10))
                     .build("muntjac");
 
@@ -196,7 +196,7 @@ public class EcoRegionsEntities {
             REGISTRY.builder(KuduEntity::new, EntityClassification.CREATURE)
                     .attributes(KuduEntity::registerAttributes)
                     .renderer(() -> KuduRenderer::new)
-                    .spawns(8, 1, 2, ZawaSpawnCategory.DRY_FOREST)
+                    .spawns(8, 3, 4, ZawaSpawnCategory.WET_SAVANNA)
                     .data(entityBuilder -> entityBuilder.sized(1.5F, 1.5F).clientTrackingRange(10))
                     .build("kudu");
 

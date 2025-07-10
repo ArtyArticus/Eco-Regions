@@ -2,15 +2,30 @@
   "type": "minecraft:entity",
   "pools": [
     {
-      "rolls": 1,
+      "rolls": 2,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "zawa:medium_meat",
+          "name": "minecraft:leather",
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "zawa:large_meat",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
             },
             {
               "function": "minecraft:furnace_smelt",
