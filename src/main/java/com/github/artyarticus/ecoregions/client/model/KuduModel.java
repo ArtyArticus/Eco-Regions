@@ -293,21 +293,29 @@ public abstract class KuduModel extends ZawaBaseModel<KuduEntity> {
         @Override
         public void setupAnim(KuduEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-         }
+            this.Neck.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
+            this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
+            this.Head.xRot = (headPitch / (180F / (float) Math.PI)) + 0.614F;
+            this.Head.zRot = headPitch / (180F / (float) Math.PI) * 0.05F;
+        }
 
         @Override
         public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             float speed = 1.0f;
             float degree = 1.0f;
-         }
-
+            this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.07F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.156F;
+            this.Head.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.07F) * limbSwingAmount * (degree * -0.15F) * 0.5F + 0.614F;
+            this.Tail1.xRot = MathHelper.cos(limbSwing * speed * 0.1F + 3.1415927F) * degree * 0.8F * limbSwingAmount * 0.5F + 0.396F;
+            this.Tail2.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F + 3.1415927F) * degree * -1.0F * limbSwingAmount * 0.5F;
+            this.Tail1.zRot = MathHelper.cos(limbSwing * speed * 0.1F + 3.1415927F) * degree * 1.0F * limbSwingAmount * 0.5F;
+            this.Tail2.zRot = MathHelper.cos(1.0F + limbSwing * speed * 0.1F + 3.1415927F) * degree * -2.0F * limbSwingAmount * 0.5F;
+        }
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             if (isSwimming) {
                 limbSwing = (float) entity.tickCount;
                 limbSwingAmount = 0.3F;
             }
-
             if (entity.isSprinting()) {
                 float speed = 0.8f;
                 float degree = 0.5f;
@@ -515,13 +523,23 @@ public abstract class KuduModel extends ZawaBaseModel<KuduEntity> {
         @Override
         public void setupAnim(KuduEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-           }
+            this.Neck.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
+            this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
+            this.Head.xRot = (headPitch / (180F / (float) Math.PI)) + 0.614F;
+            this.Head.zRot = headPitch / (180F / (float) Math.PI) * 0.05F;
+        }
 
         @Override
         public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             float speed = 1.0f;
             float degree = 1.0f;
-          }
+            this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.07F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.156F;
+            this.Head.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.07F) * limbSwingAmount * (degree * -0.15F) * 0.5F + 0.614F;
+            this.Tail1.xRot = MathHelper.cos(limbSwing * speed * 0.1F + 3.1415927F) * degree * 0.8F * limbSwingAmount * 0.5F + 0.396F;
+            this.Tail2.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F + 3.1415927F) * degree * -1.0F * limbSwingAmount * 0.5F;
+            this.Tail1.zRot = MathHelper.cos(limbSwing * speed * 0.1F + 3.1415927F) * degree * 1.0F * limbSwingAmount * 0.5F;
+            this.Tail2.zRot = MathHelper.cos(1.0F + limbSwing * speed * 0.1F + 3.1415927F) * degree * -2.0F * limbSwingAmount * 0.5F;
+        }
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {

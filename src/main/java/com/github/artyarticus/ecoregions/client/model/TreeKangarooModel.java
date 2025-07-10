@@ -7,6 +7,7 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 import org.zawamod.zawa.client.model.ZawaBaseModel;
+import org.zawamod.zawa.client.model.ZawaModelRenderer;
 
 public abstract class TreeKangarooModel extends ZawaBaseModel<TreeKangarooEntity> {
     public ModelRenderer Hips;
@@ -231,12 +232,19 @@ public abstract class TreeKangarooModel extends ZawaBaseModel<TreeKangarooEntity
         @Override
         public void setupAnim(TreeKangarooEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-         }
+            this.Neck.yRot = (float)Math.toRadians((double)(-netHeadYaw)) * 0.25F;
+            this.Head.yRot = (float)Math.toRadians((double)(-netHeadYaw)) * 0.25F;
+        }
+
         public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             this.loadBase();
             float speed = 1.0F;
             float degree = 1.0F;
-           }
+            this.Neck.xRot = MathHelper.cos(limbSwing * speed * 0.1F + 3.1415927F) * degree * 0.1F * limbSwingAmount * 0.5F + 1.485F;
+            this.Head.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.1F + 3.1415927F) * degree * -0.1F * limbSwingAmount * 0.5F + 0.39F;
+            this.ArmBaseLeft.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F + 3.1415927F) * degree * 0.1F * limbSwingAmount * 0.5F + 2.1F;
+            this.ArmBaseRight.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.1F + 3.1415927F) * degree * 0.1F * limbSwingAmount * 0.5F + 2.1F;
+        }
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             this.loadBase();
             float speed = 1.2F;
