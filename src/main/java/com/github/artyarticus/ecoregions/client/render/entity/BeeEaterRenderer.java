@@ -13,7 +13,7 @@ public class BeeEaterRenderer extends ZawaMobRenderer<BeeEaterEntity, BeeEaterMo
 
     @Override
     protected void scale(BeeEaterEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.4F : 0.75F;
+        float scale = entity.isBaby() ? 0.5F : 0.75F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }
