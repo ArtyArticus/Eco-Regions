@@ -14,7 +14,7 @@ public class KuduRenderer extends ZawaMobRenderer<KuduEntity, KuduModel> {
 
     @Override
     protected void scale(KuduEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.5F : 0.85F;
+        float scale = entity.isBaby() ? 1.0F : 0.85F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }
