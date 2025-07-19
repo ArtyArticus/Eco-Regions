@@ -173,7 +173,7 @@ public class EcoRegionsEntities {
                     .attributes(ScreamerEntity::registerAttributes)
                     .renderer(() -> ScreamerRenderer::new)
                     .spawns(15, 1, 3, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.7F, 0.7F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.65F, 0.7F).clientTrackingRange(10))
                     .build("screamer");
 
     public static final RegistryObject<EntityType<TreeKangarooEntity>> TREE_KANGAROO =
@@ -181,7 +181,7 @@ public class EcoRegionsEntities {
                     .attributes(TreeKangarooEntity::registerAttributes)
                     .renderer(() -> TreeKangarooRenderer::new)
                     .spawns(2, 1, 2, ZawaSpawnCategory.TEMPERATE_FOREST,ZawaSpawnCategory.DEEP_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.8F, 0.8F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.75F, 0.75F).clientTrackingRange(10))
                     .build("tree_kangaroo");
 
     public static final RegistryObject<EntityType<MuntjacEntity>> MUNTJAC =
@@ -189,7 +189,7 @@ public class EcoRegionsEntities {
                     .attributes(MuntjacEntity::registerAttributes)
                     .renderer(() -> MuntjacRenderer::new)
                     .spawns(10, 1, 3, ZawaSpawnCategory.COASTAL_TAIGA)
-                    .data(entityBuilder -> entityBuilder.sized(0.95F, 0.95F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.85F, 0.85F).clientTrackingRange(10))
                     .build("muntjac");
 
     public static final RegistryObject<EntityType<KuduEntity>> KUDU =
@@ -197,7 +197,7 @@ public class EcoRegionsEntities {
                     .attributes(KuduEntity::registerAttributes)
                     .renderer(() -> KuduRenderer::new)
                     .spawns(8, 3, 4, ZawaSpawnCategory.WET_SAVANNA)
-                    .data(entityBuilder -> entityBuilder.sized(1.5F, 1.5F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.65F, 1.65F).clientTrackingRange(10))
                     .build("kudu");
 
     public static void registerSpawnPlacements() {

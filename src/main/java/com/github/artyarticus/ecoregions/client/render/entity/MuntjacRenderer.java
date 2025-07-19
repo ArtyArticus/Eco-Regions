@@ -8,7 +8,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class MuntjacRenderer extends ZawaMobRenderer<MuntjacEntity, MuntjacModel> {
     public MuntjacRenderer(EntityRendererManager manager) {
-        super(manager, new MuntjacModel.Adult(), new MuntjacModel.Child(), 0.5F);
+        super(manager, new MuntjacModel.Adult(), new MuntjacModel.Child(), 0.45F);
     }
 
     @Override
