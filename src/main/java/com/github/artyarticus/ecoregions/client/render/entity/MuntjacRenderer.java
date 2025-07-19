@@ -13,7 +13,7 @@ public class MuntjacRenderer extends ZawaMobRenderer<MuntjacEntity, MuntjacModel
 
     @Override
     protected void scale(MuntjacEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.55F : 0.7F;
+        float scale = entity.isBaby() ? 0.65F : 0.7F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }
