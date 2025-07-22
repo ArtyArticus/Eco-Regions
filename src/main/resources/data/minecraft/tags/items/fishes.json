@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "zawa:african_lake_cichlid",
+    "zawa:angelfish",
+    "zawa:clownfish",
+    "zawa:corydoras",
+    "zawa:gramma",
+
+    "ecoregions:bass",
+    "ecoregions:foxface"
+  ]
+}
