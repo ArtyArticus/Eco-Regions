@@ -8,7 +8,6 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.registries.RegistryObject;
-import org.zawamod.zawa.Zawa;
 import org.zawamod.zawa.config.ZawaSpawnCategory;
 import org.zawamod.zawa.world.entity.ZawaEntityRegistry;
 import org.zawamod.zawa.world.entity.ambient.ZawaAmbientFishEntity;
@@ -16,7 +15,7 @@ import org.zawamod.zawa.world.entity.animal.ZawaBaseEntity;
 import org.zawamod.zawa.world.entity.animal.ZawaFlyingEntity;
 
 public class EcoRegionsEntities {
-    public static final ZawaEntityRegistry REGISTRY = new ZawaEntityRegistry(EcoRegions.MOD_ID, Zawa.ENTITIES_GROUP);
+    public static final ZawaEntityRegistry REGISTRY = new ZawaEntityRegistry(EcoRegions.MOD_ID);
 
     public static final RegistryObject<EntityType<BushDogEntity>> BUSH_DOG =
             REGISTRY.builder(BushDogEntity::new, MobCategory.CREATURE)

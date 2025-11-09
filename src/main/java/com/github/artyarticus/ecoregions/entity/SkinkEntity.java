@@ -1,6 +1,7 @@
 package com.github.artyarticus.ecoregions.entity;
 
 import com.github.artyarticus.ecoregions.item.EcoRegionsItems;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.EntityType;
@@ -10,7 +11,6 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.server.level.ServerLevel;
 import org.zawamod.zawa.world.entity.OviparousEntity;
 import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
@@ -41,6 +41,7 @@ public class SkinkEntity extends ZawaLandEntity implements OviparousEntity {
         super.registerGoals();
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
     }
+
     protected float getStandingEyeHeight(Pose pose, EntityDimensions size) {
         return size.height * 0.85F;
     }

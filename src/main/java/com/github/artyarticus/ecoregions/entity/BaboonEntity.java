@@ -1,7 +1,9 @@
 package com.github.artyarticus.ecoregions.entity;
 
 import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.EntityType;
@@ -13,9 +15,7 @@ import net.minecraft.world.entity.ai.goal.target.NonTameRandomTargetGoal;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.WallClimberNavigation;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.world.level.Level;
-import net.minecraft.server.level.ServerLevel;
 import org.zawamod.zawa.world.entity.ClimbingEntity;
 import org.zawamod.zawa.world.entity.ai.goal.ZawaMeleeAttackGoal;
 import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
@@ -58,8 +58,8 @@ public class BaboonEntity extends ZawaLandEntity implements ClimbingEntity {
 
     public void tick() {
         super.tick();
-        if (!this.level.isClientSide && this.horizontalCollision) {
-            this.setClimbing(this.isClimbableBlock(this.level, this.blockPosition().relative(this.getDirection())));
+        if (!this.level().isClientSide && this.horizontalCollision) {
+            this.setClimbing(this.isClimbableBlock(this.level(), this.blockPosition().relative(this.getDirection())));
         }
 
     }
@@ -81,6 +81,7 @@ public class BaboonEntity extends ZawaLandEntity implements ClimbingEntity {
     public AgeableMob getBreedOffspring(ServerLevel world, AgeableMob entity) {
         return EcoRegionsEntities.BABOON.get().create(world);
     }
+
     @Override
     public float getMaleRatio() {
         return 0.20F;

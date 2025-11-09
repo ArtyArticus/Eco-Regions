@@ -2,6 +2,8 @@ package com.github.artyarticus.ecoregions.entity;
 
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.EntityType;
@@ -9,12 +11,10 @@ import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.PanicGoal;
-import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.world.entity.ai.navigation.WallClimberNavigation;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
-import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.ai.navigation.WallClimberNavigation;
 import net.minecraft.world.level.Level;
-import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.level.LevelAccessor;
 import org.zawamod.zawa.world.entity.ClimbingEntity;
 import org.zawamod.zawa.world.entity.SpeciesVariantsEntity;
 import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
@@ -55,8 +55,8 @@ public class GibbonEntity extends ZawaLandEntity implements SpeciesVariantsEntit
 
     public void tick() {
         super.tick();
-        if (!this.level.isClientSide && this.horizontalCollision) {
-            this.setClimbing(this.isClimbableBlock(this.level, this.blockPosition().relative(this.getDirection())));
+        if (!this.level().isClientSide && this.horizontalCollision) {
+            this.setClimbing(this.isClimbableBlock(this.level(), this.blockPosition().relative(this.getDirection())));
         }
 
     }
@@ -77,10 +77,12 @@ public class GibbonEntity extends ZawaLandEntity implements SpeciesVariantsEntit
     public int getVariantByBiome(LevelAccessor iWorld) {
         return random.nextInt(getWildVariants());
     }
+
     @Override
     public float getMaleRatio() {
         return 0.25F;
     }
+
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel world, AgeableMob entity) {

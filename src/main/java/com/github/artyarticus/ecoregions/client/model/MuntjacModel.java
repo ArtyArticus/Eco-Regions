@@ -2,7 +2,6 @@ package com.github.artyarticus.ecoregions.client.model;
 
 import com.github.artyarticus.ecoregions.entity.MuntjacEntity;
 import com.google.common.collect.ImmutableList;
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;

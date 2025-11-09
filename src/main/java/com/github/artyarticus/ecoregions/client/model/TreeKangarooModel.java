@@ -2,7 +2,6 @@ package com.github.artyarticus.ecoregions.client.model;
 
 import com.github.artyarticus.ecoregions.entity.TreeKangarooEntity;
 import com.google.common.collect.ImmutableList;
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
@@ -162,8 +161,8 @@ public abstract class TreeKangarooModel extends ZawaBaseModel<TreeKangarooEntity
         @Override
         public void setupAnim(TreeKangarooEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-            this.Neck.yRot = (float) Math.toRadians((double) (-netHeadYaw)) * 0.25F;
-            this.Head.yRot = (float) Math.toRadians((double) (-netHeadYaw)) * 0.25F;
+            this.Neck.yRot = (float) Math.toRadians(-netHeadYaw) * 0.25F;
+            this.Head.yRot = (float) Math.toRadians(-netHeadYaw) * 0.25F;
         }
 
         public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -341,8 +340,8 @@ public abstract class TreeKangarooModel extends ZawaBaseModel<TreeKangarooEntity
         @Override
         public void setupAnim(TreeKangarooEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-            this.Neck.yRot = (float) Math.toRadians((double) (-netHeadYaw)) * 0.25F;
-            this.Head.yRot = (float) Math.toRadians((double) (-netHeadYaw)) * 0.25F;
+            this.Neck.yRot = (float) Math.toRadians(-netHeadYaw) * 0.25F;
+            this.Head.yRot = (float) Math.toRadians(-netHeadYaw) * 0.25F;
 
         }
 
