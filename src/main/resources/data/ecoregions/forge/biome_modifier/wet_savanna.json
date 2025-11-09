@@ -1,0 +1,27 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:and",
+    "values": [
+      "#is_overworld",
+      "#forge:is_hot",
+      {"type": "forge:not", "value": "#minecraft:is_jungle"},
+      {"type": "forge:not", "value": "#forge:is_dry"},
+      {"type": "forge:not", "value": "#minecraft:is_ocean"}
+    ]
+  },
+  "spawners": [
+    {
+      "type": "ecoregions:mongoose",
+      "weight": 15,
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "type": "ecoregions:kudu",
+      "weight": 8,
+      "minCount": 3,
+      "maxCount": 4
+    }
+  ]
+}

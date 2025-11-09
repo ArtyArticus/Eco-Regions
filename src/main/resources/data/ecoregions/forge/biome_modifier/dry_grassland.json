@@ -1,0 +1,39 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:or",
+    "values": [
+      {
+        "type": "forge:and",
+        "values": [
+          "#is_overworld",
+          "#forge:is_plains",
+          {"type": "forge:not", "value": "#forge:is_cold"},
+          {"type": "forge:not", "value": "#forge:is_wet"}
+        ]
+      },
+      {
+        "type": "forge:and",
+        "values": [
+          "#is_overworld",
+          "#minecraft:is_badlands",
+          {"type": "forge:not", "value": "#forge:is_sparse"}
+        ]
+      }
+    ]
+  },
+  "spawners": [
+    {
+      "type": "ecoregions:rhea",
+      "weight": 10,
+      "minCount": 1,
+      "maxCount": 4
+    },
+    {
+      "type": "ecoregions:blackbuck",
+      "weight": 8,
+      "minCount": 3,
+      "maxCount": 4
+    }
+  ]
+}

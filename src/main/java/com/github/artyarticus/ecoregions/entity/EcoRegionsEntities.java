@@ -143,6 +143,7 @@ public class EcoRegionsEntities {
                     .spawns(8, 5, 6, ZawaSpawnCategory.FAST_FRESH_WATER)
                     .data(entityBuilder -> entityBuilder.sized(0.35F, 0.35F).clientTrackingRange(10))
                     .build("foxface");
+
     public static final RegistryObject<EntityType<BeeEaterEntity>> BEE_EATER =
             REGISTRY.builder(BeeEaterEntity::new, MobCategory.CREATURE)
                     .attributes(BeeEaterEntity::registerAttributes)

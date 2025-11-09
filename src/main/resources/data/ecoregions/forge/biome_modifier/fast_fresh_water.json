@@ -1,0 +1,18 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:and",
+    "values": [
+      "#is_overworld",
+      "#minecraft:is_river"
+    ]
+  },
+  "spawners": [
+    {
+      "type": "ecoregions:foxface",
+      "weight": 8,
+      "minCount": 5,
+      "maxCount": 6
+    }
+  ]
+}

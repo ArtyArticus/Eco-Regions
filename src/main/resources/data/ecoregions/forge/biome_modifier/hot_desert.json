@@ -1,0 +1,24 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:and",
+    "values": [
+      "#is_overworld",
+      "#forge:is_sandy"
+    ]
+  },
+  "spawners": [
+    {
+      "type": "ecoregions:porcupine",
+      "weight": 10,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "ecoregions:skink",
+      "weight": 10,
+      "minCount": 1,
+      "maxCount": 1
+    }
+  ]
+}
