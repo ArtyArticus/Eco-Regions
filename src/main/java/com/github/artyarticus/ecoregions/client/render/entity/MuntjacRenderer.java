@@ -1,18 +1,19 @@
 package com.github.artyarticus.ecoregions.client.render.entity;
 
+import com.github.artyarticus.ecoregions.client.model.EcoRegionsModelLayers;
 import com.github.artyarticus.ecoregions.client.model.MuntjacModel;
 import com.github.artyarticus.ecoregions.entity.MuntjacEntity;
-import com.mojang.blaze3d.matrix.MatrixStack;
-import net.minecraft.client.renderer.entity.EntityRendererManager;
+import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class MuntjacRenderer extends ZawaMobRenderer<MuntjacEntity, MuntjacModel> {
-    public MuntjacRenderer(EntityRendererManager manager) {
-        super(manager, new MuntjacModel.Adult(), new MuntjacModel.Child(), 0.45F);
+    public MuntjacRenderer(EntityRendererProvider.Context context) {
+        super(context, new MuntjacModel.Adult(context.bakeLayer(EcoRegionsModelLayers.MUNTJAC_ADULT)), new MuntjacModel.Child(context.bakeLayer(EcoRegionsModelLayers.MUNTJAC_CHILD)), 0.45F);
     }
 
     @Override
-    protected void scale(MuntjacEntity entity, MatrixStack matrixStack, float partialTickTime) {
+    protected void scale(MuntjacEntity entity, PoseStack matrixStack, float partialTickTime) {
         float scale = entity.isBaby() ? 0.65F : 0.7F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);

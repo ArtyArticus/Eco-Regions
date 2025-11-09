@@ -1,35 +1,34 @@
 package com.github.artyarticus.ecoregions.entity;
 
 import com.github.artyarticus.ecoregions.item.EcoRegionsItems;
-import net.minecraft.entity.AgeableEntity;
-import net.minecraft.entity.EntitySize;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.Pose;
-import net.minecraft.entity.ai.attributes.AttributeModifierMap;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.goal.PanicGoal;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
-import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
-import org.zawamod.zawa.world.entity.SittingEntity;
-import org.zawamod.zawa.world.entity.ai.goal.GroupPanicGoal;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.entity.AgeableMob;
+import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.PanicGoal;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 import org.zawamod.zawa.world.entity.ambient.ZawaAmbientFishEntity;
 
 import javax.annotation.Nullable;
 
 public class FoxfaceEntity extends ZawaAmbientFishEntity {
-    public FoxfaceEntity(EntityType<? extends ZawaAmbientFishEntity> type, World world) {
+    public FoxfaceEntity(EntityType<? extends ZawaAmbientFishEntity> type, Level world) {
         super(type, world);
     }
 
-    public static AttributeModifierMap.MutableAttribute registerAttributes() {
+    public static AttributeSupplier.Builder registerAttributes() {
         return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.255F).add(Attributes.MAX_HEALTH, 4.0);
     }
 
     @Override
-    protected ItemStack getBucketItemStack() {
+    public @NotNull ItemStack getBucketItemStack() {
         return new ItemStack(EcoRegionsItems.FOXFACE_BUCKET.get());
     }
 
@@ -41,11 +40,11 @@ public class FoxfaceEntity extends ZawaAmbientFishEntity {
 
     @Nullable
     @Override
-    public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
+    public AgeableMob getBreedOffspring(ServerLevel world, AgeableMob entity) {
         return EcoRegionsEntities.FOXFACE.get().create(world);
     }
 
-    protected float getStandingEyeHeight(Pose pose, EntitySize size) {
+    protected float getStandingEyeHeight(Pose pose, EntityDimensions size) {
         return size.height * 0.85F;
     }
 

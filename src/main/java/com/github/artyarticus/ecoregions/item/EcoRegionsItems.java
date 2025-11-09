@@ -3,16 +3,17 @@ package com.github.artyarticus.ecoregions.item;
 import com.github.artyarticus.ecoregions.EcoRegions;
 import com.github.artyarticus.ecoregions.block.EcoRegionsBlocks;
 import com.github.artyarticus.ecoregions.entity.EcoRegionsEntities;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.Item;
-import net.minecraft.util.Util;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraft.Util;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.MobBucketItem;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 import org.zawamod.zawa.Zawa;
 import org.zawamod.zawa.world.item.PlushBlockItem;
 import org.zawamod.zawa.world.item.ZawaEggItem;
-import org.zawamod.zawa.world.item.ZawaFishBucketItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,10 +38,10 @@ public class EcoRegionsItems {
     public static final RegistryObject<Item>
             FOXFACE = REGISTRAR.register("foxface", () -> new Item(new Item.Properties().tab(Zawa.ITEMS_GROUP)));
     public static final RegistryObject<Item>
-            BASS_BUCKET = REGISTRAR.register("bucket_of_bass", () -> new ZawaFishBucketItem(EcoRegionsEntities.BASS, () -> Fluids.WATER,
+            BASS_BUCKET = REGISTRAR.register("bucket_of_bass", () -> new MobBucketItem(EcoRegionsEntities.BASS, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH,
             new Item.Properties().stacksTo(1).tab(Zawa.ITEMS_GROUP)));
 
     public static final RegistryObject<Item>
-            FOXFACE_BUCKET = REGISTRAR.register("bucket_of_foxface", () -> new ZawaFishBucketItem(EcoRegionsEntities.FOXFACE, () -> Fluids.WATER,
+            FOXFACE_BUCKET = REGISTRAR.register("bucket_of_foxface", () -> new MobBucketItem(EcoRegionsEntities.FOXFACE, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH,
             new Item.Properties().stacksTo(1).tab(Zawa.ITEMS_GROUP)));
 }

@@ -1,36 +1,36 @@
-modLoader = "javafml"
-loaderVersion = "[36.2.0,)"
-license = "GNU GPLv3"
-issueTrackerURL = "https://github.com/ArtyArticus/EcoRegions/issues"
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+issueTrackerURL="https://github.com/ArtyArticus/EcoRegions/issues"
 
 [[mods]]
-modId = "ecoregions"
-version = "${file.jarVersion}"
-displayName = "Zawa: Eco-Regions Addon"
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
 #updateJSONURL=""
-displayURL = "https://www.curseforge.com/minecraft/mc-mods/eco-regions"
-logoFile = "logo.png"
-credits = "Arty, HelloCrossy67, Lleo, Arzher, Shoresy, Platinum"
-authors = "HelloCrossy67"
-description = '''Explore your overworld to find new animals that come from the continents of our real world through this mod!'''
+displayURL="https://www.curseforge.com/minecraft/mc-mods/eco-regions"
+logoFile="logo.png"
+credits="${mod_credits}"
+authors="${mod_authors}"
+description='''${mod_description}'''
 
-[[dependencies.ecoregions]]
-modId = "forge"
-mandatory = true
-versionRange = "[36.2.20,)"
-ordering = "NONE"
-side = "BOTH"
+[[dependencies.${mod_id}]]
+modId="forge"
+mandatory=true
+versionRange="${forge_version_range}"
+ordering="NONE"
+side="BOTH"
 
-[[dependencies.ecoregions]]
-modId = "minecraft"
-mandatory = true
-versionRange = "[1.16.5,1.17)"
-ordering = "NONE"
-side = "BOTH"
+[[dependencies.${mod_id}]]
+modId="minecraft"
+mandatory=true
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"
 
-[[dependencies.ecoregions]]
-modId = "zawa"
-mandatory = true
-versionRange = "[1.16.5-1.0.2-BeefBeta-TropicalExpedition3,)"
-ordering = "AFTER"
-side = "BOTH"
+[[dependencies.${mod_id}]]
+modId="zawa"
+mandatory=true
+versionRange="${zawa_version_range}"
+ordering="AFTER"
+side="BOTH"
