@@ -34,6 +34,8 @@ public class EcoRegionsItems {
     public static final RegistryObject<Item> SKINK_EGG = ITEMS_REGISTRAR.register("skink_egg", () -> new ZawaEggItem(EcoRegionsEntities.SKINK, new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> TEGU_EGG = ITEMS_REGISTRAR.register("tegu_egg", () -> new ZawaEggItem(EcoRegionsEntities.TEGU, new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> SCREAMER_EGG = ITEMS_REGISTRAR.register("screamer_egg", () -> new ZawaEggItem(EcoRegionsEntities.SCREAMER, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> MONITOR_EGG = ITEMS_REGISTRAR.register("monitor_egg", () -> new ZawaEggItem(EcoRegionsEntities.MONITOR, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> ARACARI_EGG = ITEMS_REGISTRAR.register("aracari_egg", () -> new ZawaEggItem(EcoRegionsEntities.ARACARI, new Item.Properties().stacksTo(16)));
 
     public static final RegistryObject<Item> BASS = ITEMS_REGISTRAR.register("bass", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BASS_BUCKET = ITEMS_REGISTRAR.register("bucket_of_bass", () -> new ZawaBucketItem(EcoRegionsEntities.BASS, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1)));
