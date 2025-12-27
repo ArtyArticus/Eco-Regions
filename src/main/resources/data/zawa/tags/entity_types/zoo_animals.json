@@ -21,6 +21,12 @@
     "ecoregions:muntjac",
     "ecoregions:tree_kangaroo",
     "ecoregions:screamer",
-    "ecoregions:kudu"
+    "ecoregions:kudu",
+    "ecoregions:wombat",
+    "ecoregions:tamandua",
+    "ecoregions:marmoset",
+    "ecoregions:monitor",
+    "ecoregions:aracari",
+    "ecoregions:aoudad"
   ]
 }
