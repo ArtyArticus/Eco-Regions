@@ -13,8 +13,8 @@ import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
 import javax.annotation.Nullable;
 
-public class WombatEntity extends ZawaLandEntity {
-    public WombatEntity(EntityType<? extends ZawaLandEntity> type, Level world) {
+public class CommonWombatEntity extends ZawaLandEntity {
+    public CommonWombatEntity(EntityType<? extends ZawaLandEntity> type, Level world) {
         super(type, world);
     }
 
@@ -25,7 +25,7 @@ public class WombatEntity extends ZawaLandEntity {
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel world, AgeableMob entity) {
-        return EcoRegionsEntities.WOMBAT.get().create(world);
+        return EcoRegionsEntities.COMMON_WOMBAT.get().create(world);
     }
 
     @Override

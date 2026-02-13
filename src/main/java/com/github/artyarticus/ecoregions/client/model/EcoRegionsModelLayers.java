@@ -64,8 +64,8 @@ public class EcoRegionsModelLayers {
     public static final ModelLayerLocation KUDU_CHILD = register("kudu", "child", KuduModel.Child::createBodyLayer);
     public static final ModelLayerLocation AOUDAD_ADULT = register("aoudad", "adult", AoudadModel.Adult::createBodyLayer);
     public static final ModelLayerLocation AOUDAD_CHILD = register("aoudad", "child", AoudadModel.Child::createBodyLayer);
-    public static final ModelLayerLocation WOMBAT_ADULT = register("wombat", "adult", WombatModel.Adult::createBodyLayer);
-    public static final ModelLayerLocation WOMBAT_CHILD = register("wombat", "child", WombatModel.Child::createBodyLayer);
+    public static final ModelLayerLocation COMMON_WOMBAT_ADULT = register("common_wombat", "adult", CommonWombatModel.Adult::createBodyLayer);
+    public static final ModelLayerLocation COMMON_WOMBAT_CHILD = register("common_wombat", "child", CommonWombatModel.Child::createBodyLayer);
     public static final ModelLayerLocation ARACARI_ADULT = register("aracari", "adult", AracariModel.Adult::createBodyLayer);
     public static final ModelLayerLocation ARACARI_FLYING = register("aracari", "flying", AracariModel.Flying::createBodyLayer);
     public static final ModelLayerLocation ARACARI_CHILD = register("aracari", "child", AracariModel.Child::createBodyLayer);

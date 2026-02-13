@@ -185,12 +185,12 @@ public class EcoRegionsEntities {
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("aoudad");
     
-    public static final RegistryObject<EntityType<WombatEntity>> WOMBAT =
-            REGISTRY.builder(WombatEntity::new, MobCategory.CREATURE)
-                    .attributes(WombatEntity::registerAttributes)
+    public static final RegistryObject<EntityType<CommonWombatEntity>> COMMON_WOMBAT =
+            REGISTRY.builder(CommonWombatEntity::new, MobCategory.CREATURE)
+                    .attributes(CommonWombatEntity::registerAttributes)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
-                    .build("wombat");
+                    .build("common_wombat");
     
     public static final RegistryObject<EntityType<AracariEntity>> ARACARI =
             REGISTRY.builder(AracariEntity::new, MobCategory.CREATURE)
@@ -245,7 +245,7 @@ public class EcoRegionsEntities {
         SpawnPlacements.register(MUNTJAC.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         SpawnPlacements.register(KUDU.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         SpawnPlacements.register(MARMOSET.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
-        SpawnPlacements.register(WOMBAT.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        SpawnPlacements.register(COMMON_WOMBAT.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         SpawnPlacements.register(MONITOR.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaSemiAquaticEntity::checkLandSpawnRules);
         SpawnPlacements.register(ARACARI.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaFlyingEntity::checkLandSpawnRules);
         SpawnPlacements.register(AOUDAD.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
@@ -277,7 +277,7 @@ public class EcoRegionsEntities {
         EntityRenderers.register(MUNTJAC.get(), MuntjacRenderer::new);
         EntityRenderers.register(KUDU.get(), KuduRenderer::new);
         EntityRenderers.register(AOUDAD.get(), AoudadRenderer::new);
-        EntityRenderers.register(WOMBAT.get(), WombatRenderer::new);
+        EntityRenderers.register(COMMON_WOMBAT.get(), CommonWombatRenderer::new);
         EntityRenderers.register(ARACARI.get(), AracariRenderer::new);
         EntityRenderers.register(MARMOSET.get(), MarmosetRenderer::new);
         EntityRenderers.register(SOUTHERN_TAMANDUA.get(), SouthernTamanduaRenderer::new);
