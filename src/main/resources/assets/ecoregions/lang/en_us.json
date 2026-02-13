@@ -28,7 +28,7 @@
   "entity.ecoregions.asian_water_monitor": "Asian Water Monitor",
   "entity.ecoregions.southern_tamandua": "Southern Tamandua",
   "entity.ecoregions.aracari": "Aracari",
-  "entity.ecoregions.aoudad": "Auodad",
+  "entity.ecoregions.aoudad": "Aoudad",
 
   
   "__comment": "Blocks",
@@ -80,7 +80,7 @@
   "item.ecoregions.asian_water_monitor_spawn_egg": "Asian Water Monitor Spawn Egg",
   "item.ecoregions.southern_tamandua_spawn_egg": "Southern Tamandua Spawn Egg",
   "item.ecoregions.aracari_spawn_egg": "Aracari Spawn Egg",
-  "item.ecoregions.aoudad_spawn_egg": "Auodad Spawn Egg",
+  "item.ecoregions.aoudad_spawn_egg": "Aoudad Spawn Egg",
   "item.ecoregions.aracari_egg": "Aracari Egg",
   "item.ecoregions.asian_water_monitor_egg": "Asian Water Monitor Egg",
 
