@@ -8,5 +8,12 @@
       {"type": "forge:not", "value": "#forge:is_wet"}
     ]
   },
-  "spawners": []
+  "spawners": [
+    {
+      "type": "ecoregions:aoudad",
+      "weight": 8,
+      "minCount": 2,
+      "maxCount": 4
+    }
+  ]
 }

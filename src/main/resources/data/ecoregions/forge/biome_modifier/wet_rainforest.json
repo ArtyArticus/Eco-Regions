@@ -57,6 +57,12 @@
       "weight": 15,
       "minCount": 1,
       "maxCount": 3
+    },
+    {
+      "type": "ecoregions:asian_water_monitor",
+      "weight": 8,
+      "minCount": 1,
+      "maxCount": 1
     }
   ]
 }
