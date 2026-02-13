@@ -9,7 +9,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class SouthernTamanduaRenderer extends ZawaMobRenderer<SouthernTamanduaEntity, SouthernTamanduaModel> {
     public SouthernTamanduaRenderer(EntityRendererProvider.Context context) {
-        super(context, new SouthernTamanduaModel.Adult(context.bakeLayer(EcoRegionsModelLayers.SOUTHERN_TAMANDUA_ADULT)), new SouthernTamanduaModel.Child(context.bakeLayer(EcoRegionsModelLayers.SOUTHERN_TAMANDUA_CHILD)), 0.4F);
+        super(context, new SouthernTamanduaModel.Adult(context.bakeLayer(EcoRegionsModelLayers.SOUTHERN_TAMANDUA_ADULT)), new SouthernTamanduaModel.Child(context.bakeLayer(EcoRegionsModelLayers.SOUTHERN_TAMANDUA_CHILD)), 0.3F);
     }
 
     @Override

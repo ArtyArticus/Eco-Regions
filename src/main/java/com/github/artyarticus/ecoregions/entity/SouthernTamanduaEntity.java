@@ -28,7 +28,7 @@ public class SouthernTamanduaEntity extends ZawaLandEntity implements ClimbingEn
     }
 
     public static AttributeSupplier.Builder registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 14.0).add(Attributes.ATTACK_DAMAGE, 0.5);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 8.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Override
@@ -79,7 +79,7 @@ public class SouthernTamanduaEntity extends ZawaLandEntity implements ClimbingEn
 
     @Override
     public float getMaleRatio() {
-        return 0.25F;
+        return 0.33F;
     }
 
     @Nullable

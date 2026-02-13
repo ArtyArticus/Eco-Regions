@@ -9,7 +9,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class AsianWaterMonitorRenderer extends ZawaMobRenderer<AsianWaterMonitorEntity, AsianWaterMonitorModel> {
     public AsianWaterMonitorRenderer(EntityRendererProvider.Context context) {
-        super(context, new AsianWaterMonitorModel.Adult(context.bakeLayer(EcoRegionsModelLayers.ASIAN_WATER_MONITOR_ADULT)), new AsianWaterMonitorModel.Child(context.bakeLayer(EcoRegionsModelLayers.ASIAN_WATER_MONITOR_CHILD)), 0.4F);
+        super(context, new AsianWaterMonitorModel.Adult(context.bakeLayer(EcoRegionsModelLayers.ASIAN_WATER_MONITOR_ADULT)), new AsianWaterMonitorModel.Child(context.bakeLayer(EcoRegionsModelLayers.ASIAN_WATER_MONITOR_CHILD)), 0.65F);
     }
 
     @Override

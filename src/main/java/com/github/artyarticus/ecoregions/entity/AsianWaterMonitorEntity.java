@@ -8,10 +8,12 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.PanicGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.zawamod.zawa.world.entity.OviparousEntity;
+import org.zawamod.zawa.world.entity.ai.goal.BreachGoal;
+import org.zawamod.zawa.world.entity.ai.goal.ZawaMeleeAttackGoal;
 import org.zawamod.zawa.world.entity.animal.ZawaSemiAquaticEntity;
 
 import javax.annotation.Nullable;
@@ -49,6 +51,7 @@ public class AsianWaterMonitorEntity extends ZawaSemiAquaticEntity implements Ov
         this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 4.0, 1.33, true));
         this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
     }
+
     @Override
     public ItemStack getBreedEggItem() {
         return EcoRegionsItems.ASIAN_WATER_MONITOR_EGG.get().getDefaultInstance();
