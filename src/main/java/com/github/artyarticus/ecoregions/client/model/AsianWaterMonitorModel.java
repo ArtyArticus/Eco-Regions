@@ -1,6 +1,6 @@
 package com.github.artyarticus.ecoregions.client.model;
 
-import com.github.artyarticus.ecoregions.entity.MonitorEntity;
+import com.github.artyarticus.ecoregions.entity.AsianWaterMonitorEntity;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -9,7 +9,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import org.zawamod.zawa.client.model.ZawaBaseModel;
 
-public abstract class AsianWaterMonitorModel extends ZawaBaseModel<MonitorEntity> {
+public abstract class AsianWaterMonitorModel extends ZawaBaseModel<AsianWaterMonitorEntity> {
     public ModelPart Chest;
     protected Iterable<ModelPart> parts;
 
@@ -172,7 +172,7 @@ public abstract class AsianWaterMonitorModel extends ZawaBaseModel<MonitorEntity
         }
 
         @Override
-        public void setupAnim(MonitorEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(AsianWaterMonitorEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Head.xRot = (headPitch / (180F / (float) Math.PI)) + 0.344F;
             this.Neck.yRot = netHeadYaw / (180F / (float) Math.PI);
@@ -333,7 +333,7 @@ public abstract class AsianWaterMonitorModel extends ZawaBaseModel<MonitorEntity
         }
 
         @Override
-        public void setupAnim(MonitorEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(AsianWaterMonitorEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Head.xRot = (headPitch / (180F / (float) Math.PI)) + 0.318F;
             this.Neck.yRot = netHeadYaw / (180F / (float) Math.PI);

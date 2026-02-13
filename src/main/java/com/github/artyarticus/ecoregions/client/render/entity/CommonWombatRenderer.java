@@ -14,7 +14,7 @@ public class CommonWombatRenderer extends ZawaMobRenderer<CommonWombatEntity, Co
 
     @Override
     protected void scale(CommonWombatEntity entity, PoseStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.4F : 0.65F;
+        float scale = entity.isBaby() ? 0.75F : 0.8F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

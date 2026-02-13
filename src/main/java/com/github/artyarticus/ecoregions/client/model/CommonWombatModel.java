@@ -1,6 +1,6 @@
 package com.github.artyarticus.ecoregions.client.model;
 
-import com.github.artyarticus.ecoregions.entity.WombatEntity;
+import com.github.artyarticus.ecoregions.entity.CommonWombatEntity;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -12,7 +12,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import org.zawamod.zawa.client.model.ZawaBaseModel;
 
-public abstract class CommonWombatModel extends ZawaBaseModel<WombatEntity> {
+public abstract class CommonWombatModel extends ZawaBaseModel<CommonWombatEntity> {
     public ModelPart Chest;
     protected Iterable<ModelPart> parts;
 
@@ -143,7 +143,7 @@ public abstract class CommonWombatModel extends ZawaBaseModel<WombatEntity> {
         }
 
         @Override
-        public void setupAnim(WombatEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(CommonWombatEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Head.xRot = (headPitch / (180F / (float) Math.PI)) + 0.087F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI);
@@ -306,7 +306,7 @@ public abstract class CommonWombatModel extends ZawaBaseModel<WombatEntity> {
         }
 
         @Override
-        public void setupAnim(WombatEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(CommonWombatEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Head.xRot = (headPitch / (180F / (float) Math.PI)) - 0.157F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI);

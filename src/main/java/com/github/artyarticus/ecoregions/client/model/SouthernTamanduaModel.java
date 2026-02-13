@@ -1,6 +1,6 @@
 package com.github.artyarticus.ecoregions.client.model;
 
-import com.github.artyarticus.ecoregions.entity.TamanduaEntity;
+import com.github.artyarticus.ecoregions.entity.SouthernTamanduaEntity;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -12,7 +12,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import org.zawamod.zawa.client.model.ZawaBaseModel;
 
-public abstract class SouthernTamanduaModel extends ZawaBaseModel<TamanduaEntity> {
+public abstract class SouthernTamanduaModel extends ZawaBaseModel<SouthernTamanduaEntity> {
     public ModelPart Chest;
     protected Iterable<ModelPart> parts;
 
@@ -158,7 +158,7 @@ public abstract class SouthernTamanduaModel extends ZawaBaseModel<TamanduaEntity
         }
 
         @Override
-        public void setupAnim(TamanduaEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(SouthernTamanduaEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Neck.yRot = (float) Math.toRadians((double) netHeadYaw) * 0.5F;
             this.Head.yRot = (float) Math.toRadians((double) netHeadYaw) * 0.5F;
@@ -325,7 +325,7 @@ public abstract class SouthernTamanduaModel extends ZawaBaseModel<TamanduaEntity
         }
 
         @Override
-        public void setupAnim(TamanduaEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(SouthernTamanduaEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Neck.yRot = (float) Math.toRadians((double) netHeadYaw) * 0.5F;
             this.Head.yRot = (float) Math.toRadians((double) netHeadYaw) * 0.5F;
