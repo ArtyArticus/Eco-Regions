@@ -13,7 +13,7 @@ public class AracariRenderer extends ZawaMobRenderer<AracariEntity, AracariModel
 
     @Override
     protected void scale(AracariEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.5F : 0.75F;
+        float scale = entity.isBaby() ? 0.4F : 0.6F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }
@@ -21,5 +21,9 @@ public class AracariRenderer extends ZawaMobRenderer<AracariEntity, AracariModel
     @Override
     protected boolean hasBabyVariants(AracariEntity entity) {
         return false;
+    }
+    @Override
+    protected boolean isSexuallyDimorphic() {
+        return true;
     }
 }

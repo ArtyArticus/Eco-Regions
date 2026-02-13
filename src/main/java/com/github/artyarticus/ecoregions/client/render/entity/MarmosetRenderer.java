@@ -13,7 +13,7 @@ public class MarmosetRenderer extends ZawaMobRenderer<MarmosetEntity, MarmosetMo
 
     @Override
     protected void scale(MarmosetEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.4F : 0.65F;
+        float scale = entity.isBaby() ? 0.2F : 0.45F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }
