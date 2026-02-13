@@ -62,6 +62,19 @@ public class EcoRegionsModelLayers {
     public static final ModelLayerLocation KUDU_ADULT_MALE = register("kudu", "adult/male", KuduModel.AdultMale::createBodyLayer);
     public static final ModelLayerLocation KUDU_ADULT_FEMALE = register("kudu", "adult/female", KuduModel.AdultFemale::createBodyLayer);
     public static final ModelLayerLocation KUDU_CHILD = register("kudu", "child", KuduModel.Child::createBodyLayer);
+    public static final ModelLayerLocation AOUDAD_ADULT = register("aoudad", "adult", AoudadModel.Adult::createBodyLayer);
+    public static final ModelLayerLocation AOUDAD_CHILD = register("aoudad", "child", AoudadModel.Child::createBodyLayer);
+    public static final ModelLayerLocation WOMBAT_ADULT = register("wombat", "adult", WombatModel.Adult::createBodyLayer);
+    public static final ModelLayerLocation WOMBAT_CHILD = register("wombat", "child", WombatModel.Child::createBodyLayer);
+    public static final ModelLayerLocation ARACARI_ADULT = register("aracari", "adult", AracariModel.Adult::createBodyLayer);
+    public static final ModelLayerLocation ARACARI_FLYING = register("aracari", "flying", AracariModel.Flying::createBodyLayer);
+    public static final ModelLayerLocation ARACARI_CHILD = register("aracari", "child", AracariModel.Child::createBodyLayer);
+    public static final ModelLayerLocation MARMOSET_ADULT = register("marmoset", "adult", MarmosetModel.Adult::createBodyLayer);
+    public static final ModelLayerLocation MARMOSET_CHILD = register("marmoset", "child", MarmosetModel.Child::createBodyLayer);
+    public static final ModelLayerLocation TAMANDUA_ADULT = register("tamandua", "adult", TamanduaModel.Adult::createBodyLayer);
+    public static final ModelLayerLocation TAMANDUA_CHILD = register("tamandua", "child", TamanduaModel.Child::createBodyLayer);
+    public static final ModelLayerLocation MONITOR_ADULT = register("monitor", "adult", MonitorModel.Adult::createBodyLayer);
+    public static final ModelLayerLocation MONITOR_CHILD = register("monitor", "child", MonitorModel.Child::createBodyLayer);
 
     public static final ModelLayerLocation BASS = register("bass", BassModel::createBodyLayer);
     public static final ModelLayerLocation FOXFACE = register("foxface", FoxfaceModel::createBodyLayer);

@@ -179,49 +179,43 @@ public class EcoRegionsEntities {
                     .data(entityBuilder -> entityBuilder.sized(1.65F, 1.65F).clientTrackingRange(10))
                     .build("kudu");
     public static final RegistryObject<EntityType<AoudadEntity>> AOUDAD =
-            REGISTRY.builder(AoudadEntity::new, EntityClassification.CREATURE)
+            REGISTRY.builder(AoudadEntity::new, MobCategory.CREATURE)
                     .attributes(AoudadEntity::registerAttributes)
-                    .renderer(() -> AoudadRenderer::new)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("aoudad");
     
     public static final RegistryObject<EntityType<WombatEntity>> WOMBAT =
-            REGISTRY.builder(WombatEntity::new, EntityClassification.CREATURE)
+            REGISTRY.builder(WombatEntity::new, MobCategory.CREATURE)
                     .attributes(WombatEntity::registerAttributes)
-                    .renderer(() -> WombatRenderer::new)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("wombat");
     
     public static final RegistryObject<EntityType<AracariEntity>> ARACARI =
-            REGISTRY.builder(AracariEntity::new, EntityClassification.CREATURE)
+            REGISTRY.builder(AracariEntity::new, MobCategory.CREATURE)
                     .attributes(AracariEntity::registerAttributes)
-                    .renderer(() -> AracariRenderer::new)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("aracari");
     
     public static final RegistryObject<EntityType<MarmosetEntity>> MARMOSET =
-            REGISTRY.builder(MarmosetEntity::new, EntityClassification.CREATURE)
+            REGISTRY.builder(MarmosetEntity::new, MobCategory.CREATURE)
                     .attributes(MarmosetEntity::registerAttributes)
-                    .renderer(() -> MarmosetRenderer::new)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("marmoset");
     
     public static final RegistryObject<EntityType<TamanduaEntity>> TAMANDUA =
-            REGISTRY.builder(TamanduaEntity::new, EntityClassification.CREATURE)
+            REGISTRY.builder(TamanduaEntity::new, MobCategory.CREATURE)
                     .attributes(TamanduaEntity::registerAttributes)
-                    .renderer(() -> TamanduaRenderer::new)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("tamandua");
     
     public static final RegistryObject<EntityType<MonitorEntity>> MONITOR =
-            REGISTRY.builder(MonitorEntity::new, EntityClassification.CREATURE)
+            REGISTRY.builder(MonitorEntity::new, MobCategory.CREATURE)
                     .attributes(MonitorEntity::registerAttributes)
-                    .renderer(() -> MonitorRenderer::new)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("monitor");
@@ -282,6 +276,11 @@ public class EcoRegionsEntities {
         EntityRenderers.register(TREE_KANGAROO.get(), TreeKangarooRenderer::new);
         EntityRenderers.register(MUNTJAC.get(), MuntjacRenderer::new);
         EntityRenderers.register(KUDU.get(), KuduRenderer::new);
-		//todo
+        EntityRenderers.register(AOUDAD.get(), AoudadRenderer::new);
+        EntityRenderers.register(WOMBAT.get(), WombatRenderer::new);
+        EntityRenderers.register(ARACARI.get(), AracariRenderer::new);
+        EntityRenderers.register(MARMOSET.get(), MarmosetRenderer::new);
+        EntityRenderers.register(TAMANDUA.get(), TamanduaRenderer::new);
+        EntityRenderers.register(MONITOR.get(), MonitorRenderer::new);
     }
 }

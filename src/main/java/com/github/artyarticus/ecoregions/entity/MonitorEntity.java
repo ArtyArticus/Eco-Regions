@@ -1,34 +1,33 @@
 package com.github.artyarticus.ecoregions.entity;
 
 import com.github.artyarticus.ecoregions.item.EcoRegionsItems;
-import net.minecraft.entity.AgeableEntity;
-import net.minecraft.entity.EntitySize;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.Pose;
-import net.minecraft.entity.ai.attributes.AttributeModifierMap;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.goal.PanicGoal;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.AgeableMob;
+import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.PanicGoal;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import org.zawamod.zawa.world.entity.OviparousEntity;
-import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 import org.zawamod.zawa.world.entity.animal.ZawaSemiAquaticEntity;
 
 import javax.annotation.Nullable;
 
 public class MonitorEntity extends ZawaSemiAquaticEntity implements OviparousEntity {
-    public MonitorEntity(EntityType<? extends ZawaSemiAquaticEntity> type, World world) {
+    public MonitorEntity(EntityType<? extends ZawaSemiAquaticEntity> type, Level world) {
         super(type, world);
     }
 
-    public static AttributeModifierMap.MutableAttribute registerAttributes() {
+    public static AttributeSupplier.Builder registerAttributes() {
         return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 8.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Nullable
     @Override
-    public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
+    public AgeableMob getBreedOffspring(ServerLevel world, AgeableMob entity) {
         return EcoRegionsEntities.MONITOR.get().create(world);
     }
 
@@ -38,7 +37,8 @@ public class MonitorEntity extends ZawaSemiAquaticEntity implements OviparousEnt
         super.customServerAiStep();
     }
 
-    protected float getStandingEyeHeight(Pose pose, EntitySize size) {
+    @Override
+    protected float getStandingEyeHeight(Pose pose, EntityDimensions size) {
         return size.height * 0.85F;
     }
 
@@ -67,7 +67,5 @@ public class MonitorEntity extends ZawaSemiAquaticEntity implements OviparousEnt
     public float swimSpeedMultiplier() {
         return 0.5F;
     }
-
-
 }
 
