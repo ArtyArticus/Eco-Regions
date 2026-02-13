@@ -213,12 +213,12 @@ public class EcoRegionsEntities {
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("southern_tamandua");
     
-    public static final RegistryObject<EntityType<MonitorEntity>> MONITOR =
-            REGISTRY.builder(MonitorEntity::new, MobCategory.CREATURE)
-                    .attributes(MonitorEntity::registerAttributes)
+    public static final RegistryObject<EntityType<AsianWaterMonitorEntity>> ASIAN_WATER_MONITOR =
+            REGISTRY.builder(AsianWaterMonitorEntity::new, MobCategory.CREATURE)
+                    .attributes(AsianWaterMonitorEntity::registerAttributes)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
-                    .build("monitor");
+                    .build("asian_water_monitor");
 
     public static void registerSpawnPlacements() {
         SpawnPlacements.register(BUSH_DOG.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
@@ -246,7 +246,7 @@ public class EcoRegionsEntities {
         SpawnPlacements.register(KUDU.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         SpawnPlacements.register(MARMOSET.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         SpawnPlacements.register(COMMON_WOMBAT.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
-        SpawnPlacements.register(MONITOR.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaSemiAquaticEntity::checkLandSpawnRules);
+        SpawnPlacements.register(ASIAN_WATER_MONITOR.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaSemiAquaticEntity::checkLandSpawnRules);
         SpawnPlacements.register(ARACARI.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaFlyingEntity::checkLandSpawnRules);
         SpawnPlacements.register(AOUDAD.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         SpawnPlacements.register(SOUTHERN_TAMANDUA.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
@@ -281,6 +281,6 @@ public class EcoRegionsEntities {
         EntityRenderers.register(ARACARI.get(), AracariRenderer::new);
         EntityRenderers.register(MARMOSET.get(), MarmosetRenderer::new);
         EntityRenderers.register(SOUTHERN_TAMANDUA.get(), SouthernTamanduaRenderer::new);
-        EntityRenderers.register(MONITOR.get(), MonitorRenderer::new);
+        EntityRenderers.register(ASIAN_WATER_MONITOR.get(), AsianWaterMonitorRenderer::new);
     }
 }

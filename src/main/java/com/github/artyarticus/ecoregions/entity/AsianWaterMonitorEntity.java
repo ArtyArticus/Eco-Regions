@@ -16,8 +16,8 @@ import org.zawamod.zawa.world.entity.animal.ZawaSemiAquaticEntity;
 
 import javax.annotation.Nullable;
 
-public class MonitorEntity extends ZawaSemiAquaticEntity implements OviparousEntity {
-    public MonitorEntity(EntityType<? extends ZawaSemiAquaticEntity> type, Level world) {
+public class AsianWaterMonitorEntity extends ZawaSemiAquaticEntity implements OviparousEntity {
+    public AsianWaterMonitorEntity(EntityType<? extends ZawaSemiAquaticEntity> type, Level world) {
         super(type, world);
     }
 
@@ -28,7 +28,7 @@ public class MonitorEntity extends ZawaSemiAquaticEntity implements OviparousEnt
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel world, AgeableMob entity) {
-        return EcoRegionsEntities.MONITOR.get().create(world);
+        return EcoRegionsEntities.ASIAN_WATER_MONITOR.get().create(world);
     }
 
     @Override
@@ -55,7 +55,7 @@ public class MonitorEntity extends ZawaSemiAquaticEntity implements OviparousEnt
 
     @Override
     public ItemStack getBreedEggItem() {
-        return EcoRegionsItems.MONITOR_EGG.get().getDefaultInstance();
+        return EcoRegionsItems.ASIAN_WATER_MONITOR_EGG.get().getDefaultInstance();
     }
 
     @Override
