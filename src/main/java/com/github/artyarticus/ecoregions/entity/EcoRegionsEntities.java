@@ -204,7 +204,7 @@ public class EcoRegionsEntities {
             REGISTRY.builder(AoudadEntity::new, EntityClassification.CREATURE)
                     .attributes(AoudadEntity::registerAttributes)
                     .renderer(() -> AoudadRenderer::new)
-                    .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
+                    .spawns(8, 2, 4, ZawaSpawnCategory.DRY_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("aoudad");
     
@@ -212,7 +212,7 @@ public class EcoRegionsEntities {
             REGISTRY.builder(WombatEntity::new, EntityClassification.CREATURE)
                     .attributes(WombatEntity::registerAttributes)
                     .renderer(() -> WombatRenderer::new)
-                    .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
+                    .spawns(10, 1, 1, ZawaSpawnCategory.TEMPERATE_FOREST)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("wombat");
     
@@ -220,7 +220,7 @@ public class EcoRegionsEntities {
             REGISTRY.builder(AracariEntity::new, EntityClassification.CREATURE)
                     .attributes(AracariEntity::registerAttributes)
                     .renderer(() -> AracariRenderer::new)
-                    .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
+                    .spawns(10, 2, 5, ZawaSpawnCategory.DEEP_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("aracari");
     
@@ -228,7 +228,7 @@ public class EcoRegionsEntities {
             REGISTRY.builder(MarmosetEntity::new, EntityClassification.CREATURE)
                     .attributes(MarmosetEntity::registerAttributes)
                     .renderer(() -> MarmosetRenderer::new)
-                    .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
+                    .spawns(15, 3, 5, ZawaSpawnCategory.DEEP_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("marmoset");
     
@@ -236,7 +236,7 @@ public class EcoRegionsEntities {
             REGISTRY.builder(TamanduaEntity::new, EntityClassification.CREATURE)
                     .attributes(TamanduaEntity::registerAttributes)
                     .renderer(() -> TamanduaRenderer::new)
-                    .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
+                    .spawns(2, 1, 1, ZawaSpawnCategory.DRY_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("tamandua");
     
@@ -244,7 +244,7 @@ public class EcoRegionsEntities {
             REGISTRY.builder(MonitorEntity::new, EntityClassification.CREATURE)
                     .attributes(MonitorEntity::registerAttributes)
                     .renderer(() -> MonitorRenderer::new)
-                    .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
+                    .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("monitor");
 

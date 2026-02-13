@@ -1,22 +1,23 @@
 {
   "temperament": "neutral",
-  "kibble": "zawa:carnivore_kibble",
-  "size": "tiny",
-  "fertility": "high",
-  "breeding_item": "zawa:small_meat",
+  "kibble": "zawa:herbivore_kibble",
+  "size": "medium",
+  "fertility": "medium",
+  "breeding_item": "minecraft:hay_block",
   "litter_size": {
     "min": 1,
-    "max": 5
+    "max": 2
   },
-  "diet": "zawa:small_carnivore",
-  "speed": "fast",
+  "diet": "zawa:herbivore",
+  "speed": "medium",
   "enrichment": {
     "zawa:blocks": [
-      "zawa:sprinkler",
-      "zawa:puzzle_feeder"
+      "zawa:scratching_post",
+      "zawa:salt_lick",
+      "zawa:apple_ice_treat"
     ],
     "zawa:entities": [
-      "zawa:scented_ball"
+      "zawa:apple_ice_treat"
     ]
   },
   "variant_count": 3

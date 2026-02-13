@@ -6,11 +6,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "zawa:medium_meat",
+          "name": "zawa:small_meat",
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": 2
+              "count": 1
             },
             {
               "function": "minecraft:furnace_smelt",

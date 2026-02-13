@@ -19,7 +19,7 @@ public class AoudadEntity extends ZawaLandEntity {
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 8.0).add(Attributes.ATTACK_DAMAGE, 0.5);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 14.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Nullable
@@ -46,6 +46,6 @@ public class AoudadEntity extends ZawaLandEntity {
 
     @Override
     public float getMaleRatio() {
-        return 0.25F;
+        return 0.20F;
     }
 }
