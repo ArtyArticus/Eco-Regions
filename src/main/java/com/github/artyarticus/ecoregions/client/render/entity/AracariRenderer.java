@@ -20,12 +20,12 @@ public class AracariRenderer extends ZawaMobRenderer<AracariEntity, AracariModel
     }
 
     @Override
-    protected boolean isSexuallyDimorphic() {
-        return true;
+    protected boolean hasBabyVariants(AracariEntity entity) {
+        return false;
     }
 
     @Override
-    protected boolean hasBabyVariants(AracariEntity entity) {
-        return false;
+    protected boolean isSexuallyDimorphic() {
+        return true;
     }
 }

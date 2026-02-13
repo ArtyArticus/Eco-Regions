@@ -184,35 +184,35 @@ public class EcoRegionsEntities {
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("aoudad");
-    
+
     public static final RegistryObject<EntityType<CommonWombatEntity>> COMMON_WOMBAT =
             REGISTRY.builder(CommonWombatEntity::new, MobCategory.CREATURE)
                     .attributes(CommonWombatEntity::registerAttributes)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("common_wombat");
-    
+
     public static final RegistryObject<EntityType<AracariEntity>> ARACARI =
             REGISTRY.builder(AracariEntity::new, MobCategory.CREATURE)
                     .attributes(AracariEntity::registerAttributes)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("aracari");
-    
+
     public static final RegistryObject<EntityType<MarmosetEntity>> MARMOSET =
             REGISTRY.builder(MarmosetEntity::new, MobCategory.CREATURE)
                     .attributes(MarmosetEntity::registerAttributes)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("marmoset");
-    
+
     public static final RegistryObject<EntityType<SouthernTamanduaEntity>> SOUTHERN_TAMANDUA =
             REGISTRY.builder(SouthernTamanduaEntity::new, MobCategory.CREATURE)
                     .attributes(SouthernTamanduaEntity::registerAttributes)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("southern_tamandua");
-    
+
     public static final RegistryObject<EntityType<AsianWaterMonitorEntity>> ASIAN_WATER_MONITOR =
             REGISTRY.builder(AsianWaterMonitorEntity::new, MobCategory.CREATURE)
                     .attributes(AsianWaterMonitorEntity::registerAttributes)
