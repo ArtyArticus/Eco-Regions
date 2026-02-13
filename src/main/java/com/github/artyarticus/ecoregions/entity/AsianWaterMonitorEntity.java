@@ -24,7 +24,7 @@ public class AsianWaterMonitorEntity extends ZawaSemiAquaticEntity implements Ov
     }
 
     public static AttributeSupplier.Builder registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 8.0).add(Attributes.ATTACK_DAMAGE, 0.5);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 20.0).add(Attributes.ATTACK_DAMAGE, 2.0);
     }
 
     @Nullable

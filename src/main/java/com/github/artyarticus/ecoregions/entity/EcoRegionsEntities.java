@@ -178,6 +178,7 @@ public class EcoRegionsEntities {
                     .spawns(8, 3, 4, ZawaSpawnCategory.WET_SAVANNA)
                     .data(entityBuilder -> entityBuilder.sized(1.65F, 1.65F).clientTrackingRange(10))
                     .build("kudu");
+
     public static final RegistryObject<EntityType<AoudadEntity>> AOUDAD =
             REGISTRY.builder(AoudadEntity::new, MobCategory.CREATURE)
                     .attributes(AoudadEntity::registerAttributes)

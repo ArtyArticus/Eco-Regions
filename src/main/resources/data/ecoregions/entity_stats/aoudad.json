@@ -13,8 +13,7 @@
   "enrichment": {
     "zawa:blocks": [
       "zawa:scratching_post",
-      "zawa:salt_lick",
-      "zawa:apple_ice_treat"
+      "zawa:salt_lick"
     ],
     "zawa:entities": [
       "zawa:apple_ice_treat"
