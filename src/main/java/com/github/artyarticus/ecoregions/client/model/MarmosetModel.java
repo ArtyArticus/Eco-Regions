@@ -246,7 +246,6 @@ public abstract class MarmosetModel extends ZawaBaseModel<MarmosetEntity> {
     }
 
     public static class Child extends MarmosetModel {
-        public ModelPart Body;
         public ModelPart Neck;
         public ModelPart ArmBaseLeft;
         public ModelPart ArmBaseRight;
