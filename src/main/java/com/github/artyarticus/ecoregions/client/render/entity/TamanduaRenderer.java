@@ -8,7 +8,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class TamanduaRenderer extends ZawaMobRenderer<TamanduaEntity, TamanduaModel> {
     public TamanduaRenderer(EntityRendererManager manager) {
-        super(manager, new TamanduaModel.Adult(), new TamanduaModel.Child(), 0.4F);
+        super(manager, new TamanduaModel.Adult(), new TamanduaModel.Child(), 0.3F);
     }
 
     @Override

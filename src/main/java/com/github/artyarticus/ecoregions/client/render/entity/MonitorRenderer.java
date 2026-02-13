@@ -8,7 +8,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class MonitorRenderer extends ZawaMobRenderer<MonitorEntity, MonitorModel> {
     public MonitorRenderer(EntityRendererManager manager) {
-        super(manager, new MonitorModel.Adult(), new MonitorModel.Child(), 0.4F);
+        super(manager, new MonitorModel.Adult(), new MonitorModel.Child(), 0.65F);
     }
 
     @Override

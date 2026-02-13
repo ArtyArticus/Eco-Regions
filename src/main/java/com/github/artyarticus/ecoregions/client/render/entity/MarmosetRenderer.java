@@ -8,7 +8,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class MarmosetRenderer extends ZawaMobRenderer<MarmosetEntity, MarmosetModel> {
     public MarmosetRenderer(EntityRendererManager manager) {
-        super(manager, new MarmosetModel.Adult(), new MarmosetModel.Child(), 0.4F);
+        super(manager, new MarmosetModel.Adult(), new MarmosetModel.Child(), 0.15F);
     }
 
     @Override

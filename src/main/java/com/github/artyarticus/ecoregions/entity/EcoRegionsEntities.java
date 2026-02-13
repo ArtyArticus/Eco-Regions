@@ -213,7 +213,7 @@ public class EcoRegionsEntities {
                     .attributes(WombatEntity::registerAttributes)
                     .renderer(() -> WombatRenderer::new)
                     .spawns(10, 1, 1, ZawaSpawnCategory.TEMPERATE_FOREST)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.7F, 0.7F).clientTrackingRange(10))
                     .build("wombat");
     
     public static final RegistryObject<EntityType<AracariEntity>> ARACARI =
@@ -221,7 +221,7 @@ public class EcoRegionsEntities {
                     .attributes(AracariEntity::registerAttributes)
                     .renderer(() -> AracariRenderer::new)
                     .spawns(10, 2, 5, ZawaSpawnCategory.DEEP_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.4F, 0.4F).clientTrackingRange(10))
                     .build("aracari");
     
     public static final RegistryObject<EntityType<MarmosetEntity>> MARMOSET =
@@ -229,7 +229,7 @@ public class EcoRegionsEntities {
                     .attributes(MarmosetEntity::registerAttributes)
                     .renderer(() -> MarmosetRenderer::new)
                     .spawns(15, 3, 5, ZawaSpawnCategory.DEEP_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.4F, 0.4F).clientTrackingRange(10))
                     .build("marmoset");
     
     public static final RegistryObject<EntityType<TamanduaEntity>> TAMANDUA =
@@ -237,7 +237,7 @@ public class EcoRegionsEntities {
                     .attributes(TamanduaEntity::registerAttributes)
                     .renderer(() -> TamanduaRenderer::new)
                     .spawns(2, 1, 1, ZawaSpawnCategory.DRY_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.7F, 0.45F).clientTrackingRange(10))
                     .build("tamandua");
     
     public static final RegistryObject<EntityType<MonitorEntity>> MONITOR =
@@ -245,7 +245,7 @@ public class EcoRegionsEntities {
                     .attributes(MonitorEntity::registerAttributes)
                     .renderer(() -> MonitorRenderer::new)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.1F, 0.6F).clientTrackingRange(10))
                     .build("monitor");
 
     public static void registerSpawnPlacements() {
