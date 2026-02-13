@@ -45,14 +45,10 @@ public class AsianWaterMonitorEntity extends ZawaSemiAquaticEntity implements Ov
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
+        this.goalSelector.addGoal(4, new BreachGoal(this, 5));
+        this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 4.0, 1.33, true));
+        this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
     }
-
-    @Override
-    public float getMaleRatio() {
-        return 0.25F;
-    }
-
     @Override
     public ItemStack getBreedEggItem() {
         return EcoRegionsItems.ASIAN_WATER_MONITOR_EGG.get().getDefaultInstance();

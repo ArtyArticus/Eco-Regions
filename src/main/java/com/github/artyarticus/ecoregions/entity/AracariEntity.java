@@ -43,6 +43,11 @@ public class AracariEntity extends ZawaFlyingEntity implements SpeciesVariantsEn
     }
 
     @Override
+    public float getMaleRatio() {
+        return 0.25F;
+    }
+
+    @Override
     public int getVariantByBiome(LevelAccessor iWorld) {
         return random.nextInt(getWildVariants());
     }

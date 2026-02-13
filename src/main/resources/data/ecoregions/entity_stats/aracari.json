@@ -1,22 +1,21 @@
 {
-  "temperament": "neutral",
-  "kibble": "zawa:carnivore_kibble",
+  "temperament": "timid",
+  "kibble": "zawa:herbivore_kibble",
   "size": "tiny",
-  "fertility": "high",
-  "breeding_item": "zawa:small_meat",
+  "fertility": "medium",
+  "breeding_item": "minecraft:melon_slice",
   "litter_size": {
-    "min": 1,
+    "min": 2,
     "max": 5
   },
-  "diet": "zawa:small_carnivore",
-  "speed": "fast",
+  "diet": "zawa:frugivore",
+  "speed": "medium",
   "enrichment": {
     "zawa:blocks": [
+      "zawa:perching_stand",
       "zawa:sprinkler",
-      "zawa:puzzle_feeder"
-    ],
-    "zawa:entities": [
-      "zawa:scented_ball"
+      "zawa:branch",
+      "zawa:pineapple_pinata"
     ]
   },
   "variant_count": 9

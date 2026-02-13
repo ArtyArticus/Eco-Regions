@@ -9,7 +9,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class MarmosetRenderer extends ZawaMobRenderer<MarmosetEntity, MarmosetModel> {
     public MarmosetRenderer(EntityRendererProvider.Context context) {
-        super(context, new MarmosetModel.Adult(context.bakeLayer(EcoRegionsModelLayers.MARMOSET_ADULT)), new MarmosetModel.Child(context.bakeLayer(EcoRegionsModelLayers.MARMOSET_CHILD)), 0.4F);
+        super(context, new MarmosetModel.Adult(context.bakeLayer(EcoRegionsModelLayers.MARMOSET_ADULT)), new MarmosetModel.Child(context.bakeLayer(EcoRegionsModelLayers.MARMOSET_CHILD)), 0.15F);
     }
 
     @Override
