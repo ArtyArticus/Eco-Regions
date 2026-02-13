@@ -26,7 +26,7 @@
   "entity.ecoregions.wombat": "Common Wombat",
   "entity.ecoregions.marmoset": "Marmoset",
   "entity.ecoregions.monitor": "Asian Water Monitor",
-  "entity.ecoregions.tamandua": "Southern Tamandua",
+  "entity.ecoregions.southern_tamandua": "Southern Tamandua",
   "entity.ecoregions.aracari": "Aracari",
   "entity.ecoregions.aoudad": "Aoudad",
 
@@ -78,7 +78,7 @@
   "item.ecoregions.wombat_spawn_egg": "Common Wombat Spawn Egg",
   "item.ecoregions.marmoset_spawn_egg": "Marmoset Spawn Egg",
   "item.ecoregions.monitor_spawn_egg": "Asian Water Monitor Spawn Egg",
-  "item.ecoregions.tamandua_spawn_egg": "Southern Tamandua Spawn Egg",
+  "item.ecoregions.southern_tamandua_spawn_egg": "Southern Tamandua Spawn Egg",
   "item.ecoregions.aracari_spawn_egg": "Aracari Spawn Egg",
   "item.ecoregions.aoudad_spawn_egg": "Aoudad Spawn Egg",
   "item.ecoregions.aracari_egg": "Aracari Egg",

@@ -206,12 +206,12 @@ public class EcoRegionsEntities {
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("marmoset");
     
-    public static final RegistryObject<EntityType<TamanduaEntity>> TAMANDUA =
-            REGISTRY.builder(TamanduaEntity::new, MobCategory.CREATURE)
-                    .attributes(TamanduaEntity::registerAttributes)
+    public static final RegistryObject<EntityType<SouthernTamanduaEntity>> SOUTHERN_TAMANDUA =
+            REGISTRY.builder(SouthernTamanduaEntity::new, MobCategory.CREATURE)
+                    .attributes(SouthernTamanduaEntity::registerAttributes)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
-                    .build("tamandua");
+                    .build("southern_tamandua");
     
     public static final RegistryObject<EntityType<MonitorEntity>> MONITOR =
             REGISTRY.builder(MonitorEntity::new, MobCategory.CREATURE)
@@ -249,7 +249,7 @@ public class EcoRegionsEntities {
         SpawnPlacements.register(MONITOR.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaSemiAquaticEntity::checkLandSpawnRules);
         SpawnPlacements.register(ARACARI.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaFlyingEntity::checkLandSpawnRules);
         SpawnPlacements.register(AOUDAD.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
-        SpawnPlacements.register(TAMANDUA.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        SpawnPlacements.register(SOUTHERN_TAMANDUA.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
     }
 
     public static void registerRenderers() {
@@ -280,7 +280,7 @@ public class EcoRegionsEntities {
         EntityRenderers.register(WOMBAT.get(), WombatRenderer::new);
         EntityRenderers.register(ARACARI.get(), AracariRenderer::new);
         EntityRenderers.register(MARMOSET.get(), MarmosetRenderer::new);
-        EntityRenderers.register(TAMANDUA.get(), TamanduaRenderer::new);
+        EntityRenderers.register(SOUTHERN_TAMANDUA.get(), SouthernTamanduaRenderer::new);
         EntityRenderers.register(MONITOR.get(), MonitorRenderer::new);
     }
 }

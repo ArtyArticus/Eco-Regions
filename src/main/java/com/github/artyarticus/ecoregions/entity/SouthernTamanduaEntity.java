@@ -20,10 +20,10 @@ import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
 import javax.annotation.Nullable;
 
-public class TamanduaEntity extends ZawaLandEntity implements ClimbingEntity {
-    public static final EntityDataAccessor<Boolean> CLIMBING = SynchedEntityData.defineId(TamanduaEntity.class, EntityDataSerializers.BOOLEAN);
+public class SouthernTamanduaEntity extends ZawaLandEntity implements ClimbingEntity {
+    public static final EntityDataAccessor<Boolean> CLIMBING = SynchedEntityData.defineId(SouthernTamanduaEntity.class, EntityDataSerializers.BOOLEAN);
 
-    public TamanduaEntity(EntityType<? extends ZawaLandEntity> type, Level world) {
+    public SouthernTamanduaEntity(EntityType<? extends ZawaLandEntity> type, Level world) {
         super(type, world);
     }
 
@@ -85,7 +85,7 @@ public class TamanduaEntity extends ZawaLandEntity implements ClimbingEntity {
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel world, AgeableMob entity) {
-        return EcoRegionsEntities.TAMANDUA.get().create(world);
+        return EcoRegionsEntities.SOUTHERN_TAMANDUA.get().create(world);
     }
 
     @Override

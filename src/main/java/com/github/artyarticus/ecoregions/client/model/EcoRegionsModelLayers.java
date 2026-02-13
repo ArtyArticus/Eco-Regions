@@ -71,8 +71,8 @@ public class EcoRegionsModelLayers {
     public static final ModelLayerLocation ARACARI_CHILD = register("aracari", "child", AracariModel.Child::createBodyLayer);
     public static final ModelLayerLocation MARMOSET_ADULT = register("marmoset", "adult", MarmosetModel.Adult::createBodyLayer);
     public static final ModelLayerLocation MARMOSET_CHILD = register("marmoset", "child", MarmosetModel.Child::createBodyLayer);
-    public static final ModelLayerLocation TAMANDUA_ADULT = register("tamandua", "adult", TamanduaModel.Adult::createBodyLayer);
-    public static final ModelLayerLocation TAMANDUA_CHILD = register("tamandua", "child", TamanduaModel.Child::createBodyLayer);
+    public static final ModelLayerLocation SOUTHERN_TAMANDUA_ADULT = register("southern_tamandua", "adult", SouthernTamanduaModel.Adult::createBodyLayer);
+    public static final ModelLayerLocation SOUTHERN_TAMANDUA_CHILD = register("southern_tamandua", "child", SouthernTamanduaModel.Child::createBodyLayer);
     public static final ModelLayerLocation MONITOR_ADULT = register("monitor", "adult", MonitorModel.Adult::createBodyLayer);
     public static final ModelLayerLocation MONITOR_CHILD = register("monitor", "child", MonitorModel.Child::createBodyLayer);
 

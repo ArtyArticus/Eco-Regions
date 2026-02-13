@@ -1,6 +1,6 @@
 package com.github.artyarticus.ecoregions.client.model;
 
-import com.github.artyarticus.ecoregions.entity.TamanduaEntity;
+import com.github.artyarticus.ecoregions.entity.SouthernTamanduaEntity;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -12,7 +12,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import org.zawamod.zawa.client.model.ZawaBaseModel;
 
-public abstract class TamanduaModel extends ZawaBaseModel<TamanduaEntity> {
+public abstract class SouthernTamanduaModel extends ZawaBaseModel<SouthernTamanduaEntity> {
     public ModelPart Chest;
     protected Iterable<ModelPart> parts;
 
@@ -25,7 +25,7 @@ public abstract class TamanduaModel extends ZawaBaseModel<TamanduaEntity> {
         return this.parts;
     }
 
-    public static class Adult extends TamanduaModel {
+    public static class Adult extends SouthernTamanduaModel {
         public ModelPart Body;
         public ModelPart Neck;
         public ModelPart ArmLeft;
@@ -158,7 +158,7 @@ public abstract class TamanduaModel extends ZawaBaseModel<TamanduaEntity> {
         }
 
         @Override
-        public void setupAnim(TamanduaEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(SouthernTamanduaEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Neck.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
@@ -218,7 +218,7 @@ public abstract class TamanduaModel extends ZawaBaseModel<TamanduaEntity> {
         }
     }
 
-    public static class Child extends TamanduaModel {
+    public static class Child extends SouthernTamanduaModel {
         public ModelPart Body;
         public ModelPart Neck;
         public ModelPart ArmBaseLeft;
@@ -325,7 +325,7 @@ public abstract class TamanduaModel extends ZawaBaseModel<TamanduaEntity> {
         }
 
         @Override
-        public void setupAnim(TamanduaEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(SouthernTamanduaEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Neck.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
