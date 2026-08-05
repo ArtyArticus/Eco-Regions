@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "ecoregions:loris",
+    "ecoregions:slow_loris",
     "ecoregions:mongoose",
     "ecoregions:bee_eater",
     "ecoregions:gazelle",

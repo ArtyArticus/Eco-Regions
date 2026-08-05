@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ecoregions:item/african_crested_porcupine_spawn_egg"
+  }
+}

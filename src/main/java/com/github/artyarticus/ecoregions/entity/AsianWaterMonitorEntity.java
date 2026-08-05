@@ -1,5 +1,6 @@
 package com.github.artyarticus.ecoregions.entity;
 
+import com.github.artyarticus.ecoregions.item.EcoRegionsItems;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntitySize;
 import net.minecraft.entity.EntityType;
@@ -7,14 +8,16 @@ import net.minecraft.entity.Pose;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.PanicGoal;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
-import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
+import org.zawamod.zawa.world.entity.OviparousEntity;
+import org.zawamod.zawa.world.entity.animal.ZawaSemiAquaticEntity;
 
 import javax.annotation.Nullable;
 
-public class WombatEntity extends ZawaLandEntity {
-    public WombatEntity(EntityType<? extends ZawaLandEntity> type, World world) {
+public class AsianWaterMonitorEntity extends ZawaSemiAquaticEntity implements OviparousEntity {
+    public AsianWaterMonitorEntity(EntityType<? extends ZawaSemiAquaticEntity> type, World world) {
         super(type, world);
     }
 
@@ -25,7 +28,7 @@ public class WombatEntity extends ZawaLandEntity {
     @Nullable
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
-        return EcoRegionsEntities.COMMON_WOMBAT.get().create(world);
+        return EcoRegionsEntities.ASIAN_WATER_MONITOR.get().create(world);
     }
 
     @Override
@@ -48,4 +51,22 @@ public class WombatEntity extends ZawaLandEntity {
     public float getMaleRatio() {
         return 0.25F;
     }
+
+    @Override
+    public ItemStack getBreedEggItem() {
+        return EcoRegionsItems.ASIAN_WATER_MONITOR_EGG.get().getDefaultInstance();
+    }
+
+    @Override
+    public boolean canBabySwim() {
+        return false;
+    }
+
+    @Override
+    public float swimSpeedMultiplier() {
+        return 0.5F;
+    }
+
+
 }
+
