@@ -13,8 +13,8 @@ import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
 import javax.annotation.Nullable;
 
-public class WombatEntity extends ZawaLandEntity {
-    public WombatEntity(EntityType<? extends ZawaLandEntity> type, World world) {
+public class CommonWombatEntity extends ZawaLandEntity {
+    public CommonWombatEntity(EntityType<? extends ZawaLandEntity> type, World world) {
         super(type, world);
     }
 

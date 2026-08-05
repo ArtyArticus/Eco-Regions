@@ -1,6 +1,6 @@
 package com.github.artyarticus.ecoregions.client.model;
 
-import com.github.artyarticus.ecoregions.entity.WombatEntity;
+import com.github.artyarticus.ecoregions.entity.CommonWombatEntity;
 import com.google.common.collect.ImmutableList;
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.client.renderer.model.ModelRenderer;
@@ -8,7 +8,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 import org.zawamod.zawa.client.model.ZawaBaseModel;
 
-public abstract class WombatModel extends ZawaBaseModel<WombatEntity> {
+public abstract class CommonWombatModel extends ZawaBaseModel<CommonWombatEntity> {
     public ModelRenderer Chest;
     protected Iterable<ModelRenderer> parts;
 
@@ -22,7 +22,7 @@ public abstract class WombatModel extends ZawaBaseModel<WombatEntity> {
         return this.parts;
     }
 
-    public static class Adult extends WombatModel {
+    public static class Adult extends CommonWombatModel {
 
         public ModelRenderer Body;
         public ModelRenderer ArmBaseLeft;
@@ -259,7 +259,7 @@ public abstract class WombatModel extends ZawaBaseModel<WombatEntity> {
         }
 
         @Override
-        public void setupAnim(WombatEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(CommonWombatEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Head.xRot = (headPitch / (180F / (float) Math.PI)) + 0.087F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI);
@@ -305,7 +305,7 @@ public abstract class WombatModel extends ZawaBaseModel<WombatEntity> {
     }
 
 
-    public static class Child extends WombatModel {
+    public static class Child extends CommonWombatModel {
 
         public ModelRenderer Body;
         public ModelRenderer Neck;
@@ -474,7 +474,7 @@ public abstract class WombatModel extends ZawaBaseModel<WombatEntity> {
         }
 
         @Override
-        public void setupAnim(WombatEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(CommonWombatEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Head.xRot = (headPitch / (180F / (float) Math.PI)) - 0.157F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI);

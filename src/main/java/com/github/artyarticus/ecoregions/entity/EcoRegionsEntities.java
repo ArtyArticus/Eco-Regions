@@ -120,7 +120,7 @@ public class EcoRegionsEntities {
                     .renderer(() -> HamadrayasBaboonRenderer::new)
                     .spawns(10, 3, 5, ZawaSpawnCategory.DRY_SAVANNA)
                     .data(entityBuilder -> entityBuilder.sized(1.2F, 0.95F).clientTrackingRange(10))
-                    .build("hamadrayas_hamadrayas_baboon");
+                    .build("hamadrayas_baboon");
 
     public static final RegistryObject<EntityType<GibbonEntity>> GIBBON =
             REGISTRY.builder(GibbonEntity::new, EntityClassification.CREATURE)
@@ -208,10 +208,10 @@ public class EcoRegionsEntities {
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("aoudad");
     
-    public static final RegistryObject<EntityType<WombatEntity>> COMMON_WOMBAT =
-            REGISTRY.builder(WombatEntity::new, EntityClassification.CREATURE)
-                    .attributes(WombatEntity::registerAttributes)
-                    .renderer(() -> WombatRenderer::new)
+    public static final RegistryObject<EntityType<CommonWombatEntity>> COMMON_WOMBAT =
+            REGISTRY.builder(CommonWombatEntity::new, EntityClassification.CREATURE)
+                    .attributes(CommonWombatEntity::registerAttributes)
+                    .renderer(() -> CommonWombatRenderer::new)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("common_wombat");
