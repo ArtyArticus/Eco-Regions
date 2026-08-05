@@ -3,7 +3,6 @@ package com.github.artyarticus.ecoregions;
 import com.github.artyarticus.ecoregions.block.EcoRegionsBlocks;
 import com.github.artyarticus.ecoregions.entity.EcoRegionsEntities;
 import com.github.artyarticus.ecoregions.item.EcoRegionsItems;
-import com.github.artyarticus.ecoregions.sounds.EcoRegionsSounds;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -21,7 +20,6 @@ public class EcoRegions {
         EcoRegionsEntities.REGISTRY.initialize();
         EcoRegionsItems.REGISTRAR.register(bus);
         EcoRegionsBlocks.REGISTRAR.register(bus);
-        EcoRegionsSounds.REGISTRAR.register(bus);
 
         bus.addListener(this::setup);
         bus.addListener(this::setupClient);
