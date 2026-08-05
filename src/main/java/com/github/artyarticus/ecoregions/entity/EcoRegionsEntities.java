@@ -232,13 +232,13 @@ public class EcoRegionsEntities {
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build("marmoset");
     
-    public static final RegistryObject<EntityType<TamanduaEntity>> TAMANDUA =
-            REGISTRY.builder(TamanduaEntity::new, EntityClassification.CREATURE)
-                    .attributes(TamanduaEntity::registerAttributes)
-                    .renderer(() -> TamanduaRenderer::new)
+    public static final RegistryObject<EntityType<SouthernTamanduaEntity>> SOUTHERN_TAMANDUA =
+            REGISTRY.builder(SouthernTamanduaEntity::new, EntityClassification.CREATURE)
+                    .attributes(SouthernTamanduaEntity::registerAttributes)
+                    .renderer(() -> SouthernTamanduaRenderer::new)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
-                    .build("tamandua");
+                    .build("southern_southern_tamandua");
     
     public static final RegistryObject<EntityType<MonitorEntity>> MONITOR =
             REGISTRY.builder(MonitorEntity::new, EntityClassification.CREATURE)
@@ -277,7 +277,7 @@ public class EcoRegionsEntities {
         EntitySpawnPlacementRegistry.register(MONITOR.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaSemiAquaticEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(ARACARI.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaFlyingEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(AOUDAD.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
-        EntitySpawnPlacementRegistry.register(TAMANDUA.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(SOUTHERN_TAMANDUA.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
 
     }
 }
