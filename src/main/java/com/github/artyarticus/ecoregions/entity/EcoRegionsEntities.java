@@ -238,7 +238,7 @@ public class EcoRegionsEntities {
                     .renderer(() -> SouthernTamanduaRenderer::new)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
-                    .build("southern_southern_tamandua");
+                    .build("southern_tamandua");
     
     public static final RegistryObject<EntityType<AsianWaterMonitorEntity>> ASIAN_WATER_MONITOR =
             REGISTRY.builder(AsianWaterMonitorEntity::new, EntityClassification.CREATURE)
