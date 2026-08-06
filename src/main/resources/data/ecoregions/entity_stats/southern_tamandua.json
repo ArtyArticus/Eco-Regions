@@ -19,5 +19,9 @@
       "zawa:scented_ball"
     ]
   },
-  "variant_count": 6
+  "variant_count": 6,
+  "captive_variants": [
+    "albino",
+    "melanistic"
+  ]
 }
