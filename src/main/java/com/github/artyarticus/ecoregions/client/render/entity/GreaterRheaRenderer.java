@@ -13,7 +13,7 @@ public class GreaterRheaRenderer extends ZawaMobRenderer<GreaterRheaEntity, Grea
 
     @Override
     protected void scale(GreaterRheaEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.8F : 1.0F;
+        float scale = entity.isBaby() ? 0.75F : 0.95F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }
