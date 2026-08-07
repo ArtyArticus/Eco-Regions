@@ -33,12 +33,6 @@ public class AsianWaterMonitorEntity extends ZawaSemiAquaticEntity implements Ov
         return EcoRegionsEntities.ASIAN_WATER_MONITOR.get().create(world);
     }
 
-    @Override
-    protected void customServerAiStep() {
-        if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
-        super.customServerAiStep();
-    }
-
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
         return size.height * 0.85F;
     }

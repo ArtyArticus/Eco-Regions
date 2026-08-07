@@ -36,12 +36,6 @@ public class SouthernTamanduaEntity extends ZawaLandEntity implements ClimbingEn
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
     }
 
-    @Override
-    protected void customServerAiStep() {
-        if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
-        super.customServerAiStep();
-    }
-
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(CLIMBING, false);

@@ -30,12 +30,6 @@ public class WhiteRhinocerosEntity extends ZawaLandEntity {
         return EcoRegionsEntities.WHITE_RHINOCEROS.get().create(world);
     }
 
-    @Override
-    protected void customServerAiStep() {
-        if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
-        super.customServerAiStep();
-    }
-
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
         return size.height * 0.85F;
     }

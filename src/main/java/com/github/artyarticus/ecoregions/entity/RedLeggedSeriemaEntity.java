@@ -34,12 +34,6 @@ public class RedLeggedSeriemaEntity extends ZawaLandEntity implements OviparousE
     }
 
     @Override
-    protected void customServerAiStep() {
-        if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
-        super.customServerAiStep();
-    }
-
-    @Override
     public ItemStack getBreedEggItem() {
         return EcoRegionsItems.RED_LEGGED_SERIEMA_EGG.get().getDefaultInstance();
     }

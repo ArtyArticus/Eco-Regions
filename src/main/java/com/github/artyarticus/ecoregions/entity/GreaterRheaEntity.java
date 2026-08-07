@@ -35,12 +35,6 @@ public class GreaterRheaEntity extends ZawaLandEntity implements OviparousEntity
     }
 
     @Override
-    protected void customServerAiStep() {
-        if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
-        super.customServerAiStep();
-    }
-
-    @Override
     public ItemStack getBreedEggItem() {
         return EcoRegionsItems.GREATER_RHEA_EGG.get().getDefaultInstance();
     }

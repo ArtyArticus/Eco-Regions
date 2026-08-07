@@ -40,12 +40,6 @@ public class SlowLorisEntity extends ZawaLandEntity implements SpeciesVariantsEn
         return EcoRegionsEntities.SLOW_LORIS.get().create(world);
     }
 
-    @Override
-    protected void customServerAiStep() {
-        if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
-        super.customServerAiStep();
-    }
-
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(CLIMBING, false);
