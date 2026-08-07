@@ -264,29 +264,6 @@ public abstract class ScreamerModel extends ZawaBaseModel<ScreamerEntity> {
         }
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            if (isSwimming) {
-                limbSwing = (float) entity.tickCount;
-                limbSwingAmount = 0.3F;
-            }
-
-            if (entity.isSprinting()) {
-                float speed = 1.0f;
-                float degree = 1.0f;
-                this.Body.y = MathHelper.cos(6F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * -4F) * 0.5F + 15.2F;
-                this.Body.xRot = MathHelper.cos(9.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * -1F) * 0.5F - 0.195F;
-                this.TailBase.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * 0.8F) * 0.5F + 1.094F;
-                this.Neck1.xRot = MathHelper.cos(7.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * -0.6F) * 0.5F - 0.625F;
-                this.Head.xRot = MathHelper.cos(1F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * -0.6F) * 0.5F + 0.351F;
-
-                this.ThighLeft.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.3F) * limbSwingAmount * (degree * 5F) * 0.5F + 0.507F;
-                this.Leg1Left.xRot = MathHelper.cos(0.5F + limbSwing * speed * 0.3F) * limbSwingAmount * (degree * 3F) * 0.5F - 0.234F;
-                this.FootLeft.xRot = MathHelper.cos(5.5F + limbSwing * speed * 0.3F) * limbSwingAmount * (degree * -2F) * 0.5F + 0.117F;
-                this.ThighRight.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.3F) * limbSwingAmount * (degree * -5F) * 0.5F + 0.507F;
-                this.Leg1Right.xRot = MathHelper.cos(0.5F + limbSwing * speed * 0.3F) * limbSwingAmount * (degree * -3F) * 0.5F - 0.234F;
-                this.FootRight.xRot = MathHelper.cos(5.5F + limbSwing * speed * 0.3F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.117F;
-
-
-            } else {
                 float speed = 1.0f;
                 float degree = 1.0f;
                 this.Body.y = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.5F) * 0.5F + 15.2F;
@@ -303,8 +280,6 @@ public abstract class ScreamerModel extends ZawaBaseModel<ScreamerEntity> {
                 this.FootRight.xRot = MathHelper.cos(5.5F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.117F;
             }
         }
-    }
-
 
     public static class Child extends ScreamerModel {
 

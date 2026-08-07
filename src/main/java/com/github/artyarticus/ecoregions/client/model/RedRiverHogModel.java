@@ -282,12 +282,6 @@ public abstract class RedRiverHogModel extends ZawaBaseModel<RedRiverHogEntity> 
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            if (entity.isSprinting()) {
-                float speed = 1.0f;
-                float degree = 0.5f;
-
-
-            } else {
                 float speed = 1.25f;
                 float degree = 0.6f;
                 this.Neck.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F + 0.17F;
@@ -315,7 +309,6 @@ public abstract class RedRiverHogModel extends ZawaBaseModel<RedRiverHogEntity> 
                 this.UpperLegRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.5F) * 0.5F + 0.44F;
                 this.LowerLegRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.5F) * 0.5F - 0.35F;
                 this.FootRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.5F) * 0.5F + 0.14F;
-            }
         }
     }
 

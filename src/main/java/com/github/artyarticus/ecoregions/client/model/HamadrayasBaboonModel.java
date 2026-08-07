@@ -273,34 +273,6 @@ public abstract class HamadrayasBaboonModel extends ZawaBaseModel<HamadrayasBabo
             this.loadBase();
             float speed = 3.0F;
             float degree = 1.0F;
-            if (this.isSwimming) {
-                limbSwing = (float) entity.tickCount;
-                limbSwingAmount = 0.3F;
-                speed = 2.0F;
-            }
-
-            if (entity.isSprinting() && !this.isSwimming) {
-                degree = 0.3F;
-                this.ArmLeft.xRot = MathHelper.cos(limbSwing * speed * 0.3F + 3.1415927F) * degree * 6.0F * limbSwingAmount * 0.5F + 0.377F;
-                this.ForearmLeft.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * 2.0F * limbSwingAmount * 0.5F - 0.318F;
-                this.HandLeft.xRot = MathHelper.cos(6.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * -4.0F * limbSwingAmount * 0.5F;
-                this.ArmRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * 6.0F * limbSwingAmount * 0.5F + 0.377F;
-                this.ForearmRight.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * 2.0F * limbSwingAmount * 0.5F - 0.318F;
-                this.HandRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * -4.0F * limbSwingAmount * 0.5F;
-                this.ThightLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * -4.5F * limbSwingAmount * 0.5F - 0.039F;
-                this.LegLeft.xRot = MathHelper.cos(6.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * -3.0F * limbSwingAmount * 0.5F + 0.364F;
-                this.FootLeft.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * 1.0F * limbSwingAmount * 0.5F - 0.182F;
-                this.ThightRight.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * -4.5F * limbSwingAmount * 0.5F - 0.039F;
-                this.LegRight.xRot = MathHelper.cos(limbSwing * speed * 0.3F + 3.1415927F) * degree * -3.0F * limbSwingAmount * 0.5F + 0.364F;
-                this.FootRight.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * 1.0F * limbSwingAmount * 0.5F - 0.182F;
-                this.Chest.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * -1.7F * limbSwingAmount * 0.5F - 0.045F;
-                this.Body.xRot = MathHelper.cos(6.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * -1.0F * limbSwingAmount * 0.5F + 0.091F;
-                this.Hips.xRot = MathHelper.cos(limbSwing * speed * 0.3F + 3.1415927F) * degree * -1.5F * limbSwingAmount * 0.5F - 0.142F;
-                this.Chest.y = MathHelper.cos(1.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * -7.0F * limbSwingAmount * 0.5F + 10.5F;
-                this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * 0.8F * limbSwingAmount * 0.5F - 0.591F;
-                this.Head.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.3F + 3.1415927F) * degree * 0.4F * limbSwingAmount * 0.5F + 0.761F;
-                this.Mouth.xRot = MathHelper.cos(limbSwing * speed * 0.3F + 3.1415927F) * degree * -0.5F * limbSwingAmount * 0.5F - 0.215F;
-            } else {
                 this.ArmLeft.xRot = MathHelper.cos(limbSwing * speed * 0.2F + 3.1415927F) * degree * 2.5F * limbSwingAmount * 0.5F + 0.377F;
                 this.ForearmLeft.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.2F + 3.1415927F) * degree * 1.7F * limbSwingAmount * 0.5F - 0.318F;
                 this.HandLeft.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.2F + 3.1415927F) * degree * 2.0F * limbSwingAmount * 0.5F;
@@ -317,8 +289,6 @@ public abstract class HamadrayasBaboonModel extends ZawaBaseModel<HamadrayasBabo
                 this.Neck.xRot = MathHelper.cos(6.0F + limbSwing * speed * 0.4F + 3.1415927F) * degree * -0.2F * limbSwingAmount * 0.5F + (this.isSwimming ? 1.0F : -0.591F);
                 this.Head.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.4F + 3.1415927F) * degree * 0.1F * limbSwingAmount * 0.5F + (this.isSwimming ? -1.6F : +0.761F);
                 this.Body.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.4F + 3.1415927F) * degree * -0.1F * limbSwingAmount * 0.5F + 0.091F;
-            }
-
         }
     }
 
@@ -513,9 +483,6 @@ public abstract class HamadrayasBaboonModel extends ZawaBaseModel<HamadrayasBabo
             this.loadBase();
             float speed = 1.0F;
             float degree = 1.0F;
-            if (entity.isSprinting()) {
-                degree = 0.3F;
-            }
             this.ArmLeft.xRot = MathHelper.cos(limbSwing * speed * 0.2F + 3.1415927F) * degree * 2.5F * limbSwingAmount * 0.5F + 0.377F;
             this.ForearmLeft.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.2F + 3.1415927F) * degree * 1.7F * limbSwingAmount * 0.5F - 0.319F;
             this.HandLeft.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.2F + 3.1415927F) * degree * 2.0F * limbSwingAmount * 0.5F;

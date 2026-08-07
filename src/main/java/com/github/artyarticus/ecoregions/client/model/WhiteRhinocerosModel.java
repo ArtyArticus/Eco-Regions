@@ -273,10 +273,6 @@ public abstract class WhiteRhinocerosModel extends ZawaBaseModel<WhiteRhinoceros
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            if (entity.isSprinting()) {
-                float speed = 1.0f;
-                float degree = 0.5f;
-            } else {
                 float speed = 0.6f;
                 float degree = 0.6f;
                 this.Neck.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F + 0.59F;
@@ -302,7 +298,6 @@ public abstract class WhiteRhinocerosModel extends ZawaBaseModel<WhiteRhinoceros
                 this.UpperLegRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.5F) * 0.5F + 0.61F;
                 this.LegRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.5F) * 0.5F - 0.61F;
                 this.FootRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.5F) * 0.5F + 0.078F;
-            }
         }
     }
 
@@ -509,10 +504,6 @@ public abstract class WhiteRhinocerosModel extends ZawaBaseModel<WhiteRhinoceros
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            if (entity.isSprinting()) {
-                float speed = 1.0f;
-                float degree = 0.5f;
-            } else {
                 float speed = 0.6f;
                 float degree = 0.6f;
                 this.Neck.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.31F;
@@ -538,7 +529,6 @@ public abstract class WhiteRhinocerosModel extends ZawaBaseModel<WhiteRhinoceros
                 this.UpperLegRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.5F) * 0.5F + 0.61F;
                 this.LegRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.5F) * 0.5F - 0.61F;
                 this.HandRight_2.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.5F) * 0.5F + 0.11F;
-            }
         }
     }
 }

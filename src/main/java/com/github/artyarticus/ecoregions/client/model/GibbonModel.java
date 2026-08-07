@@ -272,11 +272,6 @@ public abstract class GibbonModel extends ZawaBaseModel<GibbonEntity> {
             this.loadBase();
             float speed = 1.9F;
             float degree = 0.7F;
-            if (this.isSwimming) {
-                limbSwing = (float) entity.tickCount;
-                limbSwingAmount = 0.3F;
-            }
-
             this.Neck.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.5F + 3.1415927F) * degree * -0.2F * limbSwingAmount * 0.5F - 0.3F;
             this.Head.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F + 3.1415927F) * degree * 0.2F * limbSwingAmount * 0.5F + 0.455F;
             this.Chest.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F + 3.1415927F) * degree * -0.1F * limbSwingAmount * 0.5F - 0.361F;
@@ -522,11 +517,6 @@ public abstract class GibbonModel extends ZawaBaseModel<GibbonEntity> {
                 this.loadBase();
                 float speed = 1.0F;
                 float degree = 1.0F;
-                if (this.isSwimming) {
-                    limbSwing = (float)entity.tickCount;
-                    limbSwingAmount = 0.3F;
-                }
-
                 this.ThighLeft.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.25F + 3.1415927F) * degree * -2.5F * limbSwingAmount * 0.5F + 0.97F;
                 this.LegLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.25F + 3.1415927F) * degree * -2.0F * limbSwingAmount * 0.5F + 0.409F;
                 this.FootLeft.xRot = MathHelper.cos(limbSwing * speed * 0.25F + 3.1415927F) * degree * -2.5F * limbSwingAmount * 0.5F - 0.149F;

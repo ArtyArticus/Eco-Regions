@@ -211,14 +211,8 @@ public abstract class AndeanBearModel extends ZawaBaseModel<AndeanBearEntity> {
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            if (entity.isSprinting()) {
-                limbSwing = (float) entity.tickCount;
-                limbSwingAmount = 0.3F;
-
-            } else {
                 float speed = 1.1f;
                 float degree = 0.7f;
-
                 this.Body.xRot = MathHelper.cos(limbSwing * speed * 0.4F) * degree * -0.05F * limbSwingAmount - 0.034F;
                 this.Chest.xRot = MathHelper.cos(6.0F + limbSwing * speed * 0.4F) * degree * 0.1F * limbSwingAmount - 0.139F;
                 this.Hips.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.4F) * degree * 0.1F * limbSwingAmount - 0.174F;
@@ -239,7 +233,6 @@ public abstract class AndeanBearModel extends ZawaBaseModel<AndeanBearEntity> {
                 this.ArmRight.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.2F) * degree * 1.0F * limbSwingAmount - 0.209F;
                 this.HandRight.xRot = MathHelper.cos(limbSwing * speed * 0.2F) * degree * 1.5F * limbSwingAmount + 0.069F;
             }
-        }
     }
 
 
