@@ -13,6 +13,9 @@
   "enrichment": {
     "zawa:blocks": [
       "zawa:scratching_post",
+      "zawa:leaf_browse",
+      "zawa:hay_browse",
+      "zawa:sprinkler",
       "zawa:salt_lick"
     ],
     "zawa:entities": [

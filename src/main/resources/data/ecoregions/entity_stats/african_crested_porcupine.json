@@ -1,8 +1,8 @@
 {
   "temperament": "defensive",
   "kibble": "zawa:herbivore_kibble",
-  "size": "medium",
-  "fertility": "high",
+  "size": "small",
+  "fertility": "medium",
   "breeding_item": "minecraft:pumpkin",
   "litter_size": {
     "min": 1,
@@ -14,10 +14,11 @@
     "zawa:blocks": [
       "zawa:hay_browse",
       "zawa:leaf_browse",
-      "zawa:sprinkler"
+      "zawa:sprinkler",
+      "zawa:ball_pit"
     ],
     "zawa:entities": [
-      "zawa:boomer_ball",
+      "zawa:scented_ball",
       "zawa:apple_ice_treat"
     ]
   },

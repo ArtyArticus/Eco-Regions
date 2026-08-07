@@ -13,7 +13,13 @@
   "enrichment": {
     "zawa:blocks": [
       "zawa:scratching_post",
-      "zawa:sprinkler"
+      "zawa:heat_rock",
+      "zawa:sprinkler",
+      "zawa:ball_pit"
+    ],
+    "zawa:entities": [
+      "zawa:scented_ball",
+      "zawa:beef_ice_treat"
     ]
   },
   "variant_count": 4

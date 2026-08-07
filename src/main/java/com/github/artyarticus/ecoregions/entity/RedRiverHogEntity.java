@@ -21,7 +21,7 @@ public class RedRiverHogEntity extends ZawaLandEntity {
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 12.0).add(Attributes.ATTACK_DAMAGE, 1);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 12.0).add(Attributes.ATTACK_DAMAGE, 2);
     }
 
     @Nullable
@@ -37,13 +37,8 @@ public class RedRiverHogEntity extends ZawaLandEntity {
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal(4, new BreachGoal(this, 5));
         this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 4.0, 1.33, true));
         this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
     }
 
-    @Override
-    public float getMaleRatio() {
-        return 0.25F;
-    }
 }

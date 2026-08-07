@@ -57,7 +57,7 @@ public class GazelleEntity extends ZawaLandEntity implements SpeciesVariantsEnti
 
     @Override
     public float getMaleRatio() {
-        return 0.33F;
+        return 0.25F;
     }
 }
 

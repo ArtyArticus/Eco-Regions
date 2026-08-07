@@ -28,7 +28,7 @@ public class TeguEntity extends ZawaLandEntity implements SpeciesVariantsEntity,
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.15F).add(Attributes.MAX_HEALTH, 6.0).add(Attributes.ATTACK_DAMAGE, 2.0);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.15F).add(Attributes.MAX_HEALTH, 8.0).add(Attributes.ATTACK_DAMAGE, 2);
     }
 
     @Nullable
@@ -64,11 +64,6 @@ public class TeguEntity extends ZawaLandEntity implements SpeciesVariantsEntity,
         }
 
         super.customServerAiStep();
-    }
-
-    @Override
-    public float getMaleRatio() {
-        return 0.33F;
     }
 }
 

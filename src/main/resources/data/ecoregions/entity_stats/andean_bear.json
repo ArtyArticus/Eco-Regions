@@ -1,7 +1,7 @@
 {
   "temperament": "territorial",
   "kibble": "zawa:omnivore_kibble",
-  "size": "medium",
+  "size": "large",
   "fertility": "medium",
   "breeding_item": "zawa:medium_meat",
   "litter_size": {
@@ -9,16 +9,16 @@
     "max": 3
   },
   "diet": "zawa:omnivore",
-  "speed": "medium",
+  "speed": "slow",
   "enrichment": {
     "zawa:blocks": [
       "zawa:puzzle_feeder",
-      "zawa:scratching_post",
-      "zawa:sprinkler"
+      "zawa:scratching_post"
     ],
     "zawa:entities": [
       "zawa:boomer_ball",
-      "zawa:apple_ice_treat"
+      "zawa:beef_ice_treat",
+      "zawa:scented_ball"
     ]
   },
   "variant_count": 4,

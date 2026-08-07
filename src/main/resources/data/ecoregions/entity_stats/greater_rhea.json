@@ -9,7 +9,7 @@
     "max": 5
   },
   "diet": "zawa:omnivore",
-  "speed": "fast",
+  "speed": "medium",
   "enrichment": {
     "zawa:blocks": [
       "zawa:sprinkler"

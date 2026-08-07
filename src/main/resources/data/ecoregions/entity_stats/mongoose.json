@@ -13,7 +13,8 @@
   "enrichment": {
     "zawa:blocks": [
       "zawa:sprinkler",
-      "zawa:puzzle_feeder"
+      "zawa:puzzle_feeder",
+      "zawa:ball_pit"
     ],
     "zawa:entities": [
       "zawa:scented_ball"

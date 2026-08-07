@@ -30,7 +30,7 @@ public class GibbonEntity extends ZawaLandEntity implements SpeciesVariantsEntit
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 14.0).add(Attributes.ATTACK_DAMAGE, 0.5);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 16.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Override
@@ -78,10 +78,7 @@ public class GibbonEntity extends ZawaLandEntity implements SpeciesVariantsEntit
     public int getVariantByBiome(IWorld iWorld) {
         return random.nextInt(getWildVariants());
     }
-    @Override
-    public float getMaleRatio() {
-        return 0.25F;
-    }
+
     @Nullable
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {

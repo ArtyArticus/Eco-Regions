@@ -12,10 +12,11 @@
   "speed": "medium",
   "enrichment": {
     "zawa:blocks": [
-      "zawa:sprinkler"
+      "zawa:leaf_browse",
+      "zawa:hay_browse"
     ],
     "zawa:entities": [
-      "zawa:boomer_ball",
+      "zawa:scented_ball",
       "zawa:apple_ice_treat"
     ]
   },

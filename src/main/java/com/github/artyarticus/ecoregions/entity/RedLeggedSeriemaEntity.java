@@ -24,7 +24,7 @@ public class RedLeggedSeriemaEntity extends ZawaLandEntity implements OviparousE
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 5.0).add(Attributes.ATTACK_DAMAGE, 1.5);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 12.0).add(Attributes.ATTACK_DAMAGE, 3);
     }
 
     @Nullable
@@ -54,10 +54,5 @@ public class RedLeggedSeriemaEntity extends ZawaLandEntity implements OviparousE
         this.goalSelector.addGoal(4, new BreachGoal(this, 5));
         this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 4.0, 1.33, true));
         this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-    }
-
-    @Override
-    public float getMaleRatio() {
-        return 0.33F;
     }
 }

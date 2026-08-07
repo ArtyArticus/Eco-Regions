@@ -13,11 +13,15 @@
   "enrichment": {
     "zawa:blocks": [
       "zawa:puzzle_feeder",
-      "zawa:apple_ice_treat",
-      "zawa:branch",
-      "zawa:pineapple_pinata",
-      "zawa:rope",
+      "zawa:tire_swing",
+      "zawa:scratching_post",
+      "zawa:leaf_browse",
+      "zawa:hay_browse",
       "zawa:ball_pit"
+    ],
+    "zawa:entities": [
+      "zawa:scented_ball",
+      "zawa:apple_ice_treat"
     ]
   },
   "variant_count": 3

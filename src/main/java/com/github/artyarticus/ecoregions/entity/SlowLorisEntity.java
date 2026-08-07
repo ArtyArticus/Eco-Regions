@@ -49,11 +49,6 @@ public class SlowLorisEntity extends ZawaLandEntity implements SpeciesVariantsEn
     }
 
     @Override
-    public float getMaleRatio() {
-        return 0.33F;
-    }
-
-    @Override
     public float getScale() {
         if (isBaby()) return 0.3F;
         int variant = getVariant();

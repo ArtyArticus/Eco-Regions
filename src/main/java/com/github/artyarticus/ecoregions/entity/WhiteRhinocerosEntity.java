@@ -21,7 +21,7 @@ public class WhiteRhinocerosEntity extends ZawaLandEntity {
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 38.0).add(Attributes.ATTACK_DAMAGE, 6.0);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 80.0).add(Attributes.ATTACK_DAMAGE, 12.0);
     }
 
     @Nullable
@@ -51,6 +51,6 @@ public class WhiteRhinocerosEntity extends ZawaLandEntity {
 
     @Override
     public float getMaleRatio() {
-        return 0.25F;
+        return 0.33F;
     }
 }
