@@ -42,7 +42,7 @@ public class BlueToungedSkinkEntity extends ZawaLandEntity implements OviparousE
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
     }
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
-        return size.height * 0.85F;
+        return size.height * 0.7F;
     }
 
     protected void customServerAiStep() {

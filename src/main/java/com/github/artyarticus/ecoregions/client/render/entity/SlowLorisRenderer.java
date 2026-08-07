@@ -8,7 +8,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class SlowLorisRenderer extends ZawaMobRenderer<SlowLorisEntity, SlowLorisModel> {
     public SlowLorisRenderer(EntityRendererManager manager) {
-        super(manager, new SlowLorisModel.Adult(), new SlowLorisModel.Child(), 0.35F);
+        super(manager, new SlowLorisModel.Adult(), new SlowLorisModel.Child(), 0.2F);
     }
 
     @Override

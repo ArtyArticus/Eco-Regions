@@ -54,8 +54,7 @@ public class TeguEntity extends ZawaLandEntity implements SpeciesVariantsEntity,
         this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
     }
 
-    protected float getStandingEyeHeight(Pose pose, EntitySize size) {
-        return size.height * 0.85F;
+    protected float getStandingEyeHeight(Pose pose, EntitySize size) {return size.height * 0.9F;
     }
 }
 

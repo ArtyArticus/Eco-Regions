@@ -8,7 +8,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class MongooseRenderer extends ZawaMobRenderer<MongooseEntity, MongooseModel> {
     public MongooseRenderer(EntityRendererManager manager) {
-        super(manager, new MongooseModel.Adult(), new MongooseModel.Child(), 0.4F);
+        super(manager, new MongooseModel.Adult(), new MongooseModel.Child(), 0.25F);
     }
 
     @Override

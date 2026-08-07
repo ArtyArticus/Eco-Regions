@@ -62,7 +62,7 @@ public class SouthernTamanduaEntity extends ZawaLandEntity implements ClimbingEn
     }
 
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
-        return size.height * 0.85F;
+        return size.height * 0.75F;
     }
 
     @Nullable

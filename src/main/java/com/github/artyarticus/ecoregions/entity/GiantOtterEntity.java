@@ -29,7 +29,7 @@ public class GiantOtterEntity extends ZawaSemiAquaticEntity {
     }
 
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
-        return size.height * 0.85F;
+        return size.height * 1.0F;
     }
 
     @Override

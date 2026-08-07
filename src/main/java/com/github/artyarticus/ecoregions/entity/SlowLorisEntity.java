@@ -71,7 +71,7 @@ public class SlowLorisEntity extends ZawaLandEntity implements SpeciesVariantsEn
     }
 
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
-        return size.height * 0.85F;
+        return size.height * 0.75F;
     }
 
     @Override

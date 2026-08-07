@@ -39,7 +39,7 @@ public class GreaterKuduEntity extends ZawaLandEntity {
     }
 
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
-        return size.height * 0.85F;
+        return size.height * 1.0F;
     }
     @Override
     public float getMaleRatio() {

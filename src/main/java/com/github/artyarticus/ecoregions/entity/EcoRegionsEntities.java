@@ -23,7 +23,7 @@ public class EcoRegionsEntities {
                     .attributes(BushDogEntity::registerAttributes)
                     .renderer(() -> BushDogRenderer::new)
                     .spawns(8, 2, 3, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.4F, 0.4F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.6F, 0.5F).clientTrackingRange(10))
                     .build("bush_dog");
 
     public static final RegistryObject<EntityType<AndeanBearEntity>> ANDEAN_BEAR =
@@ -31,7 +31,7 @@ public class EcoRegionsEntities {
                     .attributes(AndeanBearEntity::registerAttributes)
                     .renderer(() -> AndeanBearRenderer::new)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.2F, 1.1F).clientTrackingRange(10))
                     .build("andean_bear");
 
     public static final RegistryObject<EntityType<GreaterRheaEntity>> GREATER_RHEA =
@@ -39,7 +39,7 @@ public class EcoRegionsEntities {
                     .attributes(GreaterRheaEntity::registerAttributes)
                     .renderer(() -> GreaterRheaRenderer::new)
                     .spawns(15, 1, 4, ZawaSpawnCategory.DRY_GRASSLAND)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.5F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.6F).clientTrackingRange(10))
                     .build("greater_rhea");
 
     public static final RegistryObject<EntityType<BlackbuckEntity>> BLACKBUCK =
@@ -47,7 +47,7 @@ public class EcoRegionsEntities {
                     .attributes(BlackbuckEntity::registerAttributes)
                     .renderer(() -> BlackbuckRenderer::new)
                     .spawns(10, 3, 4, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.DRY_SAVANNA)
-                    .data(entityBuilder -> entityBuilder.sized(0.8F, 1.2F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.2F).clientTrackingRange(10))
                     .build("blackbuck");
 
     public static final RegistryObject<EntityType<AfricanCrestedPorcupineEntity>> AFRICAN_CRESTED_PORCUPINE =
@@ -55,7 +55,7 @@ public class EcoRegionsEntities {
                     .attributes(AfricanCrestedPorcupineEntity::registerAttributes)
                     .renderer(() -> AfricanCrestedPorcupineRenderer::new)
                     .spawns(10, 1, 1, ZawaSpawnCategory.HOT_DESERT, ZawaSpawnCategory.DRY_SAVANNA)
-                    .data(entityBuilder -> entityBuilder.sized(0.9F, 0.9F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.9F, 0.8F).clientTrackingRange(10))
                     .build("african_crested_porcupine");
 
     public static final RegistryObject<EntityType<GiantOtterEntity>> GIANT_OTTER =
@@ -63,7 +63,7 @@ public class EcoRegionsEntities {
                     .attributes(GiantOtterEntity::registerAttributes)
                     .renderer(() -> GiantOtterRenderer::new)
                     .spawns(8, 2, 2, ZawaSpawnCategory.SLOW_FRESH_WATER)
-                    .data(entityBuilder -> entityBuilder.sized(0.8F, 0.5F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.8F, 0.6F).clientTrackingRange(10))
                     .build("giant_otter");
 
     public static final RegistryObject<EntityType<RedRiverHogEntity>> RED_RIVER_HOG =
@@ -71,7 +71,7 @@ public class EcoRegionsEntities {
                     .attributes(RedRiverHogEntity::registerAttributes)
                     .renderer(() -> RedRiverHogRenderer::new)
                     .spawns(8, 2, 3, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.85F, 0.85F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.85F, 0.95F).clientTrackingRange(10))
                     .build("red_river_hog");
 
     public static final RegistryObject<EntityType<SlowLorisEntity>> SLOW_LORIS =
@@ -79,7 +79,7 @@ public class EcoRegionsEntities {
                     .attributes(SlowLorisEntity::registerAttributes)
                     .renderer(() -> SlowLorisRenderer::new)
                     .spawns(2, 1, 1, ZawaSpawnCategory.DRY_RAINFOREST, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.6F, 0.55F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.6F, 0.5F).clientTrackingRange(10))
                     .build("slow_loris");
 
     public static final RegistryObject<EntityType<MongooseEntity>> MONGOOSE =
@@ -87,7 +87,7 @@ public class EcoRegionsEntities {
                     .attributes(MongooseEntity::registerAttributes)
                     .renderer(() -> MongooseRenderer::new)
                     .spawnVariant(MongooseEntity.VARIANT_SPAWNS, 15, 2, 3)
-                    .data(entityBuilder -> entityBuilder.sized(0.55F, 0.4F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.5F, 0.4F).clientTrackingRange(10))
                     .build("mongoose");
 
     public static final RegistryObject<EntityType<PeacockBassEntity>> PEACOCK_BASS =
@@ -119,7 +119,7 @@ public class EcoRegionsEntities {
                     .attributes(HamadrayasBaboonEntity::registerAttributes)
                     .renderer(() -> HamadrayasBaboonRenderer::new)
                     .spawns(10, 3, 5, ZawaSpawnCategory.DRY_SAVANNA)
-                    .data(entityBuilder -> entityBuilder.sized(1.2F, 0.95F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 0.95F).clientTrackingRange(10))
                     .build("hamadrayas_baboon");
 
     public static final RegistryObject<EntityType<GibbonEntity>> GIBBON =
@@ -127,7 +127,7 @@ public class EcoRegionsEntities {
                     .attributes(GibbonEntity::registerAttributes)
                     .renderer(() -> GibbonRenderer::new)
                     .spawns(2, 1, 2, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.25F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.85F, 1.05F).clientTrackingRange(10))
                     .build("gibbon");
 
     public static final RegistryObject<EntityType<GazelleEntity>> GAZELLE =
@@ -135,7 +135,7 @@ public class EcoRegionsEntities {
                     .attributes(GazelleEntity::registerAttributes)
                     .renderer(() -> GazelleRenderer::new)
                     .spawns(8, 3, 4, ZawaSpawnCategory.DRY_SAVANNA)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.5F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.9F, 1.05F).clientTrackingRange(10))
                     .build("gazelle");
 
     public static final RegistryObject<EntityType<BlueToungedSkinkEntity>> BLUE_TOUNGED_SKINK =
@@ -143,7 +143,7 @@ public class EcoRegionsEntities {
                     .attributes(BlueToungedSkinkEntity::registerAttributes)
                     .renderer(() -> BlueToungedSkinkRenderer::new)
                     .spawns(10, 1, 1, ZawaSpawnCategory.HOT_DESERT)
-                    .data(entityBuilder -> entityBuilder.sized(0.75F, 0.23F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.5F, 0.2F).clientTrackingRange(10))
                     .build("blue_tounged_skink");
 
     public static final RegistryObject<EntityType<TeguEntity>> TEGU =
@@ -151,7 +151,7 @@ public class EcoRegionsEntities {
                     .attributes(TeguEntity::registerAttributes)
                     .renderer(() -> TeguRenderer::new)
                     .spawns(8, 1, 1, ZawaSpawnCategory.DRY_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.8F, 0.45F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.7F, 0.4F).clientTrackingRange(10))
                     .build("tegu");
 
     public static final RegistryObject<EntityType<FoxfaceEntity>> FOXFACE =
@@ -167,7 +167,7 @@ public class EcoRegionsEntities {
                     .attributes(BeeEaterEntity::registerAttributes)
                     .renderer(() -> BeeEaterRenderer::new)
                     .spawns(8, 1, 2, ZawaSpawnCategory.DRY_FOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.55F, 0.55F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.4F, 0.4F).clientTrackingRange(10))
                     .build("bee_eater");
 
     public static final RegistryObject<EntityType<ScreamerEntity>> SCREAMER =
@@ -175,7 +175,7 @@ public class EcoRegionsEntities {
                     .attributes(ScreamerEntity::registerAttributes)
                     .renderer(() -> ScreamerRenderer::new)
                     .spawns(15, 1, 3, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.65F, 0.7F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.6F, 0.8F).clientTrackingRange(10))
                     .build("screamer");
 
     public static final RegistryObject<EntityType<TreeKangarooEntity>> TREE_KANGAROO =
@@ -183,7 +183,7 @@ public class EcoRegionsEntities {
                     .attributes(TreeKangarooEntity::registerAttributes)
                     .renderer(() -> TreeKangarooRenderer::new)
                     .spawns(2, 1, 2, ZawaSpawnCategory.TEMPERATE_FOREST,ZawaSpawnCategory.DEEP_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.75F, 0.75F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.75F, 0.6F).clientTrackingRange(10))
                     .build("tree_kangaroo");
 
     public static final RegistryObject<EntityType<ReevesMuntjacEntity>> REEVES_MUNTJAC =
@@ -191,7 +191,7 @@ public class EcoRegionsEntities {
                     .attributes(ReevesMuntjacEntity::registerAttributes)
                     .renderer(() -> ReevesMuntjacRenderer::new)
                     .spawns(10, 1, 3, ZawaSpawnCategory.COASTAL_TAIGA)
-                    .data(entityBuilder -> entityBuilder.sized(0.85F, 0.85F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.85F, 0.8F).clientTrackingRange(10))
                     .build("reeves_muntjac");
 
     public static final RegistryObject<EntityType<GreaterKuduEntity>> GREATER_KUDU =
@@ -199,7 +199,7 @@ public class EcoRegionsEntities {
                     .attributes(GreaterKuduEntity::registerAttributes)
                     .renderer(() -> GreaterKuduRenderer::new)
                     .spawns(10, 3, 4, ZawaSpawnCategory.WET_SAVANNA)
-                    .data(entityBuilder -> entityBuilder.sized(1.65F, 1.65F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.6F, 1.75F).clientTrackingRange(10))
                     .build("greater_kudu");
     public static final RegistryObject<EntityType<AoudadEntity>> AOUDAD =
             REGISTRY.builder(AoudadEntity::new, EntityClassification.CREATURE)
@@ -214,7 +214,7 @@ public class EcoRegionsEntities {
                     .attributes(CommonWombatEntity::registerAttributes)
                     .renderer(() -> CommonWombatRenderer::new)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.85F, 0.7F).clientTrackingRange(10))
                     .build("common_wombat");
     
     public static final RegistryObject<EntityType<AracariEntity>> ARACARI =
@@ -222,7 +222,7 @@ public class EcoRegionsEntities {
                     .attributes(AracariEntity::registerAttributes)
                     .renderer(() -> AracariRenderer::new)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.4F, 0.35F).clientTrackingRange(10))
                     .build("aracari");
     
     public static final RegistryObject<EntityType<MarmosetEntity>> MARMOSET =
@@ -230,7 +230,7 @@ public class EcoRegionsEntities {
                     .attributes(MarmosetEntity::registerAttributes)
                     .renderer(() -> MarmosetRenderer::new)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.4F, 0.3F).clientTrackingRange(10))
                     .build("marmoset");
     
     public static final RegistryObject<EntityType<SouthernTamanduaEntity>> SOUTHERN_TAMANDUA =
@@ -238,7 +238,7 @@ public class EcoRegionsEntities {
                     .attributes(SouthernTamanduaEntity::registerAttributes)
                     .renderer(() -> SouthernTamanduaRenderer::new)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.6F, 0.4F).clientTrackingRange(10))
                     .build("southern_tamandua");
     
     public static final RegistryObject<EntityType<AsianWaterMonitorEntity>> ASIAN_WATER_MONITOR =
@@ -246,7 +246,7 @@ public class EcoRegionsEntities {
                     .attributes(AsianWaterMonitorEntity::registerAttributes)
                     .renderer(() -> AsianWaterMonitorRenderer::new)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.3F, 0.6F).clientTrackingRange(10))
                     .build("asian_water_monitor");
 
     public static void registerSpawnPlacements() {

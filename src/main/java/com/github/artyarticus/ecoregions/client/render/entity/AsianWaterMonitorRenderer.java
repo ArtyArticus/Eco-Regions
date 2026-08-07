@@ -8,7 +8,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class AsianWaterMonitorRenderer extends ZawaMobRenderer<AsianWaterMonitorEntity, AsianWaterMonitorModel> {
     public AsianWaterMonitorRenderer(EntityRendererManager manager) {
-        super(manager, new AsianWaterMonitorModel.Adult(), new AsianWaterMonitorModel.Child(), 0.4F);
+        super(manager, new AsianWaterMonitorModel.Adult(), new AsianWaterMonitorModel.Child(), 0.45F);
     }
 
     @Override

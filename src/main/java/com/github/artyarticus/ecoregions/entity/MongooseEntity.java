@@ -44,7 +44,7 @@ public class MongooseEntity extends ZawaLandEntity implements SpeciesVariantsEnt
     }
 
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
-        return size.height * 0.85F;
+        return size.height * 0.8F;
     }
 
     @Override

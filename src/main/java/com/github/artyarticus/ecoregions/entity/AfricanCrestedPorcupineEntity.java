@@ -31,7 +31,7 @@ public class AfricanCrestedPorcupineEntity extends ZawaLandEntity {
     }
 
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
-        return size.height * 0.85F;
+        return size.height * 0.5F;
     }
 
     @Override

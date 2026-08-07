@@ -8,7 +8,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class AfricanCrestedPorcupineRenderer extends ZawaMobRenderer<AfricanCrestedPorcupineEntity, AfricanCrestedPorcupineModel> {
     public AfricanCrestedPorcupineRenderer(EntityRendererManager manager) {
-        super(manager, new AfricanCrestedPorcupineModel.Adult(), new AfricanCrestedPorcupineModel.Child(), 0.55F);
+        super(manager, new AfricanCrestedPorcupineModel.Adult(), new AfricanCrestedPorcupineModel.Child(), 0.5F);
     }
 
     @Override

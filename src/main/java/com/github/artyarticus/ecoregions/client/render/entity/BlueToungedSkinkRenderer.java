@@ -8,7 +8,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class BlueToungedSkinkRenderer extends ZawaMobRenderer<BlueToungedSkinkEntity, BlueToungedSkinkModel> {
     public BlueToungedSkinkRenderer(EntityRendererManager manager) {
-        super(manager, new BlueToungedSkinkModel.Adult(), new BlueToungedSkinkModel.Child(), 0.3F);
+        super(manager, new BlueToungedSkinkModel.Adult(), new BlueToungedSkinkModel.Child(), 0.2F);
     }
 
     @Override

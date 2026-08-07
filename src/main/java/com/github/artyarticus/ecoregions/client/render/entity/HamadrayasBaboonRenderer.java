@@ -8,7 +8,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class HamadrayasBaboonRenderer extends ZawaMobRenderer<HamadrayasBaboonEntity, HamadrayasBaboonModel> {
     public HamadrayasBaboonRenderer(EntityRendererManager manager) {
-        super(manager, new HamadrayasBaboonModel.Adult(), new HamadrayasBaboonModel.Child(), 0.65F);
+        super(manager, new HamadrayasBaboonModel.Adult(), new HamadrayasBaboonModel.Child(), 0.5F);
     }
 
     @Override

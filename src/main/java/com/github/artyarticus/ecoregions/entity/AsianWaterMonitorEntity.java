@@ -34,7 +34,7 @@ public class AsianWaterMonitorEntity extends ZawaSemiAquaticEntity implements Ov
     }
 
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
-        return size.height * 0.85F;
+        return size.height * 0.7F;
     }
 
     @Override

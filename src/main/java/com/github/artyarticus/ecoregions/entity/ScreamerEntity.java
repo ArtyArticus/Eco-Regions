@@ -50,7 +50,7 @@ public class ScreamerEntity extends ZawaLandEntity implements SpeciesVariantsEnt
     }
 
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
-        return size.height * 0.85F;
+        return size.height * 0.95F;
     }
 
     @Override
