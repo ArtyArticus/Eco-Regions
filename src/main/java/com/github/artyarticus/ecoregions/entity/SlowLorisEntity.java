@@ -9,15 +9,23 @@ import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.entity.ai.goal.PanicGoal;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.network.datasync.DataParameter;
+import net.minecraft.network.datasync.DataSerializers;
+import net.minecraft.network.datasync.EntityDataManager;
+import net.minecraft.pathfinding.ClimberPathNavigator;
+import net.minecraft.pathfinding.PathNavigator;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+import org.zawamod.zawa.world.entity.ClimbingEntity;
 import org.zawamod.zawa.world.entity.SpeciesVariantsEntity;
 import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
 import javax.annotation.Nullable;
 
-public class SlowLorisEntity extends ZawaLandEntity implements SpeciesVariantsEntity {
+public class SlowLorisEntity extends ZawaLandEntity implements SpeciesVariantsEntity, ClimbingEntity {
+    public static final DataParameter<Boolean> CLIMBING;
+
     public SlowLorisEntity(EntityType<? extends ZawaLandEntity> type, World world) {
         super(type, world);
     }
@@ -30,6 +38,37 @@ public class SlowLorisEntity extends ZawaLandEntity implements SpeciesVariantsEn
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return EcoRegionsEntities.SLOW_LORIS.get().create(world);
+    }
+
+    @Override
+    protected void customServerAiStep() {
+        if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
+        super.customServerAiStep();
+    }
+
+    protected void defineSynchedData() {
+        super.defineSynchedData();
+        this.entityData.define(CLIMBING, false);
+    }
+
+    protected PathNavigator createNavigation(World world) {
+        return new ClimberPathNavigator(this, world);
+    }
+
+    public void tick() {
+        super.tick();
+        if (!this.level.isClientSide && this.horizontalCollision) {
+            this.setClimbing(this.isClimbableBlock(this.level, this.blockPosition().relative(this.getDirection())));
+        }
+
+    }
+
+    public boolean onClimbable() {
+        return this.isClimbing();
+    }
+
+    public boolean causeFallDamage(float distance, float damageMultiplier) {
+        return false;
     }
 
     @Override
@@ -56,4 +95,15 @@ public class SlowLorisEntity extends ZawaLandEntity implements SpeciesVariantsEn
         if (variant == 1) return 0.85F;
         return 0.65F;
     }
-}
+        public boolean isClimbing() {
+            return this.entityData.get(CLIMBING);
+        }
+
+        public void setClimbing(boolean climbing) {
+            this.entityData.set(CLIMBING, climbing);
+        }
+
+        static {
+            CLIMBING = EntityDataManager.defineId(MarmosetEntity.class, DataSerializers.BOOLEAN);
+        }
+    }
