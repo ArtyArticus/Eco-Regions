@@ -8,7 +8,7 @@
     "min": 2,
     "max": 5
   },
-  "diet": "zawa:fruggivore",
+  "diet": "zawa:frugivore",
   "speed": "medium",
   "enrichment": {
     "zawa:blocks": [

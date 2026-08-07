@@ -2,11 +2,11 @@
   "type": "minecraft:entity",
   "pools": [
     {
-      "rolls": 2,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:leather",
+          "name": "minecraft:bone",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -25,7 +25,7 @@
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": 1
+              "count": 2
             },
             {
               "function": "minecraft:furnace_smelt",
@@ -40,6 +40,21 @@
                   }
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
             }
           ]
         }
