@@ -31,7 +31,7 @@ public abstract class RedLeggedSeriemaModel extends ZawaBaseModel<RedLeggedSerie
         public ModelRenderer ThighLeft;
         public ModelRenderer ThighRight;
         public ModelRenderer Neck2;
-        public ModelRenderer part2;
+        public ModelRenderer Head;
         public ModelRenderer TopBeak1;
         public ModelRenderer Tuft;
         public ModelRenderer BeakTip1;
@@ -143,10 +143,10 @@ public abstract class RedLeggedSeriemaModel extends ZawaBaseModel<RedLeggedSerie
             this.BeakTip1.setPos(-0.01F, 0.3F, -2.5F);
             this.BeakTip1.addBox(-0.5F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(BeakTip1, -0.9105382388075086F, 0.0F, 0.0F);
-            this.part2 = new ModelRenderer(this, 0, 25);
-            this.part2.setPos(0.0F, -7.4F, 0.5F);
-            this.part2.addBox(-1.5F, -1.5F, -2.0F, 3.0F, 3.0F, 4.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(part2, 0.2733185581991509F, 0.0F, 0.0F);
+            this.Head = new ModelRenderer(this, 0, 25);
+            this.Head.setPos(0.0F, -7.4F, 0.5F);
+            this.Head.addBox(-1.5F, -1.5F, -2.0F, 3.0F, 3.0F, 4.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Head, 0.2733185581991509F, 0.0F, 0.0F);
             this.FootRight = new ModelRenderer(this, 38, 26);
             this.FootRight.mirror = true;
             this.FootRight.setPos(0.0F, 5.4F, 0.0F);
@@ -229,10 +229,10 @@ public abstract class RedLeggedSeriemaModel extends ZawaBaseModel<RedLeggedSerie
             this.Leg2Left.addChild(this.FootLeft);
             this.Body.addChild(this.ThighLeft);
             this.TopBeak1.addChild(this.BeakBottom);
-            this.part2.addChild(this.TopBeak1);
+            this.Head.addChild(this.TopBeak1);
             this.Wing1Right.addChild(this.Wing2Right);
             this.TopBeak1.addChild(this.BeakTip1);
-            this.Neck2.addChild(this.part2);
+            this.Neck2.addChild(this.Head);
             this.Leg2Right.addChild(this.FootRight);
             this.TailMiddle.addChild(this.TailRight);
             this.Hair1Right.addChild(this.Hair2Right);
@@ -243,7 +243,7 @@ public abstract class RedLeggedSeriemaModel extends ZawaBaseModel<RedLeggedSerie
             this.Wing1Left.addChild(this.Wing2Left);
             this.TailMiddle.addChild(this.TailLeft);
             this.Hair2Right.addChild(this.Hair3Right);
-            this.part2.addChild(this.Tuft);
+            this.Head.addChild(this.Tuft);
             this.Body.addChild(this.TailBase);
             this.FootLeft.addChild(this.Toe2Left);
             this.Body.addChild(this.Wing1Right);
@@ -256,9 +256,9 @@ public abstract class RedLeggedSeriemaModel extends ZawaBaseModel<RedLeggedSerie
         public void setupAnim(RedLeggedSeriemaEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Neck2.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
-            this.part2.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
-            this.part2.xRot = (headPitch / (180F / (float) Math.PI)) + 0.27F;
-            this.part2.zRot = headPitch / (180F / (float) Math.PI) * 0.05F;
+            this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
+            this.Head.xRot = (headPitch / (180F / (float) Math.PI)) + 0.27F;
+            this.Head.zRot = headPitch / (180F / (float) Math.PI) * 0.05F;
         }
 
         @Override
@@ -266,7 +266,7 @@ public abstract class RedLeggedSeriemaModel extends ZawaBaseModel<RedLeggedSerie
             float speed = 1.0f;
             float degree = 1.0f;
             this.Neck1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.1F) * 0.5F - 0.39F;
-            this.part2.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * -0.3F) * 0.5F + 0.27F;
+            this.Head.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * -0.3F) * 0.5F + 0.27F;
             this.TailBase.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * -0.15F) * 0.5F + 1.25F;
         }
 
@@ -275,21 +275,21 @@ public abstract class RedLeggedSeriemaModel extends ZawaBaseModel<RedLeggedSerie
                 float speed = 1.5f;
                 float degree = 1.0f;
                 this.Neck2.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F + 0.47F;
-                this.part2.xRot = MathHelper.cos(2.2F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.5F) * 0.5F + 0.27F;
+                this.Head.xRot = MathHelper.cos(2.2F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.5F) * 0.5F + 0.27F;
                 this.Neck1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.1F) * 0.5F - 0.39F;
                 this.TailBase.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.05F) * 0.5F + 1.25F;
                 this.Body.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.05F) * 0.5F - 0.16F;
                 this.Body.y = MathHelper.cos(4.5F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree) * 0.5F + 11.7F;
 
-                this.ThighLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -2F) * 0.5F + 0.51F;
-                this.ThighLeft.y = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 2F) * 0.5F + 1.7F;
-                this.Leg1Left.xRot = MathHelper.cos(0.5F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 3F) * 0.5F - 0.23F;
-                this.Toe1Left.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 2F) * 0.5F;
+                this.ThighLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * -2F) * 0.5F + 0.51F;
+                this.ThighLeft.y = MathHelper.cos(1.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * 2F) * 0.5F + 1.7F;
+                this.Leg1Left.xRot = MathHelper.cos(0.5F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * 3F) * 0.5F - 0.23F;
+                this.Toe1Left.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * 2F) * 0.5F;
 
-                this.ThighRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.51F;
-                this.ThighRight.y = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -2F) * 0.5F + 1.7F;
-                this.Leg1Right.xRot = MathHelper.cos(0.5F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -3F) * 0.5F - 0.23F;
-                this.Toe1R.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -2F) * 0.5F;
+                this.ThighRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.51F;
+                this.ThighRight.y = MathHelper.cos(1.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * -2F) * 0.5F + 1.7F;
+                this.Leg1Right.xRot = MathHelper.cos(0.5F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * -3F) * 0.5F - 0.23F;
+                this.Toe1R.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * -2F) * 0.5F;
         }
     }
 

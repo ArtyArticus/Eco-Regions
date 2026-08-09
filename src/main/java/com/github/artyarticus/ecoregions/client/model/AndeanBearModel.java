@@ -211,8 +211,8 @@ public abstract class AndeanBearModel extends ZawaBaseModel<AndeanBearEntity> {
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-                float speed = 1.1f;
-                float degree = 0.7f;
+                float speed = 5.0f;
+                float degree = 1.0f;
                 this.Body.xRot = MathHelper.cos(limbSwing * speed * 0.4F) * degree * -0.05F * limbSwingAmount - 0.034F;
                 this.Chest.xRot = MathHelper.cos(6.0F + limbSwing * speed * 0.4F) * degree * 0.1F * limbSwingAmount - 0.139F;
                 this.Hips.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.4F) * degree * 0.1F * limbSwingAmount - 0.174F;

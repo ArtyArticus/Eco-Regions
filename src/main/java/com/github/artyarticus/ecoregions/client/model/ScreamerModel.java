@@ -266,22 +266,26 @@ public abstract class ScreamerModel extends ZawaBaseModel<ScreamerEntity> {
         }
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-                float speed = 1.0f;
-                float degree = 1.0f;
-                this.Body.y = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.5F) * 0.5F + 15.2F;
-                this.Body.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.2F) * 0.5F - 0.195F;
-                this.TailBase.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F + 1.094F;
-                this.Neck1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.3F) * 0.5F - 0.625F;
-                this.Head.xRot = MathHelper.cos(2.2F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.27F) * 0.5F + 0.351F;
+            float speed = 1.5f;
+            float degree = 1.0f;
+            this.Neck2.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F + 0.58F;
+            this.Head.xRot = MathHelper.cos(2.2F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.5F) * 0.5F + 0.351F;
+            this.Neck1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.1F) * 0.5F - 0.625F;
+            this.TailBase.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.05F) * 0.5F + 1.094F;
+            this.Body.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.05F) * 0.5F - 0.195F;
+            this.Body.y = MathHelper.cos(4.5F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree) * 0.5F + 15.2F;
 
-                this.ThighLeft.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.5F) * 0.5F + 0.507F;
-                this.Leg1Left.xRot = MathHelper.cos(0.5F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 2F) * 0.5F - 0.234F;
-                this.FootLeft.xRot = MathHelper.cos(5.5F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -2F) * 0.5F + 0.117F;
-                this.ThighRight.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.5F) * 0.5F + 0.507F;
-                this.Leg1Right.xRot = MathHelper.cos(0.5F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -2F) * 0.5F - 0.234F;
-                this.FootRight.xRot = MathHelper.cos(5.5F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.117F;
-            }
+            this.ThighLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.3F) * limbSwingAmount * (degree * -2F) * 0.5F + 0.51F;
+            this.ThighLeft.y = MathHelper.cos(1.0F + limbSwing * speed * 0.3F) * limbSwingAmount * (degree * 2F) * 0.5F + 2.0F;
+            this.Leg1Left.xRot = MathHelper.cos(0.5F + limbSwing * speed * 0.3F) * limbSwingAmount * (degree * 3F) * 0.5F - 0.23F;
+            this.Toe1Left.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.3F) * limbSwingAmount * (degree * 2F) * 0.5F;
+
+            this.ThighRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.3F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.51F;
+            this.ThighRight.y = MathHelper.cos(1.0F + limbSwing * speed * 0.3F) * limbSwingAmount * (degree * -2F) * 0.5F + 2.0F;
+            this.Leg1Right.xRot = MathHelper.cos(0.5F + limbSwing * speed * 0.3F) * limbSwingAmount * (degree * -3F) * 0.5F - 0.23F;
+            this.Toe1Right.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.3F) * limbSwingAmount * (degree * -2F) * 0.5F;
         }
+    }
 
     public static class Child extends ScreamerModel {
 

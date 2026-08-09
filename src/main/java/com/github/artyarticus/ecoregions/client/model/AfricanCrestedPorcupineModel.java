@@ -348,8 +348,8 @@ public abstract class AfricanCrestedPorcupineModel extends ZawaBaseModel<African
 
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             this.loadBase();
-            float speed = 0.8F;
-            float degree = 0.8F;
+            float speed = 1.0F;
+            float degree = 1.0F;
             this.Head.xRot = MathHelper.cos(6.0F + limbSwing * speed * 0.5F + 3.1415927F) * degree * -0.3F * limbSwingAmount * 0.5F;
             this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F + 3.1415927F) * degree * -0.3F * limbSwingAmount * 0.5F + 0.18F;
             this.Chest.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F + 3.1415927F) * degree * 0.2F * limbSwingAmount * 0.5F + 0.14F;
@@ -358,21 +358,21 @@ public abstract class AfricanCrestedPorcupineModel extends ZawaBaseModel<African
             this.Tail.xRot = MathHelper.cos(6.5F + limbSwing * speed * 0.5F + 3.1415927F) * degree * 0.2F * limbSwingAmount * 0.5F + 0.5F;
             this.Tail.yRot = MathHelper.cos(4.0F + limbSwing * speed * 0.25F + 3.1415927F) * degree * -0.5F * limbSwingAmount * 0.5F;
 
-            this.ArmBaseLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.25F + 3.1415927F) * degree * -1.5F * limbSwingAmount * 0.5F - 0.05F;
-            this.ArmLeft.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.25F + 3.1415927F) * degree * 1.2F * limbSwingAmount * 0.5F - 0.14F;
-            this.HandLeft.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.25F + 3.1415927F) * degree * -1.5F * limbSwingAmount * 0.5F + 0.05F;
-            this.ArmBaseRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.25F + 3.1415927F) * degree * 1.5F * limbSwingAmount * 0.5F - 0.05F;
-            this.ArmRight.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.25F + 3.1415927F) * degree * -1.2F * limbSwingAmount * 0.5F - 0.14F;
-            this.HandRight.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.25F + 3.1415927F) * degree * 1.5F * limbSwingAmount * 0.5F + 0.05F;
+            this.ArmBaseLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.35F + 3.1415927F) * degree * -1.5F * limbSwingAmount * 0.5F - 0.05F;
+            this.ArmLeft.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.35F + 3.1415927F) * degree * 1.2F * limbSwingAmount * 0.5F - 0.14F;
+            this.HandLeft.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.35F + 3.1415927F) * degree * -1.5F * limbSwingAmount * 0.5F + 0.05F;
+            this.ArmBaseRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.35F + 3.1415927F) * degree * 1.5F * limbSwingAmount * 0.5F - 0.05F;
+            this.ArmRight.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.35F + 3.1415927F) * degree * -1.2F * limbSwingAmount * 0.5F - 0.14F;
+            this.HandRight.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.35F + 3.1415927F) * degree * 1.5F * limbSwingAmount * 0.5F + 0.05F;
 
-            this.ThighLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.25F + 3.1415927F) * degree * 3.0F * limbSwingAmount * 0.5F + 0.09F;
-            this.ThighLeft.y = MathHelper.cos(1.0F + limbSwing * speed * 0.25F + 3.1415927F) * degree * -2.0F * limbSwingAmount * 0.5F + 1.2F;
-            this.LegLeft.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.25F + 3.1415927F) * degree * 3.0F * limbSwingAmount * 0.5F + 0.27F;
-            this.FootLeft.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.25F + 3.1415927F) * degree * -1.0F * limbSwingAmount * 0.5F - 0.23F;
-            this.ThighRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.25F + 3.1415927F) * degree * -3.0F * limbSwingAmount * 0.5F + 0.09F;
-            this.ThighRight.y = MathHelper.cos(1.0F + limbSwing * speed * 0.25F + 3.1415927F) * degree * 2.0F * limbSwingAmount * 0.5F + 1.2F;
-            this.LegRight.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.25F + 3.1415927F) * degree * -3.0F * limbSwingAmount * 0.5F + 0.27F;
-            this.FootRight.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.25F + 3.1415927F) * degree * 1.0F * limbSwingAmount * 0.5F - 0.23F;
+            this.ThighLeft.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.35F + 3.1415927F) * degree * 3.0F * limbSwingAmount * 0.5F + 0.09F;
+            this.ThighLeft.y = MathHelper.cos(1.0F + limbSwing * speed * 0.35F + 3.1415927F) * degree * -2.0F * limbSwingAmount * 0.5F + 1.2F;
+            this.LegLeft.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.35F + 3.1415927F) * degree * 3.0F * limbSwingAmount * 0.5F + 0.27F;
+            this.FootLeft.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.35F + 3.1415927F) * degree * -1.0F * limbSwingAmount * 0.5F - 0.23F;
+            this.ThighRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.35F + 3.1415927F) * degree * -3.0F * limbSwingAmount * 0.5F + 0.09F;
+            this.ThighRight.y = MathHelper.cos(1.0F + limbSwing * speed * 0.35F + 3.1415927F) * degree * 2.0F * limbSwingAmount * 0.5F + 1.2F;
+            this.LegRight.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.35F + 3.1415927F) * degree * -3.0F * limbSwingAmount * 0.5F + 0.27F;
+            this.FootRight.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.35F + 3.1415927F) * degree * 1.0F * limbSwingAmount * 0.5F - 0.23F;
         }
     }
 
