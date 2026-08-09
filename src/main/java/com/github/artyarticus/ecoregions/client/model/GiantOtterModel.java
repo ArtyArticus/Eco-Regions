@@ -210,11 +210,11 @@ public abstract class GiantOtterModel extends ZawaBaseModel<GiantOtterEntity> {
             this.loadBase();
             float speed = 1.0F;
             float degree = 1.0F;
-            this.Neck.xRot = MathHelper.cos((limbSwing * speed * 0.05F) + (float) Math.PI) * (degree * 0.1F) * limbSwingAmount * 0.5F - 0.23F;
-            this.EarLeft.zRot = MathHelper.cos((limbSwing * speed * 0.1F) + (float) Math.PI) * (degree * 0.4F) * limbSwingAmount * 0.5F;
-            this.EarRight.zRot = MathHelper.cos((limbSwing * speed * 0.1F) + (float) Math.PI) * (degree * -0.4F) * limbSwingAmount * 0.5F;
-            this.Tail1.xRot = MathHelper.cos((limbSwing * speed * 0.05F) + (float) Math.PI) * (degree * 0.05F) * limbSwingAmount * 0.5F - 0.14F;
-            this.Tail2.xRot = MathHelper.cos((limbSwing * speed * 0.05F) + (float) Math.PI) * (degree * 0.05F) * limbSwingAmount * 0.5F + 0.36F;
+            this.Neck.xRot = MathHelper.cos((limbSwing * speed * 0.15F) + (float) Math.PI) * (degree * 0.1F) * limbSwingAmount * 0.5F - 0.23F;
+            this.EarLeft.zRot = MathHelper.cos((limbSwing * speed * 0.2F) + (float) Math.PI) * (degree * 0.4F) * limbSwingAmount * 0.5F;
+            this.EarRight.zRot = MathHelper.cos((limbSwing * speed * 0.2F) + (float) Math.PI) * (degree * -0.4F) * limbSwingAmount * 0.5F;
+            this.Tail1.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.1F) * degree * -0.1F * limbSwingAmount - 0.14F;
+            this.Tail2.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.1F) * degree * -0.1F * limbSwingAmount + 0.36F;
         }
 
         @Override

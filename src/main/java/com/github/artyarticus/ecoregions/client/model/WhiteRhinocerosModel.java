@@ -269,6 +269,9 @@ public abstract class WhiteRhinocerosModel extends ZawaBaseModel<WhiteRhinoceros
             float degree = 1.0f;
             this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.07F) * limbSwingAmount * (degree * 0.2F) * 0.5F + 0.59F;
             this.Head.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.07F) * limbSwingAmount * (degree * -0.15F) * 0.5F + 0.16F;
+            this.Tail.xRot = MathHelper.cos(limbSwing * speed * 0.1F) * degree * 0.4F * limbSwingAmount * 0.5F + 0.213F;
+            this.Tail.zRot = MathHelper.cos(limbSwing * speed * 0.1F) * degree * 0.2F * limbSwingAmount * 0.5F;
+
         }
 
         @Override

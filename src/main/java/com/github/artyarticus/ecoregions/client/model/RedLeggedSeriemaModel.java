@@ -267,6 +267,7 @@ public abstract class RedLeggedSeriemaModel extends ZawaBaseModel<RedLeggedSerie
             float degree = 1.0f;
             this.Neck1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.1F) * 0.5F - 0.39F;
             this.part2.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * -0.3F) * 0.5F + 0.27F;
+            this.TailBase.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * -0.15F) * 0.5F + 1.25F;
         }
 
         @Override

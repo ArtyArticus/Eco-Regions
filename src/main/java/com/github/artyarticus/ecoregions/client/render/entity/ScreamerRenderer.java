@@ -9,7 +9,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class ScreamerRenderer extends ZawaMobRenderer<ScreamerEntity, ScreamerModel> {
     public ScreamerRenderer(EntityRendererManager manager) {
-        super(manager, new ScreamerModel.Adult(), new ScreamerModel.Child(), 0.2F);
+        super(manager, new ScreamerModel.Adult(), new ScreamerModel.Child(), 0.1F);
     }
 
     @Override

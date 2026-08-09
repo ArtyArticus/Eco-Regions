@@ -342,10 +342,8 @@ public abstract class AfricanCrestedPorcupineModel extends ZawaBaseModel<African
             this.loadBase();
             float speed = 1.0F;
             float degree = 1.0F;
-            this.Head.xRot = MathHelper.cos(7.0F + limbSwing * speed * 0.05F + 3.1415927F) * degree * 0.3F * limbSwingAmount * 0.5F;
             this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.05F + 3.1415927F) * degree * -0.3F * limbSwingAmount * 0.5F + 0.18F;
-            this.Tail.xRot = MathHelper.cos(6.5F + limbSwing * speed * 0.1F + 3.1415927F) * degree * 0.2F * limbSwingAmount * 0.5F + 0.5F;
-            this.Tail.yRot = MathHelper.cos(4.0F + limbSwing * speed * 0.05F + 3.1415927F) * degree * -0.3F * limbSwingAmount * 0.5F;
+            this.Tail.xRot = MathHelper.cos(6.5F + limbSwing * speed * 0.05F + 3.1415927F) * degree * 0.2F * limbSwingAmount * 0.5F + 0.5F;
         }
 
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {

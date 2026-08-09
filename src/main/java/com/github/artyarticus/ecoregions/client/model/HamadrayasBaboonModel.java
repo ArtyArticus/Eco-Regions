@@ -267,6 +267,8 @@ public abstract class HamadrayasBaboonModel extends ZawaBaseModel<HamadrayasBabo
             float degree = 1.0F;
             this.Neck.xRot = MathHelper.cos(6.0F + limbSwing * speed * 0.1F + 3.1415927F) * degree * -0.1F * limbSwingAmount * 0.5F - 0.591F;
             this.Head.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.1F + 3.1415927F) * degree * 0.1F * limbSwingAmount * 0.5F + 0.761F;
+            this.Tail1.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.1F + 3.1415927F)* degree * 0.3F * limbSwingAmount * 0.5F - 0.916F;
+            this.Tail2.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.1F + 3.1415927F)* degree * 0.1F * limbSwingAmount * 0.5F - 0.878F;
         }
 
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {

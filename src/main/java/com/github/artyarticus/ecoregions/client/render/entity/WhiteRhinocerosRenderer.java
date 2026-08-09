@@ -8,7 +8,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class WhiteRhinocerosRenderer extends ZawaMobRenderer<WhiteRhinocerosEntity, WhiteRhinocerosModel> {
     public WhiteRhinocerosRenderer(EntityRendererManager manager) {
-        super(manager, new WhiteRhinocerosModel.Adult(), new WhiteRhinocerosModel.Child(), 1.7F);
+        super(manager, new WhiteRhinocerosModel.Adult(), new WhiteRhinocerosModel.Child(), 1.3F);
     }
 
     @Override

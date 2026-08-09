@@ -251,8 +251,8 @@ public abstract class SouthernTamanduaModel extends ZawaBaseModel<SouthernTamand
             float speed = 1.0f;
             float degree = 1.0f;
             this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F + (float) Math.PI) * degree * -0.1F * limbSwingAmount * 0.5F;
-            this.Tail1.xRot = MathHelper.cos(limbSwing * speed * 0.1F + (float) Math.PI) * degree * -0.2F * limbSwingAmount * 0.5F - 0.367F;
-            this.Tail1.yRot = MathHelper.cos(1.0F + limbSwing * speed * 0.1F + (float) Math.PI) * degree * -0.4F * limbSwingAmount * 0.5F;
+            this.Tail1.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.1F) * degree * -0.1F * limbSwingAmount - 0.367F;
+            this.Tail2.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.1F) * degree * -0.1F * limbSwingAmount + 0.045F;
         }
 
         @Override
